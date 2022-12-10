@@ -1,0 +1,3540 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fitnessOntology#"
+     xml:base="http://www.semanticweb.org/fitnessOntology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:fo="http://www.semanticweb.org/fitnessOntology#"
+     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:viaf="http://viaf.org/viaf/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+     xmlns:wikidata="http://www.wikidata.org/wiki/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fitnessOntology">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/set.owl"/>
+        <dc:creator xml:lang="it">Luca Tomatis &amp; Michael Oliverio</dc:creator>
+        <dc:description xml:lang="it">L&apos;ontologia si pone l&apos;obiettivo di rappresentare la struttura delle, andando a inserire le componenti da cui è formata,l&apos;orario di apertura, gli abbonamenti offerti, la posizione geografica, il suo organigramma e gli abbonati che la frequentano</dc:description>
+        <dc:title xml:lang="it">Fitness ontology</dc:title>
+        <vann:preferredNamespacePrefix xml:lang="it">fo</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri xml:lang="it">http://www.semanticweb.org/fitnessOntology</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="it">Fitness ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#equivalentClass -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#redige"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#valePerIGiorniDellaSettimana"/>
+        <rdfs:comment xml:lang="it">proprietà hasOpeningHoursDayOfWeek nell&apos;ontologia GoodRelations</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#hasOpeningHoursSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haSpecificaOrarioApertura"/>
+        <rdfs:comment xml:lang="it">proprietà hasOpeningHoursSpecification di good relations</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#hasPOS -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/goodrelations/v1#hasPOS">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haCoordinate"/>
+        <rdfs:comment xml:lang="it">proprietà hasPos nell&apos;ontologia GoodRelations</rdfs:comment>
+        <rdfs:label xml:lang="en">has Pos (gr:hasPOS)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#allena -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#allena">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èAllenatoDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:comment xml:lang="it">indica l&apos;abbonato allenato da un Personal Trainer</rdfs:comment>
+        <rdfs:label xml:lang="it">allena</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#compone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#compone">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èCompostaDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">indica la palestra che compone una sala</rdfs:comment>
+        <rdfs:label xml:lang="it">compone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#contiene -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#contiene">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èContenutaIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">indica l&apos;attrezzatura contenuta in una sala</rdfs:comment>
+        <rdfs:label xml:lang="it">contiene</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#espertoDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#espertoDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#allena"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#pratica"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#redige"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#inerente"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">indica la disciplina di cui è esperto un Personal Trainer</rdfs:comment>
+        <rdfs:label xml:lang="it">espertoDi</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haComePersonale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haComePersonale">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#lavoraIn"/>
+        <rdfs:comment xml:lang="it">indica il Personale che una palestra dispone</rdfs:comment>
+        <rdfs:label xml:lang="it">haComePersonale</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haCoordinate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haCoordinate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+        <rdfs:comment xml:lang="it">indica le coordinate geografiche di una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">haCoordinate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haRuolo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haRuolo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Ruolo"/>
+        <rdfs:comment xml:lang="it">indica il ruolo di una persona</rdfs:comment>
+        <rdfs:label xml:lang="it">haRuolo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haSpecificaOrarioApertura -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haSpecificaOrarioApertura">
+        <rdfs:comment xml:lang="it">la palestra ha una certa specifica dell&apos;orario di apertura</rdfs:comment>
+        <rdfs:label xml:lang="it">haSpecificaOrarioApertura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haTipologia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haTipologia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">indica la tipologia di un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">haTipologia</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#inerente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#inerente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:comment xml:lang="it">indica la disciplina inerente di una scheda di allenamento</rdfs:comment>
+        <rdfs:label xml:lang="it">inerente</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#lavoraIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#lavoraIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloIstruttoreDiSala"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">indica la palestra in cui lavora un istruttore di sala oppure un personal trainer</rdfs:comment>
+        <rdfs:label xml:lang="it">lavoraIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#offreServizio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#offreServizio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#èCompostaDa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#èAdibitoAlServizio"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">indica il servizio offerto da  una Palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">offre servizio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#offreTipologiaDiAbbonamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#offreTipologiaDiAbbonamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">indica la tipologia di abbonamento offerto da una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">offreTipologiaAbbonamento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#ospita -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#ospita">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaCorsi"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Corso"/>
+        <rdfs:comment xml:lang="it">indica il corso ospitato da una sala corsi</rdfs:comment>
+        <rdfs:label xml:lang="it">ospita</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#pratica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#pratica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:comment xml:lang="it">indica la disciplina praticata da un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">pratica</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#prevede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#prevede">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:label xml:lang="it">prevede</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#redige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#redige">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èRedattaDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:comment xml:lang="it">indica la scheda di allenamento redatta da un personal trainer</rdfs:comment>
+        <rdfs:label xml:lang="it">redige</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#relativoA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#relativoA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">indica la palestra a cui fa riferimento un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">relativoA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#segueSchedaDiAllenamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#segueSchedaDiAllenamento">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èSeguitaDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:comment xml:lang="it">indica la scheda di allenamento seguita da un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">segueSchedaDiAllenamento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#siAllenaCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#siAllenaCon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:comment xml:lang="it">indica l&apos;abbonato con cui si allena un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">siAllenaCon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#siAllenaIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#siAllenaIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#sottoscriveAbbonamento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#relativoA"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">indica la palestra in cui si allena una persona</rdfs:comment>
+        <rdfs:label xml:lang="it">si allena in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#sottoscriveAbbonamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#sottoscriveAbbonamento">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èAcquistatoDa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <rdfs:comment xml:lang="it">indica l&apos;abbonamento che viene sottoscritto da un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">sottoscrive abbonamento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#specializzataIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#specializzataIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#haComePersonale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#espertoDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">indica la disciplina in cui è specializzata una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">specializzata in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#supervisiona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#supervisiona">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloIstruttoreDiSala"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaFitness"/>
+        <rdfs:comment xml:lang="it">indica la sala fitness che supervisiona un istruttore di sala</rdfs:comment>
+        <rdfs:label xml:lang="it">supervisiona</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#utilizzaAttrezzatura -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#utilizzaAttrezzatura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">indica l&apos;attrezzatura utilizzata da un movimento</rdfs:comment>
+        <rdfs:label xml:lang="it">utilizzaAttrezzattura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#valePerIGiorniDellaSettimana -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#valePerIGiorniDellaSettimana">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">indica il giorno della settimana su cui vale una determinata specifica di orario di apertura</rdfs:comment>
+        <rdfs:label xml:lang="it">vale per i giorni della settimana</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èAcquistatoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èAcquistatoDa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="it">indica l&apos;acquirente di un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">è acquistato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èAdibitoAlServizio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èAdibitoAlServizio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#LocaleDiServizio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">indica il servizio offerto da un locale di servizio</rdfs:comment>
+        <rdfs:label xml:lang="it">è adibito al servizio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èAllenatoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èAllenatoDa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="it">indica il personal trainer che allena un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">èAllenatoDa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èCompostaDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èCompostaDa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <rdfs:comment xml:lang="it">indica la sala di cui è composta una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">compostaDa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èContenutaIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èContenutaIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <rdfs:comment xml:lang="it">indica la sala in cui è contenuta un&apos;attrezzatura</rdfs:comment>
+        <rdfs:label xml:lang="it">èContenutoIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èDatoreDiLavoroDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èDatoreDiLavoroDi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èDipendenteDi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloProprietario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloIstruttoreDiSala"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#èProprietarioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#haComePersonale"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">indica il personal trainer o istruttore di sala di cui è datore di lavoro un proprietario di palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">è datore di lavoro di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èDiProprietàDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èDiProprietàDi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fitnessOntology#èProprietarioDi"/>
+        <rdfs:comment xml:lang="it">indica il proprietario di una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">è di proprietà di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èDipendenteDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èDipendenteDi">
+        <rdfs:comment xml:lang="it">indica il proprietario di palestra di cui è dipendente un personal trainer o istruttore di sala</rdfs:comment>
+        <rdfs:label xml:lang="it">è dipendente di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èProprietarioDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èProprietarioDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloProprietario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">indica la palestra di cui è proprietario una persona</rdfs:comment>
+        <rdfs:label xml:lang="it">è proprietario di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èRedattaDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èRedattaDa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+        <rdfs:comment xml:lang="it">indica il personal trainer che ha redatto una scheda di allenamento</rdfs:comment>
+        <rdfs:label xml:lang="it">è redatta da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#èSeguitaDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fitnessOntology#èSeguitaDa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:comment xml:lang="it">scheda di allenamento è seguita da un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">èSeguitaDa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#closes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#closes">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#chiudeAlle"/>
+        <rdfs:comment xml:lang="en">closes (gr:closes)</rdfs:comment>
+        <rdfs:comment xml:lang="it">proprietà closes nell&apos;ontologia GoodRelations</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#opens -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#opens">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#apreAlle"/>
+        <rdfs:comment xml:lang="en">opens (gr:opens)</rdfs:comment>
+        <rdfs:comment xml:lang="it">proprietà opens nell&apos;ontologia GoodRelations</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#apreAlle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#apreAlle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment xml:lang="it">indica orario di apertura di una specifica di orario di apertura</rdfs:comment>
+        <rdfs:label xml:lang="it">apre alle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#chiudeAlle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#chiudeAlle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment xml:lang="it">chiude alle</rdfs:comment>
+        <rdfs:comment xml:lang="it">indica orario di chiusura di una specifica di orario di apertura</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haAnniDiAllenamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haAnniDiAllenamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">indica gli anni di allenamento di un abbonato</rdfs:comment>
+        <rdfs:label xml:lang="it">ha anni di allenamento</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haCosto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haCosto">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">indica il costo di un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha costo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haDataScadenza -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haDataScadenza">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">indica la data scadenza di un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha data scadenza</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haDataUltimoRinnovo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haDataUltimoRinnovo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">indica la data ultimo rinnovo di un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha data ultimo rinnovo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haDescrizione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haDescrizione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Corso"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="it">ha descrizione</rdfs:label>
+        <rdfs:label xml:lang="it">indica la descrizione di un servizio o una disciplina o un corso</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haModello -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haModello">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">indica il modello di un&apos;attrezzatura</rdfs:comment>
+        <rdfs:label xml:lang="it">ha modello</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haRipetizioni -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haRipetizioni">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">indica le ripetizioni di un movimento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha ripetizioni</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haSerie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haSerie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">indica le serie di un movimento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha serie</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haTempoRecupero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haTempoRecupero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">indica il tempo di recupero di un movimento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tempo recupero</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#haTempoSottoTensione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fitnessOntology#haTempoSottoTensione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">indica il tempo sotto tensione di un movimento</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tempo sotto tensione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="it">proprietà lat nell&apos;ontologia Geo</rdfs:comment>
+        <rdfs:label xml:lang="en">latitudine (geo:lat)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="it">proprietà long nell&apos;ontologia Geo</rdfs:comment>
+        <rdfs:label xml:lang="en">longitudine (geo:long)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#BusinessEntity -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#BusinessEntity">
+        <rdfs:comment xml:lang="it">Classe BusinessEntity in good relations</rdfs:comment>
+        <rdfs:label xml:lang="it">BusinessEntity (gr:BusinessEntity)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#DayOfWeek -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#DayOfWeek">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">Classe day of the week appartenente all&apos;ontologia GoodRelations</rdfs:comment>
+        <rdfs:label xml:lang="en">Day of the week</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#Individual -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#Individual">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">Classe Individual appartenente all&apos;ontologia GoodRelations</rdfs:comment>
+        <rdfs:label xml:lang="it">Individual (gr:Individual)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#Location -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#Location">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+        <rdfs:comment xml:lang="it">Classe Location appartenente all&apos;ontologia GoodRelations</rdfs:comment>
+        <rdfs:label xml:lang="it">Location (gr:Location)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#OpeningHoursSpecification -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#OpeningHoursSpecification">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+        <rdfs:comment xml:lang="it">Classe OpeningHoursSpecification in GoodRelations</rdfs:comment>
+        <rdfs:label xml:lang="en">OpeningHoursSpecification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Abbonamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Abbonamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#relativoA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#èAcquistatoDa"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Abbonamento sottoscritto da uno sportivo per poter allenarsi in una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Abbonamento</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q322948</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Abbonato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Abbonato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#sottoscriveAbbonamento"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Persona"/>
+        <rdfs:comment xml:lang="it">Una persona che ha almeno un ruolo da abbonato con cui ha sottoscritto un abbonamento</rdfs:comment>
+        <rdfs:label xml:lang="it">Abbonato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Atleta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Atleta">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#pratica"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonato"/>
+        <rdfs:comment xml:lang="it">Persona che pratica almeno una disciplina</rdfs:comment>
+        <rdfs:label xml:lang="it">Atleta</rdfs:label>
+        <skos:exactMatch>https://thes.bncf.firenze.sbn.it/termine_eng.php?id=1111</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Attrezzatura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Attrezzatura">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#AttrezzoCorpoLibero"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Equipaggiamento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Strumenti per potersi allenare in palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Attrezzatura</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q10273457</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#AttrezzoCorpoLibero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#AttrezzoCorpoLibero">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_dipStation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_sbarraTrazioni"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">Attrezzo per allenarsi a corpo libero</rdfs:comment>
+        <rdfs:label xml:lang="it">AttrezzoCorpoLibero</rdfs:label>
+        <skos:exactMatch>https://thes.bncf.firenze.sbn.it/termine_eng.php?id=15832</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_bilanciere"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_disco"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_manubrio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaDeclinata"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaInclinata"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaPiana"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaRegolabile"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaScott"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pedanaStacco"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_rack"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">Attrezzo per eseguire il sollevamento dei pesi</rdfs:comment>
+        <rdfs:label xml:lang="it">AttrezzoPesistica</rdfs:label>
+        <skos:broader>https://thes.bncf.firenze.sbn.it/termine_eng.php?id=19832</skos:broader>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Avanzato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Avanzato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haAnniDiAllenamento"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Atleta"/>
+        <rdfs:comment xml:lang="it">Atleta con piu di 5 anni di allenamento</rdfs:comment>
+        <rdfs:label xml:lang="it">Avanzato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Bodybuilder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Bodybuilder">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#pratica"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Bodybuilding"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Atleta"/>
+        <rdfs:comment xml:lang="it">Atleta che pratica Bodybuilding</rdfs:comment>
+        <rdfs:label xml:lang="it">Bodybuilder</rdfs:label>
+        <skos:exactMatch>http://www.wikidata.org/entity/Q15982795</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Bodybuilding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Bodybuilding">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_enhancedBodybuilding"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_naturalBodybuilding"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:comment xml:lang="it">Bodybuilding</rdfs:comment>
+        <rdfs:label xml:lang="it">Bodybuilding</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q124100</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Calisthenico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Calisthenico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#pratica"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Calisthenics"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Atleta"/>
+        <rdfs:comment xml:lang="it">Atleta che pratica Calisthenics</rdfs:comment>
+        <rdfs:label xml:lang="it">Calisthenico</rdfs:label>
+        <skos:narrower>https://thes.bncf.firenze.sbn.it/termine_eng.php?id=27199</skos:narrower>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Calisthenics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Calisthenics">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_endurance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_skill"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_streetLifting"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:comment xml:lang="it">Calisthenics</rdfs:comment>
+        <rdfs:label xml:lang="it">Calisthenics</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q2471790</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Corso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Corso">
+        <rdfs:comment xml:lang="it">Corso proposto dalla palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Corso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Crossfit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Crossfit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:comment xml:lang="en">Crossfit</rdfs:comment>
+        <rdfs:label xml:lang="en">Crossfit</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q2072840</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Disciplina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Disciplina">
+        <rdfs:comment xml:lang="it">Disciplina</rdfs:comment>
+        <rdfs:label xml:lang="it">Disciplina</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q2312410</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Equipaggiamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Equipaggiamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaSollevamentoPesi"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaZavorra"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">Oggetti ausiliari per l&apos;allenamento</rdfs:comment>
+        <rdfs:label xml:lang="it">Equipaggiamento</rdfs:label>
+        <skos:exactMatch>http://zbw.eu/stw/descriptor/14586-2</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Esercizio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Esercizio">
+        <rdfs:comment xml:lang="it">Esercizio di una scheda di allenamento</rdfs:comment>
+        <rdfs:label xml:lang="it">Esercizio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#GiornoSettimana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#GiornoSettimana">
+        <rdfs:comment xml:lang="it">Giorno della settimana</rdfs:comment>
+        <rdfs:label xml:lang="it">GiornoSettimana</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Intermedio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Intermedio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Atleta"/>
+        <rdfs:comment xml:lang="it">Atleta che si allena da piu di 2 anni ma da meno di 5</rdfs:comment>
+        <rdfs:label xml:lang="it">Intermedio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#IstruttoreDiSala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#IstruttoreDiSala">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloIstruttoreDiSala"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#supervisiona"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaFitness"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Personale"/>
+        <rdfs:comment xml:lang="it">Dipendente che si occupa di aiutare e controllare i clienti</rdfs:comment>
+        <rdfs:label xml:lang="it">IstruttoreDiSala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#LocaleDiServizio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#LocaleDiServizio">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#èAdibitoAlServizio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <rdfs:comment xml:lang="it">Locale che offre un particolare servizio</rdfs:comment>
+        <rdfs:label xml:lang="it">LocaleDiServizio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Macchinario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Macchinario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_abductorMachine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_adductorMachine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_calfMachine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_chestPress"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cyclette"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_latMachine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legCurl"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legExtension"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legPress"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_multipower"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pectoralMachine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_poliercolina"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pulley"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_rowingMachine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_tapisRoulant"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+        <rdfs:comment xml:lang="it">Macchinario per poter svolgere esercizi guidati</rdfs:comment>
+        <rdfs:label xml:lang="it">Macchinario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Neofita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Neofita">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haAnniDiAllenamento"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Atleta"/>
+        <rdfs:comment xml:lang="it">Atleta con meno di 2 anni di allenamento</rdfs:comment>
+        <rdfs:label xml:lang="it">Neofita</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#OlympicWeightlifting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#OlympicWeightlifting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q83462</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Palestra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Palestra">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#èCompostaDa"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#èDiProprietàDi"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloProprietario"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#BusinessEntity"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#PalestraGrande"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#PalestraPiccola"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Luogo in cui allenarsi</rdfs:comment>
+        <rdfs:label xml:lang="it">Palestra</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q1065656</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#PalestraGrande -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#PalestraGrande">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">Palestra di grandi dimensioni</rdfs:comment>
+        <rdfs:label xml:lang="it">PalestraGrande</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#PalestraPiccola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#PalestraPiccola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">Palestra di piccole dimensioni</rdfs:comment>
+        <rdfs:label xml:lang="it">PalestraPiccola</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Persona">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="it">Essere umano</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#PersonalTrainer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#PersonalTrainer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#allena"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloPT"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#redige"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Personale"/>
+        <rdfs:comment xml:lang="it">Dipendente che si occupa di allenare i clienti</rdfs:comment>
+        <rdfs:label xml:lang="it">PersonalTrainer</rdfs:label>
+        <skos:exactMatch>https://thes.bncf.firenze.sbn.it/termine_eng.php?id=44898</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Personale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Personale">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloPersonale"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#lavoraIn"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Persona"/>
+        <rdfs:comment xml:lang="it">Persona facente parte dell&apos;organigramma della palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Personale</rdfs:label>
+        <skos:exactMatch>http://zbw.eu/stw/descriptor/11262-1</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Posizione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Posizione">
+        <rdfs:comment xml:lang="it">Coordinate in cui si trova una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Posizione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Powerlifting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Powerlifting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_geared"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_raw"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+        <rdfs:comment xml:lang="it">disciplina powerlifting</rdfs:comment>
+        <rdfs:label xml:lang="it">Powerlifting</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q213796</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Ruolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Ruolo">
+        <rdfs:comment xml:lang="it">Ruolo</rdfs:comment>
+        <rdfs:label xml:lang="it">Ruolo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#RuoloAbbonato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Ruolo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPersonale"/>
+        <rdfs:comment xml:lang="it">Ruolo abbonato di una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">RuoloAbbonato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#RuoloIstruttoreDiSala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloIstruttoreDiSala">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPersonale"/>
+        <rdfs:comment xml:lang="it">Ruolo istruttore di sala</rdfs:comment>
+        <rdfs:label xml:lang="it">RuoloIstruttoreDiSala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#RuoloPT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloPT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPersonale"/>
+        <rdfs:comment xml:lang="it">Ruolo personal trainer di palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">RuoloPT</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#RuoloPersonale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloPersonale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Ruolo"/>
+        <rdfs:comment xml:lang="it">Ruolo personale di una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">RuoloPersonale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#RuoloProprietario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloProprietario">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloPersonale"/>
+        <rdfs:comment xml:lang="it">Ruolo proprietario di palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">RuoloProprietario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Sala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Sala">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#compone"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Sala che compone una palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SalaCorpoLibero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SalaCorpoLibero">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#contiene"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#AttrezzoCorpoLibero"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Equipaggiamento"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SalaCorsi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SalaCorsi">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#ospita"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Corso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaFitness"/>
+        <rdfs:comment xml:lang="it">Sala in cui seguire i corsi offerti dalla palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">SalaCorsi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SalaFitness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SalaFitness">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#contiene"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SalaMutliAttivitàSportiva"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Sala che contiene attrezzatura per svolgere attività fisica</rdfs:comment>
+        <rdfs:label xml:lang="it">SalaFitness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SalaMutliAttivitàSportiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SalaMutliAttivitàSportiva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaFitness"/>
+        <rdfs:comment xml:lang="it">Sala con piu attività sportive</rdfs:comment>
+        <rdfs:label xml:lang="it">SalaMutliAttivitàSportiva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SalaPesi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SalaPesi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#contiene"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SalaFitness"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#contiene"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaFitness"/>
+        <rdfs:comment xml:lang="it">sala con una sola attività sportiva</rdfs:comment>
+        <rdfs:label xml:lang="it">SalaMutliAttivitàSportiva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#inerente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMonoDisciplinare"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMultiDisciplinare"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Scheda per allenarsi composta da esercizi</rdfs:comment>
+        <rdfs:label xml:lang="it">SchedaDiAllenamento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMonoDisciplinare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMonoDisciplinare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:comment xml:lang="it">Scheda di allenamento orientata ad una singola disciplina</rdfs:comment>
+        <rdfs:label xml:lang="it">SchedaDiAllenamentoMonoDisciplinare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMultiDisciplinare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMultiDisciplinare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <rdfs:comment xml:lang="it">Scheda di allenamento orientata a più discipline</rdfs:comment>
+        <rdfs:label xml:lang="it">SchedaDiAllenamentoMultiDisciplinare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#Servizio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#Servizio">
+        <rdfs:comment xml:lang="it">Servizio offerto dalla palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">Servizio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura">
+        <rdfs:comment xml:lang="it">Specifica dell&apos;orario di apertura che comprende l&apos;ora di inizio, l&apos;ora di chiusura ed i giorni della settimana rientranti in questa specifica</rdfs:comment>
+        <rdfs:label xml:lang="it">SpecificaOrarioDiApertura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_annuale"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_bimestrale"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_mensile"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_semestrale"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_trimestrale"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Tipologia di abbonamento offerto dalla palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">TipologiaAbbonamento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#TitolarePalestra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fitnessOntology#TitolarePalestra">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#RuoloProprietario"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/fitnessOntology#èProprietarioDi"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fitnessOntology#Personale"/>
+        <rdfs:comment xml:lang="it">Proprietario della palestra</rdfs:comment>
+        <rdfs:label xml:lang="it">TitolarePalestra</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment xml:lang="it">classe Person appartenente al vocabolario foaf</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#arnoldSchwarzenegger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#arnoldSchwarzenegger">
+        <rdfs:comment xml:lang="it">Arnlod schwarzenegger</rdfs:comment>
+        <rdfs:label xml:lang="it">arnold Schwarzenegger</rdfs:label>
+        <skos:exactMatch>http://viaf.org/viaf/64196027</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_abductorMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_abductorMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:label xml:lang="it">abductor machine</rdfs:label>
+        <rdfs:label xml:lang="it">attrezzo abduct machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_adductorMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_adductorMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:comment xml:lang="it">attrezzo adductor machine</rdfs:comment>
+        <rdfs:label xml:lang="it">adductor machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_bilanciere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_bilanciere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q1043897"/>
+        <rdfs:comment xml:lang="it">attrezzo bilanciere</rdfs:comment>
+        <rdfs:label xml:lang="it">bilanciere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_calfMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_calfMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:comment xml:lang="it">attrezzo calf machine</rdfs:comment>
+        <rdfs:label xml:lang="it">calf machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_chestPress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_chestPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:comment xml:lang="it">attrezzo chest press</rdfs:comment>
+        <rdfs:label xml:lang="it">chest press</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaSollevamentoPesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaSollevamentoPesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Equipaggiamento"/>
+        <rdfs:label xml:lang="it">attrezzo cintura sollevamento pesi</rdfs:label>
+        <rdfs:label xml:lang="it">cintura sollevamento pesi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaZavorra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaZavorra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Equipaggiamento"/>
+        <rdfs:label xml:lang="it">attrezzo cintura zavorra</rdfs:label>
+        <rdfs:label xml:lang="it">cintura zavorra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_cyclette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cyclette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q1370818"/>
+        <rdfs:comment xml:lang="it">attrezzo cyclette</rdfs:comment>
+        <rdfs:label xml:lang="it">cyclette</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_dipStation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_dipStation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoCorpoLibero"/>
+        <rdfs:label xml:lang="it">attrezzo dip station</rdfs:label>
+        <rdfs:label xml:lang="it">dip station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_disco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_disco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <owl:sameAs rdf:resource="https://m.wikidata.org/wiki/Q2220762"/>
+        <rdfs:comment xml:lang="it">disco montabile su bilanciere</rdfs:comment>
+        <rdfs:label xml:lang="it">disco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_latMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_latMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <èContenutaIn rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_2"/>
+        <rdfs:label xml:lang="it">attrezzo lat machine</rdfs:label>
+        <rdfs:label xml:lang="it">lat machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_legCurl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legCurl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q3398543"/>
+        <rdfs:label xml:lang="it">attrezzo leg curl</rdfs:label>
+        <rdfs:label xml:lang="it">leg curl</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_legExtension -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legExtension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q2588216"/>
+        <rdfs:comment xml:lang="it">attrezzo leg extension</rdfs:comment>
+        <rdfs:label xml:lang="it">leg extension</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_legPress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q814819"/>
+        <rdfs:comment xml:lang="it">attrezzo leg press</rdfs:comment>
+        <rdfs:label xml:lang="it">leg press</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_manubrio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_manubrio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:comment xml:lang="it">attrezzo manubrio</rdfs:comment>
+        <rdfs:comment xml:lang="it">manubrio</rdfs:comment>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q465453</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_multipower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_multipower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:comment xml:lang="it">attrezzo multipower</rdfs:comment>
+        <rdfs:label xml:lang="it">multipower</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaDeclinata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaDeclinata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:label xml:lang="it">attrezzo panca declinata</rdfs:label>
+        <rdfs:label xml:lang="it">panca declinata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaInclinata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaInclinata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:comment xml:lang="it">attrezzo panca inclinata</rdfs:comment>
+        <rdfs:label xml:lang="it">panca inclinata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaPiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaPiana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:comment xml:lang="it">attrezzo panca piana</rdfs:comment>
+        <rdfs:label xml:lang="it">panca piana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaRegolabile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaRegolabile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:comment xml:lang="it">attrezzo panca regolabile</rdfs:comment>
+        <rdfs:label xml:lang="it">panca regolabile</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaScott -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaScott">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:label xml:lang="it">attrezzo panca scott</rdfs:label>
+        <rdfs:label xml:lang="it">panca scott</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pectoralMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pectoralMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:label xml:lang="it">attrezzo pectoral machine</rdfs:label>
+        <rdfs:label xml:lang="it">pectoral machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pedanaStacco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pedanaStacco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:label xml:lang="it">attrezzo pedana stacco</rdfs:label>
+        <rdfs:label xml:lang="it">pedana stacco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_poliercolina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_poliercolina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:label xml:lang="it">attrezzo poliercolina</rdfs:label>
+        <rdfs:label xml:lang="it">poliercolina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_pulley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pulley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q48378"/>
+        <rdfs:label xml:lang="it">attrezzo pulley</rdfs:label>
+        <rdfs:label xml:lang="it">pulley</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_rack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_rack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoPesistica"/>
+        <rdfs:label xml:lang="it">attrezzo rack</rdfs:label>
+        <rdfs:label xml:lang="it">rack</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_rowingMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_rowingMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q1542861"/>
+        <rdfs:comment xml:lang="it">attrezzo rowing machine</rdfs:comment>
+        <rdfs:label xml:lang="it">arowing machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_sbarraTrazioni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_sbarraTrazioni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#AttrezzoCorpoLibero"/>
+        <rdfs:comment xml:lang="it">attrezzo sbarra trazioni</rdfs:comment>
+        <rdfs:label xml:lang="it">sbarra trazioni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#attrezzatura_tapisRoulant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_tapisRoulant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Macchinario"/>
+        <rdfs:comment xml:lang="it">attrezzo tapis roulant</rdfs:comment>
+        <rdfs:label xml:lang="it">tapis roulant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#corso_mobility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#corso_mobility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Corso"/>
+        <rdfs:comment xml:lang="it">corso mobility</rdfs:comment>
+        <rdfs:label xml:lang="it">corso_mobility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#corso_pilates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#corso_pilates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Corso"/>
+        <rdfs:comment xml:lang="it">corso pilates</rdfs:comment>
+        <rdfs:label xml:lang="it">corso_pilates</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#corso_strong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#corso_strong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Corso"/>
+        <rdfs:comment xml:lang="it">corso strong</rdfs:comment>
+        <rdfs:label xml:lang="it">corso_strong</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_enhancedBodybuilding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_enhancedBodybuilding">
+        <rdfs:comment xml:lang="it">disciplina enhancedBodybuilding</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_bodybuilding_enhancedBodybuilding</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_naturalBodybuilding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_naturalBodybuilding">
+        <rdfs:comment xml:lang="it">disciplina naturalBodybuilding</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_bodybuilding_naturalBodybuilding</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_endurance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_endurance">
+        <rdfs:comment xml:lang="it">disciplina calisthenics endurance</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_calisthenics_endurance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_skill">
+        <rdfs:comment xml:lang="it">disciplina calisthenics skill</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_calisthenics_skill</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_streetLifting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_streetLifting">
+        <rdfs:comment xml:lang="it">disciplina calisthenics streetLifting</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_calisthenics_streetLifting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_geared -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_geared">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Powerlifting"/>
+        <rdfs:comment xml:lang="it">disciplina powerlifting geared</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_powerlifting_geared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_raw -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_raw">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Powerlifting"/>
+        <rdfs:comment xml:lang="it">disciplina powerlifting raw</rdfs:comment>
+        <rdfs:label xml:lang="it">disciplina_powerlifting_raw</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#esercizio_legPress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#esercizio_legPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:comment xml:lang="it">esercizio legPress</rdfs:comment>
+        <rdfs:label xml:lang="it">esercizio_legPress</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#esercizio_pancaPiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#esercizio_pancaPiana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:comment xml:lang="it">esercizio pancaPiana</rdfs:comment>
+        <rdfs:label xml:lang="it">esercizio_pancaPiana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#esercizio_spaccacranio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#esercizio_spaccacranio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <rdfs:comment xml:lang="it">esercizio spaccacranio</rdfs:comment>
+        <rdfs:label xml:lang="it">esercizio_spaccacranio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#esercizio_squat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#esercizio_squat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+        <utilizzaAttrezzatura rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_bilanciere"/>
+        <utilizzaAttrezzatura rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_rack"/>
+        <haRipetizioni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</haRipetizioni>
+        <haTempoRecupero rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</haTempoRecupero>
+        <rdfs:comment xml:lang="it">esercizio squat</rdfs:comment>
+        <rdfs:label xml:lang="it">esercizio_squat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_domenica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_domenica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana domenica</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_domenica</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_sabato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_sabato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana sabato</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_sabato</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#locationFitActive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#locationFitActive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+        <haSpecificaOrarioApertura rdf:resource="http://www.semanticweb.org/fitnessOntology#specificaOrarioFitActive1"/>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.2</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.4</geo:long>
+        <rdfs:comment xml:lang="it">location della FitActive</rdfs:comment>
+        <rdfs:label xml:lang="it">locationFitActive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#palestra_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#palestra_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+        <rdfs:comment xml:lang="it">palestra 02</rdfs:comment>
+        <rdfs:label xml:lang="it">palestra_02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#palestra_4fit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#palestra_4fit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#PalestraPiccola"/>
+        <rdfs:comment xml:lang="it">palestra 4fit</rdfs:comment>
+        <rdfs:label xml:lang="it">palestra_4fit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#palestra_fitActive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#palestra_fitActive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#PalestraGrande"/>
+        <haCoordinate rdf:resource="http://www.semanticweb.org/fitnessOntology#locationFitActive"/>
+        <offreTipologiaDiAbbonamento rdf:resource="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_annuale"/>
+        <èCompostaDa rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_localeServizio_bar"/>
+        <èCompostaDa rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_localeServizio_spogliatoio"/>
+        <èCompostaDa rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_salaCorpoLibero"/>
+        <èCompostaDa rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_salaCorsi"/>
+        <èCompostaDa rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_1"/>
+        <rdfs:comment xml:lang="it">palestra fitActive</rdfs:comment>
+        <rdfs:label xml:lang="it">palestra_fitActive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#philHeath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#philHeath">
+        <rdfs:comment xml:lang="it">phil Heath</rdfs:comment>
+        <rdfs:label xml:lang="it">phil Heath</rdfs:label>
+        <skos:exactMatch>http://viaf.org/viaf/315523656</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_areaRelax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_areaRelax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio areaRelax</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_areaRelax</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_bagnoTurco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_bagnoTurco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio bagnoTurco</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_bagnoTurco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio bar</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_bar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_piscina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_piscina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio piscina</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_piscina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_reception -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_reception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio reception</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_reception</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_sauna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_sauna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio sauna</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_sauna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_spogliatoio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_spogliatoio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio spogliatoio</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_spogliatoio</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q6980658</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#servizio_wifi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_wifi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+        <rdfs:comment xml:lang="it">servizio wifi</rdfs:comment>
+        <rdfs:label xml:lang="it">servizio_wifi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#specificaOrarioFitActive1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#specificaOrarioFitActive1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_sabato"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_giovedi&apos;"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_lunedi&apos;"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_martedi&apos;"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_mercoledi&apos;"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_venerdi&apos;"/>
+        <apreAlle rdf:datatype="http://www.w3.org/2001/XMLSchema#time">09:00:00-09:00</apreAlle>
+        <chiudeAlle rdf:datatype="http://www.w3.org/2001/XMLSchema#time">23:00:00-09:00</chiudeAlle>
+        <rdfs:comment xml:lang="it">specifica Orario FitActive1</rdfs:comment>
+        <rdfs:label xml:lang="it">specificaOrarioFitActive1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#specificaOrarioFitActive2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#specificaOrarioFitActive2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+        <valePerIGiorniDellaSettimana rdf:resource="http://www.semanticweb.org/fitnessOntology#giornoSettimana_domenica"/>
+        <apreAlle rdf:datatype="http://www.w3.org/2001/XMLSchema#time">09:00:00-09:00</apreAlle>
+        <chiudeAlle rdf:datatype="http://www.w3.org/2001/XMLSchema#time">13:00:00-09:00</chiudeAlle>
+        <rdfs:comment xml:lang="it">specifica Orario FitActive2</rdfs:comment>
+        <rdfs:label xml:lang="it">specificaOrarioFitActive2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_annuale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_annuale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">tipologia abbonamento annuale</rdfs:comment>
+        <rdfs:label xml:lang="it">tipologiaAbbonamento_annuale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_bimestrale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_bimestrale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">tipologia abbonamento bimestrale</rdfs:comment>
+        <rdfs:label xml:lang="it">tipologiaAbbonamento_bimestrale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_mensile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_mensile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">tipologia abbonamento mensile</rdfs:comment>
+        <rdfs:label xml:lang="it">tipologiaAbbonamento_mensile</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_semestrale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_semestrale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">tipologia abbonamento semestrale</rdfs:comment>
+        <rdfs:label xml:lang="it">tipologiaAbbonamento_semestrale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_trimestrale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_trimestrale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        <rdfs:comment xml:lang="it">tipologia abbonamento trimestrale</rdfs:comment>
+        <rdfs:label xml:lang="it">tipologiaAbbonamento_trimestrale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_abbonamentoNiccolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_abbonamentoNiccolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+        <relativoA rdf:resource="http://www.semanticweb.org/fitnessOntology#palestra_fitActive"/>
+        <rdfs:comment xml:lang="it">abbonamento di Niccolo</rdfs:comment>
+        <rdfs:label xml:lang="it">1_abbonamentoNiccolo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_persona_abbonato_atleta_michael -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_persona_abbonato_atleta_michael">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Atleta"/>
+        <haRuolo rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaMichael"/>
+        <rdfs:comment xml:lang="it">abbonato alla fit active che segue scheda1</rdfs:comment>
+        <rdfs:label xml:lang="it">1_persona_abbonato_atleta_michael</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_persona_abbonato_atleta_nicolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_persona_abbonato_atleta_nicolo">
+        <haRuolo rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaNicolo"/>
+        <rdfs:comment xml:lang="it">abbonato alla fitactive che segue scheda2</rdfs:comment>
+        <rdfs:label xml:lang="it">1_persona_abbonato_atleta_nicolo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_persona_personale_istruttoreDiSala_enrico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_persona_personale_istruttoreDiSala_enrico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#IstruttoreDiSala"/>
+        <haRuolo rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloPersonale_ruoloIstruttore_personaGabriele"/>
+        <rdfs:comment xml:lang="it">istruttore di sala della fitactive che supervisiona la sala corsi</rdfs:comment>
+        <rdfs:label xml:lang="it">1_persona_personale_istruttoreDiSala_enrico</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_persona_personale_personalTrainer_ezio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_persona_personale_personalTrainer_ezio">
+        <haRuolo rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_personaEzio_PT"/>
+        <rdfs:comment xml:lang="it">PT ezio</rdfs:comment>
+        <rdfs:label xml:lang="it">1_persona_personale_personalTrainer_ezio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_persona_personale_titolarePalestra_luca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_persona_personale_titolarePalestra_luca">
+        <haRuolo rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloPersonale_ruoloProprietario_personaLuca"/>
+        <rdfs:comment xml:lang="it">titolare palestra luca</rdfs:comment>
+        <rdfs:label xml:lang="it">1_persona_personale_titolarePalestra_luca</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_ruolo_personaEzio_PT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_ruolo_personaEzio_PT">
+        <allena rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaNicolo"/>
+        <rdfs:comment xml:lang="it">PT della fitactive che redige scheda1</rdfs:comment>
+        <rdfs:label xml:lang="it">1_ruolo_personaEzio_PT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaMichael -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaMichael">
+        <pratica rdf:resource="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_endurance"/>
+        <pratica rdf:resource="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_skill"/>
+        <pratica rdf:resource="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_streetLifting"/>
+        <segueSchedaDiAllenamento rdf:resource="http://www.semanticweb.org/fitnessOntology#1_scheda1"/>
+        <haAnniDiAllenamento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</haAnniDiAllenamento>
+        <rdfs:comment xml:lang="it">ruolo abbonato Michael</rdfs:comment>
+        <rdfs:label xml:lang="it">1_ruolo_ruoloAbbonato_personaMichael</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaNicolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloAbbonato_personaNicolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloAbbonato"/>
+        <pratica rdf:resource="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_enhancedBodybuilding"/>
+        <segueSchedaDiAllenamento rdf:resource="http://www.semanticweb.org/fitnessOntology#1_scheda2"/>
+        <sottoscriveAbbonamento rdf:resource="http://www.semanticweb.org/fitnessOntology#1_abbonamentoNiccolo"/>
+        <rdfs:comment xml:lang="it">ruolo abbonato Nicolo</rdfs:comment>
+        <rdfs:label xml:lang="it">1_ruolo_ruoloAbbonato_personaNicolo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloPersonale_ruoloIstruttore_personaGabriele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloPersonale_ruoloIstruttore_personaGabriele">
+        <supervisiona rdf:resource="http://www.semanticweb.org/fitnessOntology#1_sala_salaCorsi"/>
+        <rdfs:comment xml:lang="it">ruolo istruttore di sala Gabriele</rdfs:comment>
+        <rdfs:label xml:lang="it">1_ruolo_ruoloPersonale_ruoloIstruttore_personaGabriele</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloPersonale_ruoloProprietario_personaLuca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_ruolo_ruoloPersonale_ruoloProprietario_personaLuca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#RuoloProprietario"/>
+        <èProprietarioDi rdf:resource="http://www.semanticweb.org/fitnessOntology#palestra_fitActive"/>
+        <rdfs:comment xml:lang="it">ruolo proprietario Luca</rdfs:comment>
+        <rdfs:label xml:lang="it">1_ruolo_ruoloPersonale_ruoloProprietario_personaLuca</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_sala_localeServizio_bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_localeServizio_bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#LocaleDiServizio"/>
+        <èAdibitoAlServizio rdf:resource="http://www.semanticweb.org/fitnessOntology#servizio_bar"/>
+        <rdfs:comment xml:lang="it">bar fitactive</rdfs:comment>
+        <rdfs:label xml:lang="it">1_sala_localeServizio_bar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_sala_localeServizio_spogliatoio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_localeServizio_spogliatoio">
+        <èAdibitoAlServizio rdf:resource="http://www.semanticweb.org/fitnessOntology#servizio_spogliatoio"/>
+        <rdfs:comment xml:lang="it">spogliatoio fitactive</rdfs:comment>
+        <rdfs:label xml:lang="it">1_sala_localeServizio_spogliatoio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_sala_salaCorpoLibero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_salaCorpoLibero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaZavorra"/>
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_dipStation"/>
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_sbarraTrazioni"/>
+        <rdfs:comment xml:lang="it">sala corpo libero fitactive</rdfs:comment>
+        <rdfs:label xml:lang="it">1_sala_salaCorpoLibero</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_sala_salaCorsi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_salaCorsi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#Sala"/>
+        <ospita rdf:resource="http://www.semanticweb.org/fitnessOntology#corso_pilates"/>
+        <rdfs:comment xml:lang="it">salacorsi fitactive</rdfs:comment>
+        <rdfs:label xml:lang="it">1_sala_salaCorsi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#SalaSingolaAttivitàSportiva"/>
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_abductorMachine"/>
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_adductorMachine"/>
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_legCurl"/>
+        <rdfs:comment xml:lang="it">sala pesi fiactive</rdfs:comment>
+        <rdfs:label xml:lang="it">1_sala_salaPesi_1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_2">
+        <contiene rdf:resource="http://www.semanticweb.org/fitnessOntology#attrezzatura_calfMachine"/>
+        <rdfs:comment xml:lang="it">sala pesi2 fitactive</rdfs:comment>
+        <rdfs:label xml:lang="it">1_sala_salaPesi_2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_scheda1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_scheda1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <inerente rdf:resource="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_enhancedBodybuilding"/>
+        <prevede rdf:resource="http://www.semanticweb.org/fitnessOntology#esercizio_spaccacranio"/>
+        <prevede rdf:resource="http://www.semanticweb.org/fitnessOntology#esercizio_squat"/>
+        <èRedattaDa rdf:resource="http://www.semanticweb.org/fitnessOntology#1_ruolo_personaEzio_PT"/>
+        <rdfs:comment xml:lang="it">scheda 1 redatta da ezio e seguita da michael</rdfs:comment>
+        <rdfs:label xml:lang="it">1_scheda1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#1_scheda2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#1_scheda2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+        <prevede rdf:resource="http://www.semanticweb.org/fitnessOntology#esercizio_legPress"/>
+        <prevede rdf:resource="http://www.semanticweb.org/fitnessOntology#esercizio_pancaPiana"/>
+        <rdfs:comment xml:lang="it">scheda2 seguita da nicolo</rdfs:comment>
+        <rdfs:label xml:lang="it">1_scheda2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_giovedi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_giovedi&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana giovedi&apos;</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_giovedi&apos;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_lunedi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_lunedi&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana lunedi&apos;</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_lunedi&apos;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_martedi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_martedi&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana martedi&apos;</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_martedi&apos;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_mercoledi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_mercoledi&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana mercoledi&apos;</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_mercoledi&apos;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#giornoSettimana_venerdi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_venerdi&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+        <rdfs:comment xml:lang="it">giorno settimana venerdi&apos;</rdfs:comment>
+        <rdfs:label xml:lang="it">giornoSettimana_venerdi&apos;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fitnessOntology#gold&apos;sGymVenice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fitnessOntology#gold&apos;sGymVenice">
+        <rdfs:comment xml:lang="it">gold&apos;sGymVenice</rdfs:comment>
+        <rdfs:label xml:lang="it">gold&apos;sGymVenice</rdfs:label>
+        <skos:exactMatch>http://viaf.org/viaf/150273807</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://m.wikidata.org/wiki/Q2220762 -->
+
+    <owl:NamedIndividual rdf:about="https://m.wikidata.org/wiki/Q2220762">
+        <rdfs:label xml:lang="it">disco in wikidata</rdfs:label>
+        <rdfs:label xml:lang="it">wikidata:disco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q1043897 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q1043897">
+        <rdfs:comment xml:lang="it">bilanciere in wikidata</rdfs:comment>
+        <rdfs:label xml:lang="it">wikidata:bilanciere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q1370818 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q1370818">
+        <rdfs:comment xml:lang="it">cyclette in wikidata</rdfs:comment>
+        <rdfs:label xml:lang="it">wikidata:cyclette</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q1542861 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q1542861">
+        <rdfs:comment xml:lang="it">rowing machine in wikidata</rdfs:comment>
+        <rdfs:label xml:lang="it">wikidata:rowing machine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q2588216 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q2588216">
+        <rdfs:comment xml:lang="it">leg extension in wikidata</rdfs:comment>
+        <rdfs:label xml:lang="it">wikidata:leg extension</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q3398543 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q3398543">
+        <rdfs:comment xml:lang="it">leg curl in wikidata</rdfs:comment>
+        <rdfs:label xml:lang="it">wikidata:leg curl</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q48378 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q48378">
+        <rdfs:label xml:lang="it">pulley in wikidata</rdfs:label>
+        <rdfs:label xml:lang="it">wikidata:pulley</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q814819 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q814819">
+        <rdfs:comment xml:lang="it">leg press in wikidata</rdfs:comment>
+        <rdfs:label xml:lang="it">wikidata:leg press</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:label xml:lang="en">creator</rdfs:label>
+        <rdfs:comment xml:lang="it">proprietà creator nel vocabolario dc</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/goodrelations/v1#BusinessEntity"/>
+            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Corso"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Disciplina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Esercizio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#GiornoSettimana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Persona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Ruolo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Sala"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Servizio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#SpecificaOrarioApertura"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#TipologiaAbbonamento"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Avanzato"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Intermedio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#Neofita"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_abductorMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_adductorMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_calfMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_chestPress"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cyclette"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_latMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legCurl"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legExtension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_legPress"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_multipower"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pectoralMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_poliercolina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pulley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_rowingMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_tapisRoulant"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_bilanciere"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_manubrio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaDeclinata"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaInclinata"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaPiana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaRegolabile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pancaScott"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_pedanaStacco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_rack"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaSollevamentoPesi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_cinturaZavorra"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_dipStation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#attrezzatura_sbarraTrazioni"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#corso_mobility"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#corso_pilates"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#corso_strong"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_enhancedBodybuilding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_bodybuilding_naturalBodybuilding"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_endurance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_skill"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_calisthenics_streetLifting"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_geared"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#disciplina_powerlifting_raw"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_domenica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_sabato"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_giovedi&apos;"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_lunedi&apos;"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_martedi&apos;"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_mercoledi&apos;"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#giornoSettimana_venerdi&apos;"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_areaRelax"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_bagnoTurco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_bar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_piscina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_reception"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_sauna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_spogliatoio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#servizio_wifi"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_annuale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_bimestrale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_mensile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_semestrale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_trimestrale"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#1_sala_salaPesi_2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#monthDiff">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#diff">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#yearsDiff">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#monthsDiff">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#ds">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#dur">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#s2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#s3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#rs">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#d1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#d2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping tra la classe gr:Individual e la classe Attrezzatura</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/goodrelations/v1#Individual"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#Attrezzatura"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assegna la proprietà haTipologia mensile ad un Abbonamento se esso ha una durata di 30 giorni</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#Abbonamento"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/fitnessOntology#monthDiff"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#yearMonthDuration"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#diff"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#yearsDiff"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#monthsDiff"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#haDataScadenza"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#ds"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtractDateTimesYieldingYearMonthDuration"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#diff"/>
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#ds"/>
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/fitnessOntology#dur"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#haDataUltimoRinnovo"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#dur"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#haTipologia"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#tipologiaAbbonamento_mensile"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorizza una Palestra in PalestraGrande se essa è compostaDa almeno 3 Sale</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#èCompostaDa"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#s2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#èCompostaDa"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#s1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#s2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#s2"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#s3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#Palestra"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#èCompostaDa"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#s3"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#PalestraGrande"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorizza una Persona in un Intermedio se pratica un RuoloSportivo con anniDiAllenamento compresi tra 2 e 5(estremi inclusi)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#haRuolo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#rs"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#haAnniDiAllenamento"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#rs"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/fitnessOntology#a"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#Intermedio"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping tra la classe Posizione e Location di GoodRelations</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#Posizione"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/goodrelations/v1#Location"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorizza una scheda di allenamento in SchedaDiAllenamentoMultiDisciplinare se la scheda di allenamento è inerente a più discipline</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamento"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#inerente"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#d1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#inerente"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#d2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#d1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/fitnessOntology#d2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/fitnessOntology#SchedaDiAllenamentoMultiDisciplinare"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/fitnessOntology#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

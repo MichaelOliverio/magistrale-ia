@@ -1,0 +1,1820 @@
+@prefix : <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema> .
+
+<http://www.semanticweb.org/mario/ontologies/esame/progettoCinema> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://www.ontologydesignpatterns.org/cp/owl/bag.owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+<http://xmlns.com/foaf/0.1/knows> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                                                               rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag> ;
+                                                               rdfs:range <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item> ;
+                                                               rdfs:comment "has item - The link to every item of the Bag" ;
+                                                               rdfs:label "has item" .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item> ;
+                                                                   rdfs:range [ rdf:type owl:Class ;
+                                                                                owl:complementOf <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item>
+                                                                              ] ;
+                                                                   rdfs:comment "itemContent - The link to the actual resource to which the item refers." ;
+                                                                   rdfs:label "item content" .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                                                              owl:inverseOf <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem> ;
+                                                              rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item> ;
+                                                              rdfs:range <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag> ;
+                                                              rdfs:comment "item of - The link from an item to the Bag where it is contained" ;
+                                                              rdfs:label "item of" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AmbientatoIn
+:AmbientatoIn rdf:type owl:ObjectProperty ;
+              owl:inverseOf :AmbientazioneDi ;
+              rdfs:domain :Film ;
+              rdfs:range :Ambientazione .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AmbientazioneDi
+:AmbientazioneDi rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Ambientazione ;
+                 rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ContieneCast
+:ContieneCast rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Film ;
+              rdfs:range :Cast .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DIrettoDa
+:DIrettoDa rdf:type owl:ObjectProperty ;
+           owl:inverseOf :Dirige ;
+           rdfs:domain :Film ;
+           rdfs:range :NazionalitaRegista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DirettoreAllaMusicaDi
+:DirettoreAllaMusicaDi rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :HaDirettore ;
+                       rdfs:domain :DirettoreAllaMusica ;
+                       rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Dirige
+:Dirige rdf:type owl:ObjectProperty ;
+        rdfs:domain :NazionalitaRegista ;
+        rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventoDi
+:EventoDi rdf:type owl:ObjectProperty ;
+          owl:inverseOf :haEventi ;
+          rdfs:domain :Eventi ;
+          rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmProdotto
+:FilmProdotto rdf:type owl:ObjectProperty ;
+              rdfs:domain :OrigineDiProduzione ;
+              rdfs:range :Film ;
+              owl:propertyChainAxiom ( :ProdottoDa
+                                       :Dirige
+                                     ) .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaAttore
+:HaAttore rdf:type owl:ObjectProperty ;
+          owl:inverseOf :RecintaIn ;
+          rdfs:domain :Film ;
+          rdfs:range :Attore .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaDirettore
+:HaDirettore rdf:type owl:ObjectProperty ;
+             rdfs:domain :Film ;
+             rdfs:range :DirettoreAllaMusica .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaPersonaggio
+:HaPersonaggio rdf:type owl:ObjectProperty ;
+               owl:inverseOf :PersonaggioDi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#InterpretaPersonaggio
+:InterpretaPersonaggio rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :InterpretatoDa ;
+                       rdfs:domain :Attore ;
+                       rdfs:range :Personaggio .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#InterpretatoDa
+:InterpretatoDa rdf:type owl:ObjectProperty ;
+                rdfs:domain :Personaggio ;
+                rdfs:range :Attore .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioDi
+:PersonaggioDi rdf:type owl:ObjectProperty ;
+               rdfs:domain :Personaggio ;
+               rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProdottoDa
+:ProdottoDa rdf:type owl:ObjectProperty ;
+            owl:inverseOf :ProduceFilm ;
+            rdfs:domain :OrigineDiProduzione ;
+            rdfs:range :NazionalitaRegista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduceFilm
+:ProduceFilm rdf:type owl:ObjectProperty ;
+             rdfs:domain :NazionalitaRegista ;
+             rdfs:range :OrigineDiProduzione .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RecintaIn
+:RecintaIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Attore ;
+           rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaDi
+:RegistaDi rdf:type owl:ObjectProperty ;
+           owl:inverseOf :haRegista ;
+           rdfs:domain :Regista ;
+           rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ScrittoreDi
+:ScrittoreDi rdf:type owl:ObjectProperty ;
+             owl:inverseOf :haScrittore ;
+             rdfs:domain :Scrittore ;
+             rdfs:range :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haComeCast
+:haComeCast rdf:type owl:ObjectProperty ;
+            rdfs:domain :Cast ;
+            rdfs:range :Attore .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi
+:haEventi rdf:type owl:ObjectProperty ;
+          rdfs:domain :Film ;
+          rdfs:range :Eventi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haNazionalita
+:haNazionalita rdf:type owl:ObjectProperty ;
+               rdfs:domain :Regista ;
+               rdfs:range :NazionalitaRegista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRegista
+:haRegista rdf:type owl:ObjectProperty ;
+           rdfs:domain :Film ;
+           rdfs:range :Regista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo
+:haRuolo rdf:type owl:ObjectProperty ;
+         rdfs:domain :Persona ;
+         rdfs:range :Ruolo .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haScrittore
+:haScrittore rdf:type owl:ObjectProperty ;
+             rdfs:domain :Film ;
+             rdfs:range :Scrittore .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ;
+                                                            rdfs:range xsd:integer ;
+                                                            rdfs:comment "size - The number of items belonging to a collection" ;
+                                                            rdfs:label "size" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnnoDiUscita
+:AnnoDiUscita rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Film ;
+              rdfs:range xsd:int ;
+              rdfs:comment "anno in cui un film è stato rilasciato" ;
+              rdfs:label "AnnoDiUscita" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CasaCinematografica
+:CasaCinematografica rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Film ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Casa produttoria di un film" ;
+                     rdfs:label "CasaCinematografica" ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Production_company> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaNrFilm
+:HaNrFilm rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Film ;
+          rdfs:range xsd:integer ;
+          rdfs:label "HaNrFilm" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Nome
+:Nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Film ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Titolo di un film" ;
+      rdfs:label "Nome" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RankingAttore
+:RankingAttore rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Attore ;
+               rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RankingFilm
+:RankingFilm rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Film ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Valutazione
+:Valutazione rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Film ;
+             rdfs:range xsd:float ;
+             rdfs:comment "Valutazione che un film ha ricevuto dalla critica" ;
+             rdfs:label "Valutazione" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ;
+                                                           rdfs:comment "Bag - Collection that can have a number of copies of each object" ;
+                                                           rdfs:label "(collections) Bag" .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item> rdf:type owl:Class ;
+                                                            rdfs:subClassOf owl:Thing ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent> ;
+                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                            ] ;
+                                                            owl:disjointWith <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ;
+                                                            rdfs:comment "Item - Element belonging to a Bag" ;
+                                                            rdfs:label "item" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AcclamatiDallaCritica
+:AcclamatiDallaCritica rdf:type owl:Class ;
+                       owl:equivalentClass :TopRated ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :Valutazione ;
+                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                  owl:onDatatype xsd:float ;
+                                                                  owl:withRestrictions ( [ xsd:minExclusive "8.3"^^xsd:float
+                                                                                         ]
+                                                                                       )
+                                                                ]
+                                           ] ;
+                       rdfs:subClassOf :Critica ;
+                       rdfs:comment "I film Acclamati dalla critica sono quei film che hanno ricevuto una valutazione molto positiva da un gruppo di esperti critici" ;
+                       rdfs:label "Acclamati dalla critica" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Ambientazione
+:Ambientazione rdf:type owl:Class ;
+               rdfs:subClassOf :Film ;
+               rdfs:comment "Luogo in cui viene ambientato un film" ;
+               rdfs:label "Ambientazione" ;
+               rdfs:seeAlso <https://dbpedia.org/page/Filming_location> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Attore
+:Attore rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :haRuolo ;
+                              owl:someValuesFrom :Attore
+                            ] ;
+        rdfs:subClassOf :Ruolo ;
+        rdfs:comment "Un attore  è chi rappresenta o interpreta una parte o un ruolo in uno spettacolo teatrale, cinematografico, televisivo, radiofonico o di strada." ;
+        rdfs:label "Attore" ;
+        rdfs:seeAlso <https://dbpedia.org/page/Actor> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AttorePopolare
+:AttorePopolare rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :RankingAttore ;
+                                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                  owl:onDatatype xsd:int ;
+                                                                                  owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:int
+                                                                                                         ]
+                                                                                                       )
+                                                                                ]
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :RankingAttore ;
+                                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                  owl:onDatatype xsd:int ;
+                                                                                  owl:withRestrictions ( [ xsd:maxInclusive "100"^^xsd:int
+                                                                                                         ]
+                                                                                                       )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :Attore ;
+                rdfs:comment "Gli attori popolari sono gli attori più visti dagli utenti" ;
+                rdfs:label "AttorePopolare" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BiancoNero
+:BiancoNero rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :AnnoDiUscita ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:int ;
+                                                       owl:withRestrictions ( [ xsd:maxExclusive "1965"^^xsd:int
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf :Pellicola ;
+            rdfs:comment "vecchia pellicola in bianco e nero, tipica dei film prodotti prima del 1965" ;
+            rdfs:label "BiancoNero" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Cast
+:Cast rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty :haComeCast ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Attore
+                          ] ;
+      rdfs:subClassOf :Film ;
+      rdfs:comment "gruppo di persone che lavora nella produzione di un film" ;
+      rdfs:label "Cast" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Colori
+:Colori rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :AnnoDiUscita ;
+                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                   owl:onDatatype xsd:int ;
+                                                   owl:withRestrictions ( [ xsd:minInclusive "1965"^^xsd:int
+                                                                          ]
+                                                                        )
+                                                 ]
+                            ] ;
+        rdfs:subClassOf :Pellicola ;
+        rdfs:comment "pellicola a colori dei film dopo il 1965" ;
+        rdfs:label "Colori" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ConsigliatiDagliUtenti
+:ConsigliatiDagliUtenti rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :Valutazione ;
+                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                   owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                          owl:datatypeComplementOf [ rdf:type rdfs:Datatype ;
+                                                                                                                     owl:onDatatype xsd:float ;
+                                                                                                                     owl:withRestrictions ( [ xsd:minExclusive "8.3"^^xsd:float
+                                                                                                                                            ]
+                                                                                                                                          )
+                                                                                                                   ]
+                                                                                        ]
+                                                                                        [ rdf:type rdfs:Datatype ;
+                                                                                          owl:onDatatype xsd:float ;
+                                                                                          owl:withRestrictions ( [ xsd:minInclusive "7.5"^^xsd:float
+                                                                                                                 ]
+                                                                                                               )
+                                                                                        ]
+                                                                                      )
+                                                                 ]
+                                            ] ;
+                        rdfs:subClassOf :Popolarità ;
+                        rdfs:comment "Film consigliati dalla critica con valutazione almeno 7.5 e non maggiore di 8.3" ;
+                        rdfs:label "ConsigliatiDagliUtenti" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Critica
+:Critica rdf:type owl:Class ;
+         rdfs:label "Critica" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Cult
+:Cult rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :AnnoDiUscita ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:onDatatype xsd:int ;
+                                                                                               owl:withRestrictions ( [ xsd:minInclusive "1930"^^xsd:int
+                                                                                                                      ]
+                                                                                                                    )
+                                                                                             ]
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :AnnoDiUscita ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:onDatatype xsd:int ;
+                                                                                               owl:withRestrictions ( [ xsd:maxInclusive "1999"^^xsd:int
+                                                                                                                      ]
+                                                                                                                    )
+                                                                                             ]
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :Valutazione ;
+                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                        owl:onDatatype xsd:float ;
+                                                                        owl:withRestrictions ( [ xsd:minInclusive "8.0"^^xsd:float
+                                                                                               ]
+                                                                                             )
+                                                                      ]
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf :Popolarità ;
+      rdfs:comment "Film in bianco e nero e a colori che hanno riscontrato grande successo tra la critica e il pubblico, tali da definirsi \"Film di Culto\"" ;
+      rdfs:label "Cult" ;
+      rdfs:seeAlso <https://dbpedia.org/page/DBCult_Film_Institute> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DirettoreAllaMusica
+:DirettoreAllaMusica rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :haRuolo ;
+                                           owl:someValuesFrom :DirettoreAllaMusica
+                                         ] ;
+                     rdfs:subClassOf :Ruolo ;
+                     rdfs:comment "dirige le musiche del film" ;
+                     rdfs:label "DirettoreAllaMusica" ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Film_score> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Drama
+:Drama rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :haEventi ;
+                             owl:someValuesFrom :Eventi_Drama
+                           ] ;
+       rdfs:subClassOf :Genere .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi
+:Eventi rdf:type owl:Class ;
+        rdfs:label "Eventi" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiComici_Divertenti
+:EventiComici_Divertenti rdf:type owl:Class ;
+                         rdfs:subClassOf :Eventi ;
+                         rdfs:comment "eventi divertenti nel film" ;
+                         rdfs:label "Eventi comici e divertenti" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiFuturistici
+:EventiFuturistici rdf:type owl:Class ;
+                   rdfs:subClassOf :Eventi ;
+                   rdfs:comment "eventi che potrebbero verificarsi in un futuro prossimo" ;
+                   rdfs:label "Eventi Futuristici" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiImmaginari
+:EventiImmaginari rdf:type owl:Class ;
+                  rdfs:subClassOf :Eventi ;
+                  rdfs:comment "eventi che sono frutto della fantasia" ;
+                  rdfs:label "Eventi Immaginari" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiStorici
+:EventiStorici rdf:type owl:Class ;
+               rdfs:subClassOf :Eventi ;
+               rdfs:comment "eventi avvenuti nel passato" ;
+               rdfs:label "Eventi Storici" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi_Drama
+:Eventi_Drama rdf:type owl:Class ;
+              rdfs:subClassOf :Eventi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Film
+:Film rdf:type owl:Class ;
+      rdfs:label "Film" ;
+      rdfs:seeAlso <https://dbpedia.org/page/Film> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmAmericano
+:FilmAmericano rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :DIrettoDa ;
+                                     owl:someValuesFrom :RegistaAmericano
+                                   ] ;
+               rdfs:subClassOf :Filmografia ;
+               rdfs:comment "film diretti da un regista americano e prodotti in america" ;
+               rdfs:label "FilmAmericano" ;
+               rdfs:seeAlso <https://dbpedia.org/page/Category:American_films> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmItaliano
+:FilmItaliano rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :DIrettoDa ;
+                                    owl:someValuesFrom :RegistaItaliano
+                                  ] ;
+              rdfs:subClassOf :Filmografia ;
+              rdfs:comment "film diretti da un regista italiano" ;
+              rdfs:label "FilmItaliano" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Filmografia
+:Filmografia rdf:type owl:Class ;
+             rdfs:subClassOf :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Genere
+:Genere rdf:type owl:Class ;
+        rdfs:subClassOf :Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MostPopular
+:MostPopular rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :RankingFilm ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:int ;
+                                                                               owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:int
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :RankingFilm ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:int ;
+                                                                               owl:withRestrictions ( [ xsd:maxInclusive "500"^^xsd:int
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :Popolarità ;
+             rdfs:comment "Film più visti" ;
+             rdfs:label "Most Popular" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NazionalitaRegista
+:NazionalitaRegista rdf:type owl:Class ;
+                    rdfs:subClassOf :Regista ;
+                    rdfs:label "NazionalitaRegista" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#OrigineDiProduzione
+:OrigineDiProduzione rdf:type owl:Class ;
+                     rdfs:subClassOf :Film ;
+                     rdfs:label "OrigineDiProduzione" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Pellicola
+:Pellicola rdf:type owl:Class ;
+           rdfs:subClassOf :Film ;
+           rdfs:label "Pellicola" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:comment "individuo che occupa un ruolo all'interno del film" ;
+         rdfs:label "Persona" ;
+         rdfs:seeAlso <https://dbpedia.org/ontology/Person> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Personaggio
+:Personaggio rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :PersonaggioDi ;
+                                   owl:someValuesFrom :Film
+                                 ] ;
+             rdfs:label "Personaggio" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioImmaginario
+:PersonaggioImmaginario rdf:type owl:Class ;
+                        rdfs:subClassOf :Personaggio ;
+                        rdfs:comment "personaggio puramente inventato" ;
+                        rdfs:label "PersonaggioImmaginario" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioReale
+:PersonaggioReale rdf:type owl:Class ;
+                  rdfs:subClassOf :Personaggio ;
+                  rdfs:comment "personaggio che esiste realmente" ;
+                  rdfs:label "PersonaggioReale" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioStorico
+:PersonaggioStorico rdf:type owl:Class ;
+                    rdfs:subClassOf :Personaggio ;
+                    rdfs:comment "personaggio d'epoca, vissuto realmente in un determinato periodo storico" ;
+                    rdfs:label "PersonaggioStorico" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Popolarità
+:Popolarità rdf:type owl:Class ;
+            rdfs:comment "Film Popolari o del momento" ;
+            rdfs:label "Popolarità" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduzioneAmericana
+:ProduzioneAmericana rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :ProdottoDa ;
+                                           owl:someValuesFrom :RegistaAmericano
+                                         ] ;
+                     rdfs:subClassOf :OrigineDiProduzione ;
+                     owl:disjointWith :ProduzioneItaliana ;
+                     rdfs:comment "Produzione di origine americana. i film vengono prodotti da registi Americani" ;
+                     rdfs:label "ProduzioneAmericana" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduzioneItaliana
+:ProduzioneItaliana rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :ProdottoDa ;
+                                          owl:someValuesFrom :RegistaItaliano
+                                        ] ;
+                    rdfs:subClassOf :OrigineDiProduzione ;
+                    rdfs:comment "film con origine di produzione italiana. sono diretti da registi italiani" ;
+                    rdfs:label "ProduzioneItaliana" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista
+:Regista rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :haRuolo ;
+                               owl:someValuesFrom :Regista
+                             ] ;
+         rdfs:subClassOf :Ruolo ;
+         rdfs:comment "responsabile tecnico e artistico di un opera cinematografica" ;
+         rdfs:label "Regista" ;
+         rdfs:seeAlso <https://dbpedia.org/ontology/director> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaAmericano
+:RegistaAmericano rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :haNazionalita ;
+                                        owl:someValuesFrom :RegistaAmericano
+                                      ] ;
+                  rdfs:subClassOf :NazionalitaRegista ;
+                  owl:disjointWith :RegistaItaliano ;
+                  rdfs:comment "Regista di nazionalità americana" ;
+                  rdfs:label "RegistaAmericano" ;
+                  rdfs:seeAlso <https://dbpedia.org/page/Category:American_film_directors> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaItaliano
+:RegistaItaliano rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :haNazionalita ;
+                                       owl:someValuesFrom :RegistaItaliano
+                                     ] ;
+                 rdfs:subClassOf :NazionalitaRegista ;
+                 rdfs:comment "regista di nazionalità italiana" ;
+                 rdfs:label "RegistaItaliano" ;
+                 rdfs:seeAlso <https://dbpedia.org/page/Category:Italian_film_directors> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Ruolo
+:Ruolo rdf:type owl:Class ;
+       rdfs:label "Ruolo" ;
+       rdfs:seeAlso <https://dbpedia.org/page/Film_crew> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Saga
+:Saga rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty :HaNrFilm ;
+                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                 owl:onDatatype xsd:int ;
+                                                 owl:withRestrictions ( [ xsd:minExclusive "3"^^xsd:int
+                                                                        ]
+                                                                      )
+                                               ]
+                          ] ;
+      rdfs:subClassOf :Tipologia ;
+      rdfs:comment "Una saga  è un insieme di più film legati da una sequenzialità o successione, incentrati su un personaggio o un tema comune." ;
+      rdfs:label "Saga" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Scrittore
+:Scrittore rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :haRuolo ;
+                                 owl:someValuesFrom :Scrittore
+                               ] ;
+           rdfs:subClassOf :Ruolo ;
+           rdfs:comment "scrittore della storia di un opera cinematografica" ;
+           rdfs:label "Scrittore" ;
+           rdfs:seeAlso <https://dbpedia.org/page/Writer> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Sparatorie_Action
+:Sparatorie_Action rdf:type owl:Class ;
+                   rdfs:subClassOf :Eventi ;
+                   rdfs:comment "scene d'azione, durante le quali uno o più protagonisti si trovano a dover affrontare una serie di sfide che richiedono coraggio e prodezza fisica" ;
+                   rdfs:label "Sparatorie_Action" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Tipologia
+:Tipologia rdf:type owl:Class ;
+           rdfs:label "Tipologia" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TopRated
+:TopRated rdf:type owl:Class ;
+          rdfs:subClassOf :Popolarità ;
+          rdfs:comment "Film più votati dagli utenti e dalla critica" ;
+          rdfs:label "Top Rated" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Trilogia
+:Trilogia rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :HaNrFilm ;
+                                owl:hasValue 3
+                              ] ;
+          rdfs:subClassOf :Tipologia ;
+          rdfs:comment "3 film legati tra loro con la stessa tematica e personaggi" ;
+          rdfs:label "Trilogia" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#azione
+:azione rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :haEventi ;
+                              owl:someValuesFrom :Sparatorie_Action
+                            ] ;
+        rdfs:subClassOf :Genere ;
+        rdfs:comment "film con scene d'azione" ;
+        rdfs:label "azione" ;
+        rdfs:seeAlso <https://dbpedia.org/page/Action_film> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#comedy
+:comedy rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :haEventi ;
+                              owl:someValuesFrom :EventiComici_Divertenti
+                            ] ;
+        rdfs:subClassOf :Genere ;
+        rdfs:comment "film con risvolti comici" ;
+        rdfs:label "comedy" ;
+        rdfs:seeAlso <https://dbpedia.org/page/Comedy_film> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#eventi_Western
+:eventi_Western rdf:type owl:Class ;
+                rdfs:subClassOf :Eventi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#fantasy
+:fantasy rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :haEventi ;
+                               owl:someValuesFrom :EventiImmaginari
+                             ] ;
+         rdfs:subClassOf :Genere ;
+         rdfs:comment "film con eventi fantasy" ;
+         rdfs:label "fantasy" ;
+         rdfs:seeAlso <https://dbpedia.org/page/Fantasy> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#western
+:western rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :haEventi ;
+                               owl:someValuesFrom :eventi_Western
+                             ] ;
+         rdfs:subClassOf :Genere ;
+         rdfs:comment "film ambientati nel FarWest" ;
+         rdfs:label "western" ;
+         rdfs:seeAlso <https://dbpedia.org/page/Western_(genre)> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnitaEkberg
+:AnitaEkberg rdf:type owl:NamedIndividual ,
+                      :Attore ;
+             :RecintaIn :LaDolceVita ;
+             :RankingAttore "594"^^xsd:int ;
+             <http://xmlns.com/foaf/0.1/knows> :FedericoFellini ,
+                                               :MarcelloMastroianni ;
+             <http://xmlns.com/foaf/0.1/name> :AnitaEkberg .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BastardiSenzaGloria
+:BastardiSenzaGloria rdf:type owl:NamedIndividual ,
+                              :Film ;
+                     :haRegista :QuentinTarantino ;
+                     :haScrittore :QuentinTarantino ;
+                     :AnnoDiUscita "2009"^^xsd:int ;
+                     :Nome "Inglorious Basterds" ;
+                     :RankingFilm "113"^^xsd:int ;
+                     :Valutazione "8.3"^^xsd:float ;
+                     <http://purl.org/dc/elements/1.1/creator> :QuentinTarantino ;
+                     <http://purl.org/dc/elements/1.1/description> "Nella Francia occupata dai nazisti durante la seconda guerra mondiale, un progetto per assassinare i leader nazisti da parte di un gruppo di soldati ebrei americani coincide con i stessi piani vendicativi della proprietaria di un cinema." ;
+                     <http://purl.org/dc/elements/1.1/language> "English" ;
+                     <http://purl.org/dc/elements/1.1/title> :BastardiSenzaGloria ;
+                     rdfs:label "Inglorious Basterds" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Bruce_Wayne
+:Bruce_Wayne rdf:type owl:NamedIndividual ,
+                      :PersonaggioImmaginario ;
+             :PersonaggioDi :IlCavaliereOscuro ;
+             rdfs:label "Bruce Wayne" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CalvinCandie
+:CalvinCandie rdf:type owl:NamedIndividual ,
+                       :PersonaggioImmaginario ;
+              :PersonaggioDi :Django ;
+              rdfs:label "Calvin Candie" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastDjango
+:CastDjango rdf:type owl:NamedIndividual ;
+            :haComeCast :Christoph_Waltz ,
+                        :JamieFoxx ,
+                        :LeonardoDiCaprio ;
+            rdfs:label "CastDjango" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastLaDolceVita
+:CastLaDolceVita rdf:type owl:NamedIndividual ;
+                 :haComeCast :AnitaEkberg ,
+                             :MarcelloMastroianni ;
+                 rdfs:label "CastLaDolceVita" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastPulpFiction
+:CastPulpFiction rdf:type owl:NamedIndividual ;
+                 :haComeCast :JohnTravolta ,
+                             :SamuelJackson ;
+                 rdfs:label "CastPulpFiction" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastTheAvengers
+:CastTheAvengers rdf:type owl:NamedIndividual ;
+                 :haComeCast :ChrisHemsworth ,
+                             :JoshBrolin ,
+                             :RobertDowneyJr ;
+                 rdfs:label "CastTheAvengers" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastTrilogia
+:CastTrilogia rdf:type owl:NamedIndividual ;
+              :haComeCast :Clint_Eastowood ,
+                          :EliWallach ,
+                          :LeeVanCliff ;
+              rdfs:label "CastTrilogia" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChrisHemsworth
+:ChrisHemsworth rdf:type owl:NamedIndividual ,
+                         :Attore ;
+                :InterpretaPersonaggio :Thor ;
+                :RecintaIn :TheAvengers ;
+                :RankingAttore "75"^^xsd:int ;
+                <http://xmlns.com/foaf/0.1/knows> :JoshBrolin ,
+                                                  :RobertDowneyJr ;
+                <http://xmlns.com/foaf/0.1/name> :ChrisHemsworth .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChristianBale
+:ChristianBale rdf:type owl:NamedIndividual ,
+                        :Attore ;
+               :InterpretaPersonaggio :Bruce_Wayne ;
+               :RecintaIn :IlCavaliereOscuro ;
+               :RankingAttore "62"^^xsd:int ;
+               rdfs:label "Christian Bale" ;
+               <http://xmlns.com/foaf/0.1/name> :ChristianBale ,
+                                                :Christopher_Nolan .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christoph_Waltz
+:Christoph_Waltz rdf:type owl:NamedIndividual ,
+                          :Attore ;
+                 :InterpretaPersonaggio :DrKingSchultz ,
+                                        :Hans_Landa ;
+                 :RecintaIn :BastardiSenzaGloria ,
+                            :Django ;
+                 :RankingAttore "12"^^xsd:int ;
+                 <http://xmlns.com/foaf/0.1/knows> :JamieFoxx ,
+                                                   :LeonardoDiCaprio ;
+                 <http://xmlns.com/foaf/0.1/name> :Christoph_Waltz .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan
+:Christopher_Nolan rdf:type owl:NamedIndividual ,
+                            :Regista ;
+                   :haNazionalita :Regista_Americano ;
+                   rdfs:label "Christopher Nolan" ;
+                   <http://xmlns.com/foaf/0.1/knows> :ChristianBale ;
+                   <http://xmlns.com/foaf/0.1/name> :Christopher_Nolan .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Clint_Eastowood
+:Clint_Eastowood rdf:type owl:NamedIndividual ,
+                          :Attore ;
+                 :RecintaIn :TrilogiaDelDollaro ;
+                 :RankingAttore "20"^^xsd:int ;
+                 <http://xmlns.com/foaf/0.1/knows> :EliWallach ,
+                                                   :LeeVanCliff ;
+                 <http://xmlns.com/foaf/0.1/name> :Clint_Eastowood .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Comicita_Umorismo
+:Comicita_Umorismo rdf:type owl:NamedIndividual ,
+                            :EventiComici_Divertenti ;
+                   :EventoDi :LaDolceVita ,
+                             <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                   rdfs:label "Comicita_Umorismo" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Django
+:Django rdf:type owl:NamedIndividual ,
+                 :Film ;
+        :ContieneCast :CastDjango ;
+        :haRegista :QuentinTarantino ;
+        :haScrittore :QuentinTarantino ;
+        :AnnoDiUscita "2010"^^xsd:int ;
+        :CasaCinematografica "A Band Apart" ;
+        :Nome "Django" ;
+        :RankingFilm "268"^^xsd:int ;
+        :Valutazione "8.4"^^xsd:float ;
+        <http://purl.org/dc/elements/1.1/creator> :QuentinTarantino ;
+        <http://purl.org/dc/elements/1.1/description> "Con l'aiuto di un cacciatore di taglie tedesco, uno schiavo liberato si mette in viaggio per salvare sua moglie da un brutale proprietario di piantagione del Mississippi." ;
+        <http://purl.org/dc/elements/1.1/language> "English" ;
+        <http://purl.org/dc/elements/1.1/title> :Django ;
+        <http://purl.org/dc/elements/1.1/type> :western ;
+        rdfs:label "Django" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DjangoFreeman
+:DjangoFreeman rdf:type owl:NamedIndividual ,
+                        :PersonaggioImmaginario ;
+               :PersonaggioDi :Django ;
+               <http://xmlns.com/foaf/0.1/knows> "DjangoFreeman" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DrKingSchultz
+:DrKingSchultz rdf:type owl:NamedIndividual ,
+                        :PersonaggioImmaginario ;
+               :PersonaggioDi :Django ;
+               rdfs:label "DrKingShultz" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EliWallach
+:EliWallach rdf:type owl:NamedIndividual ,
+                     :Attore ;
+            :RecintaIn :TrilogiaDelDollaro ;
+            :RankingAttore "287"^^xsd:int ;
+            <http://xmlns.com/foaf/0.1/knows> :Clint_Eastowood ,
+                                              :LeeVanCliff ;
+            <http://xmlns.com/foaf/0.1/name> :EliWallach .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EnnioMorricone
+:EnnioMorricone rdf:type owl:NamedIndividual ,
+                         :DirettoreAllaMusica ;
+                :DirettoreAllaMusicaDi :Django ,
+                                       :TrilogiaDelDollaro ;
+                <http://xmlns.com/foaf/0.1/knows> :QuentinTarantino ,
+                                                  :SergioLeone ;
+                <http://xmlns.com/foaf/0.1/name> :EnnioMorricone .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiDrama
+:EventiDrama rdf:type owl:NamedIndividual ,
+                      :Eventi_Drama ;
+             :EventoDi :BastardiSenzaGloria ,
+                       <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+             rdfs:label "EventiDrama" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiFantasi
+:EventiFantasi rdf:type owl:NamedIndividual ,
+                        :EventiImmaginari ;
+               :EventoDi :IlCavaliereOscuro ,
+                         :Inception ,
+                         :Interstellar ,
+                         :TheAvengers ;
+               rdfs:label "EventiFantasy" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi_Western
+:Eventi_Western rdf:type owl:NamedIndividual ,
+                         :eventi_Western ;
+                :EventoDi :Django ,
+                          :TrilogiaDelDollaro ;
+                rdfs:label "Eventi_Western" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventoStorico
+:EventoStorico rdf:type owl:NamedIndividual ,
+                        :EventiStorici ;
+               :EventoDi :BastardiSenzaGloria ,
+                         :Django ;
+               rdfs:label "EventoStorico" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Far_West
+:Far_West rdf:type owl:NamedIndividual ,
+                   :Ambientazione ;
+          :AmbientazioneDi :Django ,
+                           :TrilogiaDelDollaro ;
+          rdfs:label "Far_West" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FedericoFellini
+:FedericoFellini rdf:type owl:NamedIndividual ;
+                 :haNazionalita :Regista_Italiano ;
+                 <http://xmlns.com/foaf/0.1/knows> :AnitaEkberg ,
+                                                   :MarcelloMastroianni ;
+                 <http://xmlns.com/foaf/0.1/name> :FedericoFellini .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmAmericani
+:FilmAmericani rdf:type owl:NamedIndividual ;
+               :ProdottoDa :Regista_Americano ;
+               rdfs:label "FilmAmericani" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmItaliani
+:FilmItaliani rdf:type owl:NamedIndividual ;
+              :ProdottoDa :Regista_Italiano ;
+              rdfs:label "FilmItaliani" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Fulvio_Morsella
+:Fulvio_Morsella rdf:type owl:NamedIndividual ,
+                          :Scrittore ;
+                 <http://xmlns.com/foaf/0.1/knows> :SergioLeone ;
+                 <http://xmlns.com/foaf/0.1/name> :Fulvio_Morsella .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#GermaniaNazista
+:GermaniaNazista rdf:type owl:NamedIndividual ,
+                          :Ambientazione ;
+                 :AmbientazioneDi :BastardiSenzaGloria ;
+                 rdfs:label "GermaniaNazista" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Gotham_City
+:Gotham_City rdf:type owl:NamedIndividual ,
+                      :Ambientazione ;
+             :AmbientazioneDi :IlCavaliereOscuro ;
+             rdfs:label "GothamCity" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Hans_Landa
+:Hans_Landa rdf:type owl:NamedIndividual ,
+                     :PersonaggioStorico ;
+            :PersonaggioDi :BastardiSenzaGloria ;
+            rdfs:label "Hans_Landa" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IlCavaliereOscuro
+:IlCavaliereOscuro rdf:type owl:NamedIndividual ,
+                            :Film ;
+                   :haRegista :Christopher_Nolan ;
+                   :AnnoDiUscita "2008"^^xsd:int ;
+                   :Nome "The Dark Knght" ;
+                   :RankingFilm "68"^^xsd:int ;
+                   :Valutazione "9.0"^^xsd:float ;
+                   <http://purl.org/dc/elements/1.1/creator> :Christopher_Nolan ;
+                   <http://purl.org/dc/elements/1.1/description> "Quando una minaccia chiamata Joker emerge dal suo misterioso passato creando scompiglio e caos nella città di Gotham, il Cavaliere Oscuro deve affrontare le più grandi sfide psicologiche e fisiche per combattere l'ingiustizia" ;
+                   <http://purl.org/dc/elements/1.1/language> "English" ;
+                   <http://purl.org/dc/elements/1.1/title> :IlCavaliereOscuro ;
+                   rdfs:label "IlCavaliereOscuro" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Inception
+:Inception rdf:type owl:NamedIndividual ,
+                    :Film ;
+           :haRegista :Christopher_Nolan ;
+           :AnnoDiUscita "2010"^^xsd:int ;
+           :RankingFilm "123"^^xsd:int ;
+           :Valutazione "8.8"^^xsd:float ;
+           <http://purl.org/dc/elements/1.1/creator> :Christopher_Nolan ;
+           <http://purl.org/dc/elements/1.1/description> "Un ladro che ruba i segreti aziendali attraverso l'uso della tecnologia di condivisione dei sogni ha il compito inverso di inserire un'idea nella mente di un direttore generale." ;
+           <http://purl.org/dc/elements/1.1/language> "English" ;
+           <http://purl.org/dc/elements/1.1/title> :Inception ;
+           rdfs:label "Inception" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Interstellar
+:Interstellar rdf:type owl:NamedIndividual ,
+                       :Film ;
+              :haRegista :Christopher_Nolan ;
+              :AnnoDiUscita "2014"^^xsd:int ;
+              :Nome "Interstellar" ;
+              :RankingFilm "78"^^xsd:int ;
+              :Valutazione "8.6"^^xsd:float ;
+              <http://purl.org/dc/elements/1.1/creator> :Christopher_Nolan ;
+              <http://purl.org/dc/elements/1.1/description> "Una squadra di esploratori viaggia attraverso un tunnel spaziale nel tentativo di assicurare la sopravvivenza dell'umanità." ;
+              <http://purl.org/dc/elements/1.1/language> "English" ;
+              <http://purl.org/dc/elements/1.1/title> :Interstellar ;
+              rdfs:label "Interstellar" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IronMan
+:IronMan rdf:type owl:NamedIndividual ,
+                  :PersonaggioImmaginario ;
+         :PersonaggioDi :TheAvengers ;
+         rdfs:label "IronMan" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JamieFoxx
+:JamieFoxx rdf:type owl:NamedIndividual ,
+                    :Attore ;
+           :InterpretaPersonaggio :DjangoFreeman ;
+           :RecintaIn :Django ;
+           :RankingAttore "55"^^xsd:int ;
+           <http://xmlns.com/foaf/0.1/knows> :Christoph_Waltz ,
+                                             :LeonardoDiCaprio ;
+           <http://xmlns.com/foaf/0.1/name> :JamieFoxx .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JohnTravolta
+:JohnTravolta rdf:type owl:NamedIndividual ,
+                       :Attore ;
+              :RecintaIn :PulpFiction ;
+              :RankingAttore "156"^^xsd:int ;
+              <http://xmlns.com/foaf/0.1/name> :JohnTravolta ,
+                                               :SamuelJackson .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JoshBrolin
+:JoshBrolin rdf:type owl:NamedIndividual ,
+                     :Attore ;
+            :InterpretaPersonaggio :Thanos ;
+            :RecintaIn :TheAvengers ;
+            :RankingAttore "155"^^xsd:int ;
+            <http://xmlns.com/foaf/0.1/name> :ChrisHemsworth ,
+                                             :JoshBrolin ,
+                                             :RobertDowneyJr .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LaDolceVita
+:LaDolceVita rdf:type owl:NamedIndividual ,
+                      :Film ;
+             :haRegista :FedericoFellini ;
+             :haScrittore :FedericoFellini ;
+             :AnnoDiUscita "1960"^^xsd:int ;
+             :CasaCinematografica "Cinecittà, Pathé Consortium Cinéma" ;
+             :Nome "La Dolce Vita" ;
+             :RankingFilm "3650"^^xsd:int ;
+             :Valutazione "8.0"^^xsd:float ;
+             <http://purl.org/dc/elements/1.1/creator> :FedericoFellini ;
+             <http://purl.org/dc/elements/1.1/description> "Una serie di storie che raccontano una settimana della vita di un paparazzo donnaiolo a Roma" ;
+             <http://purl.org/dc/elements/1.1/language> "Italiano" ;
+             <http://purl.org/dc/elements/1.1/title> "La Dolce Vita" ;
+             <http://purl.org/dc/elements/1.1/type> :comedy ;
+             rdfs:label "LaDolceVita" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeeVanCliff
+:LeeVanCliff rdf:type owl:NamedIndividual ,
+                      :Attore ;
+             :RecintaIn :TrilogiaDelDollaro ;
+             :RankingAttore "111"^^xsd:int ;
+             <http://xmlns.com/foaf/0.1/knows> :Clint_Eastowood ,
+                                               :EliWallach ;
+             <http://xmlns.com/foaf/0.1/name> :LeeVanCliff .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeonardoDiCaprio
+:LeonardoDiCaprio rdf:type owl:NamedIndividual ,
+                           :Attore ;
+                  :InterpretaPersonaggio :CalvinCandie ;
+                  :RecintaIn :Django ,
+                             :Inception ;
+                  :RankingAttore "4"^^xsd:int ;
+                  <http://xmlns.com/foaf/0.1/knows> :Christoph_Waltz ,
+                                                    :JamieFoxx ;
+                  <http://xmlns.com/foaf/0.1/name> :LeonardoDiCaprio .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LosAngeles
+:LosAngeles rdf:type owl:NamedIndividual ,
+                     :Ambientazione ;
+            :AmbientazioneDi :PulpFiction ;
+            rdfs:label "LosAngeles" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MarcelloMastroianni
+:MarcelloMastroianni rdf:type owl:NamedIndividual ,
+                              :Attore ;
+                     :RecintaIn :LaDolceVita ,
+                                <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                     :RankingAttore "257"^^xsd:int ;
+                     <http://xmlns.com/foaf/0.1/knows> :AnitaEkberg ,
+                                                       :FedericoFellini ;
+                     <http://xmlns.com/foaf/0.1/name> :MarcelloMastroianni .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Marocco
+:Marocco rdf:type owl:NamedIndividual ,
+                  :Ambientazione ;
+         :AmbientazioneDi :Inception ;
+         rdfs:label "Marocco" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Metthew_McCounaghey
+:Metthew_McCounaghey rdf:type owl:NamedIndividual ,
+                              :Attore ;
+                     :RecintaIn :Interstellar ;
+                     :RankingAttore "55"^^xsd:int ;
+                     rdfs:label "Matthew McCounaghey" ;
+                     <http://xmlns.com/foaf/0.1/knows> :Christopher_Nolan ;
+                     <http://xmlns.com/foaf/0.1/name> :Metthew_McCounaghey .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PulpFiction
+:PulpFiction rdf:type owl:NamedIndividual ,
+                      :Film ;
+             :haRegista :QuentinTarantino ;
+             :haScrittore :QuentinTarantino ;
+             :AnnoDiUscita "1994"^^xsd:int ;
+             :CasaCinematografica "Miramax Films, A Band Apart, Jersey Films" ;
+             :Nome "Pulp Fiction" ;
+             :RankingFilm "114"^^xsd:int ;
+             :Valutazione "8.9"^^xsd:float ;
+             <http://purl.org/dc/elements/1.1/creator> :QuentinTarantino ;
+             <http://purl.org/dc/elements/1.1/description> "Le vicende di due sicari della mafia, un pugile, la moglie di un gangster e due banditi di diner si intrecciano in quattro storie di violenza e redenzione." ;
+             <http://purl.org/dc/elements/1.1/language> "English" ;
+             <http://purl.org/dc/elements/1.1/title> :PulpFiction ;
+             <http://purl.org/dc/elements/1.1/type> :azione ;
+             rdfs:label "PulpFiction" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#QuentinTarantino
+:QuentinTarantino rdf:type owl:NamedIndividual ;
+                  :haNazionalita :Regista_Americano ;
+                  rdfs:label "QuentinTarantino" ;
+                  <http://xmlns.com/foaf/0.1/knows> :Christoph_Waltz ,
+                                                    :EnnioMorricone ,
+                                                    :JamieFoxx ,
+                                                    :JohnTravolta ,
+                                                    :LeonardoDiCaprio ;
+                  <http://xmlns.com/foaf/0.1/name> :QuentinTarantino .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista_Americano
+:Regista_Americano rdf:type owl:NamedIndividual ,
+                            :RegistaAmericano ;
+                   :Dirige :BastardiSenzaGloria ,
+                           :Django ,
+                           :IlCavaliereOscuro ,
+                           :Inception ,
+                           :Interstellar ,
+                           :PulpFiction ,
+                           :TheAvengers ;
+                   rdfs:label "RegistaAmericano" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista_Italiano
+:Regista_Italiano rdf:type owl:NamedIndividual ,
+                           :RegistaItaliano ;
+                  :Dirige :LaDolceVita ,
+                          :TrilogiaDelDollaro ,
+                          <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                  rdfs:label "RegistaItaliano" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RobertDowneyJr
+:RobertDowneyJr rdf:type owl:NamedIndividual ,
+                         :Attore ;
+                :InterpretaPersonaggio :IronMan ;
+                :RecintaIn :TheAvengers ;
+                :RankingAttore "95"^^xsd:int ;
+                <http://xmlns.com/foaf/0.1/knows> :ChrisHemsworth ,
+                                                  :JoshBrolin ;
+                <http://xmlns.com/foaf/0.1/name> :RobertDowneyJr .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Roma
+:Roma rdf:type owl:NamedIndividual ,
+               :Ambientazione ;
+      :AmbientazioneDi :LaDolceVita ,
+                       <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+      rdfs:label "Roma" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RussoBrothers
+:RussoBrothers rdf:type owl:NamedIndividual ;
+               :haNazionalita :Regista_Americano ;
+               rdfs:label "RussoBrothers" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SamuelJackson
+:SamuelJackson rdf:type owl:NamedIndividual ,
+                        :Attore ;
+               :RecintaIn :Django ,
+                          :PulpFiction ;
+               :RankingAttore "73"^^xsd:int ;
+               <http://xmlns.com/foaf/0.1/knows> :JohnTravolta ;
+               <http://xmlns.com/foaf/0.1/name> :SamuelJackson .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SergioLeone
+:SergioLeone rdf:type owl:NamedIndividual ;
+             :haNazionalita :Regista_Italiano ;
+             rdfs:label "SergioLeone" ;
+             <http://xmlns.com/foaf/0.1/knows> :Fulvio_Morsella ;
+             <http://xmlns.com/foaf/0.1/name> :SergioLeone .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Texas
+:Texas rdf:type owl:NamedIndividual ,
+                :Ambientazione ;
+       :AmbientazioneDi :Django ,
+                        :TrilogiaDelDollaro ;
+       rdfs:label "Texas" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Thanos
+:Thanos rdf:type owl:NamedIndividual ,
+                 :PersonaggioImmaginario ;
+        :PersonaggioDi :TheAvengers ;
+        rdfs:label "Thanos" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TheAvengers
+:TheAvengers rdf:type owl:NamedIndividual ,
+                      :Film ;
+             :haRegista :RussoBrothers ;
+             :AnnoDiUscita "2012"^^xsd:int ;
+             :CasaCinematografica "Marvel Studios, Walt Disney Pictures" ;
+             :HaNrFilm "4"^^xsd:int ;
+             :Nome "The Avengers" ;
+             :RankingFilm "168"^^xsd:int ;
+             :Valutazione "8.3"^^xsd:float ;
+             <http://purl.org/dc/elements/1.1/creator> "Stan Lee" ;
+             <http://purl.org/dc/elements/1.1/description> "Gli Avengers e i loro alleati dovranno essere pronti a sacrificare tutto nel tentativo di sconfiggere il potente Thanos prima che il suo impeto di devastazione e rovina porti alla fine dell'universo." ;
+             <http://purl.org/dc/elements/1.1/language> "English" ;
+             <http://purl.org/dc/elements/1.1/title> :TheAvengers ;
+             <http://purl.org/dc/elements/1.1/type> :fantasy ;
+             rdfs:label "TheAvengers" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Thor
+:Thor rdf:type owl:NamedIndividual ,
+               :PersonaggioImmaginario ;
+      :PersonaggioDi :TheAvengers ;
+      rdfs:label "Thor" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TrilogiaDelDollaro
+:TrilogiaDelDollaro rdf:type owl:NamedIndividual ,
+                             :Film ;
+                    :haRegista :SergioLeone ;
+                    :haScrittore :Fulvio_Morsella ,
+                                 :SergioLeone ;
+                    :AnnoDiUscita "1965"^^xsd:int ;
+                    :CasaCinematografica "Produzioni Europee Associati, Constantin Film" ;
+                    :HaNrFilm "3"^^xsd:int ;
+                    :RankingFilm "394"^^xsd:int ;
+                    :Valutazione "8.2"^^xsd:float ;
+                    <http://purl.org/dc/elements/1.1/creator> :SergioLeone ;
+                    <http://purl.org/dc/elements/1.1/description> "trilogia ambientata nel Far West detta anche Trilogia dell'uomo senza nome" ;
+                    <http://purl.org/dc/elements/1.1/language> "English" ;
+                    <http://purl.org/dc/elements/1.1/title> """Per Qualche dollaro in più
+Per un pugno di dollari
+il buono,il brutto, e il cattivo""" ;
+                    <http://purl.org/dc/elements/1.1/type> :western ;
+                    rdfs:label "TrilogiaDelDollaro" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#sparatorie_e_gangstar
+:sparatorie_e_gangstar rdf:type owl:NamedIndividual ,
+                                :Sparatorie_Action ;
+                       :EventoDi :PulpFiction ;
+                       rdfs:label "SparatorieGangstar" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo
+<http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> rdf:type owl:NamedIndividual ,
+                                                                                      :Film ;
+                                                                             :haRegista :FedericoFellini ;
+                                                                             :haScrittore :FedericoFellini ;
+                                                                             :AnnoDiUscita "1963"^^xsd:int ;
+                                                                             :Nome "8½" ;
+                                                                             :RankingFilm "3416"^^xsd:int ;
+                                                                             :Valutazione "8.0"^^xsd:float ;
+                                                                             <http://purl.org/dc/elements/1.1/creator> :FedericoFellini ;
+                                                                             <http://purl.org/dc/elements/1.1/description> "Un regista cinematografico tormentato si ritira tra i suoi ricordi e le sue fantasie." ;
+                                                                             <http://purl.org/dc/elements/1.1/language> "italiano" ;
+                                                                             <http://purl.org/dc/elements/1.1/title> <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                                                                             rdfs:label "8½" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia
+<http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia> rdf:type owl:NamedIndividual ,
+                                                                                             :Ambientazione ;
+                                                                                    :AmbientazioneDi :TheAvengers ;
+                                                                                    rdfs:label "Galassia" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AnitaEkberg
+                        :Christoph_Waltz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AnitaEkberg
+                        :JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AnitaEkberg
+                        :JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AnitaEkberg
+                        :MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CalvinCandie
+                        :DrKingSchultz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastDjango
+                        :CastLaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastDjango
+                        :CastPulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastDjango
+                        :CastTheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastDjango
+                        :CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastLaDolceVita
+                        :CastPulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastLaDolceVita
+                        :CastTheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastLaDolceVita
+                        :CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastPulpFiction
+                        :CastTheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastPulpFiction
+                        :CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CastTheAvengers
+                        :CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Christoph_Waltz
+                        :JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Christoph_Waltz
+                        :JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Christoph_Waltz
+                        :SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Django
+                        :LaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Django
+                        :PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Django
+                        :TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Django
+                        :TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :DjangoFreeman
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :FedericoFellini
+                        :QuentinTarantino
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :FedericoFellini
+                        :RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :FilmAmericani
+                        :FilmItaliani
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fulvio_Morsella
+                        :QuentinTarantino
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fulvio_Morsella
+                        :RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :JamieFoxx
+                        :SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :JohnTravolta
+                        :SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :LaDolceVita
+                        :PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :LaDolceVita
+                        :TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :LaDolceVita
+                        :TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :LosAngeles
+                        :Roma
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :LosAngeles
+                        :Texas
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :LosAngeles
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :PulpFiction
+                        :TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :PulpFiction
+                        :TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :QuentinTarantino
+                        :RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Regista_Americano
+                        :Regista_Italiano
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Roma
+                        :Texas
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Roma
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Thanos
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :TheAvengers
+                        :TrilogiaDelDollaro
+                      )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

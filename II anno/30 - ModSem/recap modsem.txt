@@ -1,0 +1,13 @@
+reti semantiche --> nodi e archi
+reti semantiche proposizionali --> rete semantica con proposizioni
+SNEPS --> Rete semantica proposizionale + motore di ragionamento
+tassonomie --> classificazione di elementi vienti o inanimati
+Frame
+SNEPS in dettaglio
+RDF --> - descrive le risorse
+	- gli IRI permettono di raggiungere l'info presente nel web
+	- useremo il formato Turtle
+
+RDFS --> descrive relazioni tra risorse
+OWL --> descrive ontologie relazionali, RDF estensione di OWL, si tratta di un linguaggio di markup
+

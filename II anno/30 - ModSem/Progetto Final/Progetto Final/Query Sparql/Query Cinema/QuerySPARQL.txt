@@ -1,0 +1,85 @@
+
+
+1) Cercare i film Most Popular, ovvero quelli con Ranking <500.
+
+SELECT ?Film ?Regista
+WHERE {
+?Film rdf:type cinema:Film;
+      cinema:RankingFilm ?RankingFilm;
+      cinema:haRegista ?Regista
+      FILTER(?RankingFilm <500).
+}
+
+2) Cercare gli attori più popolari e i film che hanno interpretato
+
+SELECT ?Attore ?RankingAttore ?Filmografia
+	WHERE {
+	?Attore rdf:type cinema:Attore;
+			cinema:RankingAttore?RankingAttore;
+			cinema:RecintaIn ?Filmografia.
+    FILTER(?RankingAttore <100).
+}ORDER BY ?RankingAttore
+
+
+
+3)Trovare i film a colori acclamati dalla critica e che sono dei cult
+
+select distinct ?film ?regista ?valutazione ?anno
+where{
+    ?film a cinema:Film;
+          cinema:haRegista ?regista;
+    	cinema:Valutazione?valutazione;
+    	cinema:AnnoDiUscita?anno.
+    filter(?valutazione>=8.3).
+    filter(?anno >=1930).
+    filter(?anno <=1999).
+} order by ?valutazione
+
+
+4) selezionare tutti con anno di usciti in un certo arco di tempo che sono sia acclamati dalla critica che consigliati dall’utente, ordinati per ranking film. 
+
+
+
+select ?film ?anno ?regista ?valutazione ?RankingFilm
+where{
+{?film rdf:type cinema:Film;
+      cinema:AnnoDiUscita ?anno;
+      cinema:haRegista ?regista;
+      cinema:Valutazione ?valutazione;
+      cinema:RankingFilm ?RankingFilm
+            
+    filter(?anno >=2008 && ?anno < 2014).
+    filter(?valutazione > 8.3).
+}UNION
+{
+?film rdf:type cinema:Film;
+      cinema:AnnoDiUscita ?anno;
+      cinema:haRegista ?regista;
+      cinema:Valutazione ?valutazione;
+      cinema:RankingFilm ?RankingFilm
+           
+    filter(?valutazione >= 7.5 && ?valutazione <= 8.3).
+        filter(?anno >=2008 && ?anno < 2014).
+}
+} order by ?RankingFilm
+
+
+    
+  5) selezionare tutti i film che hanno come attori attori Popolari e il personaggio che interpretano
+
+  select ?film ?Attore ?RankingAttore ?personaggioInterpretato
+where {
+    ?film rdf:type cinema:Film;
+          	cinema:haRegista ?regista;
+    		cinema:HaAttore ?Attore.
+    ?Attore rdf:type cinema:Attore;
+            cinema:RankingAttore ?RankingAttore;
+            cinema:InterpretaPersonaggio ?personaggioInterpretato.
+    ?personaggioInterpretato rdf:type cinema:Personaggio;
+                 cinema:PersonaggioDi ?film.
+    
+    filter(?RankingAttore >1).
+    filter(?RankingAttore < 100). 
+
+} order by ?RankingAttore
+

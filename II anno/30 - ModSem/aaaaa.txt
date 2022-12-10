@@ -1,0 +1,6 @@
+PREFIX fo: <http://www.semanticweb.org/fitnessOntology#>
+
+SELECT ?palestra
+WHERE { ?palestra rdf:type fo:Palestra }
+
+http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#palestraGiovanni

@@ -1,0 +1,10 @@
+in lov (linked open data) troviamo tutte le ontologie che ci servono
+- inserire design pattern nel progetto (es lista) 
+	--> idea: usare pattern list per la lista dei manubri
+	guarda primi 10 minuti lezione 4 novembre per esempio
+
+per gli individui bisogna attribuire le label per renderlo multilingua
+
+same as serve per allineare concetti di ontologie diverse
+
+LODE min 40

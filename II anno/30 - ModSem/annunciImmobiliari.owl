@@ -1,0 +1,251 @@
+@prefix : <http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari> .
+
+<http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Possiede
+:Possiede rdf:type owl:ObjectProperty ;
+          rdfs:domain :Persona ;
+          rdfs:range :Appartamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#compostoDa
+:compostoDa rdf:type owl:ObjectProperty ;
+            rdfs:domain :Appartamento ;
+            rdfs:range :Ambiente .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#contiene
+:contiene rdf:type owl:ObjectProperty ;
+          rdfs:domain :Ambiente ;
+          rdfs:range :Arredo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#situatoIn
+:situatoIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Appartamento ;
+           rdfs:range :Comune .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#classeEnergetica
+:classeEnergetica rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Appartamento ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#indirizzo
+:indirizzo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Appartamento ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Ambiente
+:Ambiente rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Appartamento
+:Appartamento rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :compostoDa ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Ambiente
+                                  ] .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#AppartamentoGrande
+:AppartamentoGrande rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :compostoDa ;
+                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :StanzaDaLetto
+                                        ] ;
+                    rdfs:subClassOf :Appartamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#AppartamentoVacanze
+:AppartamentoVacanze rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :situatoIn ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :ComuneTuristico
+                                         ] ;
+                     rdfs:subClassOf :Appartamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#AppartamentoVacanzeFamigliare
+:AppartamentoVacanzeFamigliare rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( :AppartamentoGrande
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :situatoIn ;
+                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                            owl:onClass :ComuneTuristico
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf :Appartamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Arredo
+:Arredo rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Bagno
+:Bagno rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :contiene ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Lavabo
+                           ] ;
+       rdfs:subClassOf :Ambiente .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Comune
+:Comune rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#ComuneTuristico
+:ComuneTuristico rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:oneOf ( :Bardonecchia
+                                                   :Courmayeur
+                                                   :Laigueglia
+                                                   :Loano
+                                                   :Rapallo
+                                                 )
+                                     ] ;
+                 rdfs:subClassOf :Comune .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Cucina
+:Cucina rdf:type owl:Class ;
+        rdfs:subClassOf :Ambiente .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Divano
+:Divano rdf:type owl:Class ;
+        rdfs:subClassOf :Arredo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Lavabo
+:Lavabo rdf:type owl:Class ;
+        rdfs:subClassOf :Arredo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Letto
+:Letto rdf:type owl:Class ;
+       rdfs:subClassOf :Arredo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Persona
+:Persona rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Portaombrello
+:Portaombrello rdf:type owl:Class ;
+               rdfs:subClassOf :Arredo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Soggiorno
+:Soggiorno rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :contiene ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Divano
+                               ] ;
+           rdfs:subClassOf :Ambiente .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#StanzaDaLetto
+:StanzaDaLetto rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :contiene ;
+                                     owl:someValuesFrom :Letto
+                                   ] ;
+               rdfs:subClassOf :Ambiente .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Bardonecchia
+:Bardonecchia rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Courmayeur
+:Courmayeur rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Laigueglia
+:Laigueglia rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Loano
+:Loano rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#Rapallo
+:Rapallo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#casaGiovanni
+:casaGiovanni rdf:type owl:NamedIndividual ;
+              :compostoDa :stanza1Giovanni ,
+                          :stanza2Giovanni ,
+                          :stanza3Giovanni .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#lavaboGiovanni
+:lavaboGiovanni rdf:type owl:NamedIndividual ,
+                         :Lavabo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#stanza1Giovanni
+:stanza1Giovanni rdf:type owl:NamedIndividual ,
+                          :Ambiente ;
+                 :contiene :lavaboGiovanni .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#stanza2Giovanni
+:stanza2Giovanni rdf:type owl:NamedIndividual ,
+                          :Ambiente .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/annunciImmobiliari#stanza3Giovanni
+:stanza3Giovanni rdf:type owl:NamedIndividual ,
+                          :Ambiente .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ambiente
+                :Appartamento
+                :Arredo
+                :Comune
+                :Persona
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

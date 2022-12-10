@@ -1,0 +1,7 @@
+concetti importanti protege
+- only
+- assunzione di mondo aperto
+- due individui appartenenti alla stessa classe risultano
+  lo stesso individuo se non specificato
+- property chain
+- assioma di copertura

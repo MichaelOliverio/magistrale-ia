@@ -1,0 +1,6 @@
+Domande esame:
+- Esempi delle componenti di protege
+- Cos'è e come funziona OntoClean
+- come sono state costruite wikidata e dbpedia e quali sono le differenze
+- linked data: cosa sono e come sono fatti
+- tipologie di triple RDF dei linked data

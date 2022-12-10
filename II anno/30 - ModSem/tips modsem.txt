@@ -1,0 +1,8 @@
+tesauro è un elenco di termini (es. fashion theasurus europeana, contiene specifiche riguardo a lingue di riferimento
+sinonimi, ...) --> servono per andare a riempire dei campi --> risorsa non ontologica ma semantica, rispetto
+ad un'ontologia non ha assiomatizzazione (solo skoss) -- >non viene usata per fare ragionamento ma per 
+annotare le relazioni dei concetti (concetto 1 closeMatch concetto 2)
+
+tassonomia è piu un elenco di concetti (es. ACM taxonomy)
+
+quando un'ontologia viene pubblicata diventa un vocabolario rdf (i termini devono avere assiomatizzazione)

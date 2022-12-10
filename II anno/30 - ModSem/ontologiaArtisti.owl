@@ -1,0 +1,149 @@
+@prefix : <http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-8#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti> .
+
+<http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#contenutaIn
+:contenutaIn rdf:type owl:ObjectProperty ;
+             owl:inverseOf :contiene .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#contiene
+:contiene rdf:type owl:ObjectProperty ;
+          rdfs:domain :Collezione ;
+          rdfs:range :Opera .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#creaOpera
+:creaOpera rdf:type owl:ObjectProperty ;
+           owl:inverseOf :creatoDa ;
+           rdfs:domain :Artista ;
+           rdfs:range :Opera .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#creatoDa
+:creatoDa rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#dataDiMorte
+:dataDiMorte rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Artista ;
+             rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#dataDiNascita
+:dataDiNascita rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Artista ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Artista ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#titolo
+:titolo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Opera ;
+        rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Artista
+:Artista rdf:type owl:Class ;
+         rdfs:label "Artist"@en .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Collezione
+:Collezione rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#CollezioneGrande
+:CollezioneGrande rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :contiene ;
+                                        owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :Opera
+                                      ] ;
+                  rdfs:subClassOf :Collezione .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#CollezionePittorica
+:CollezionePittorica rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :contiene ;
+                                           owl:allValuesFrom :Dipinto
+                                         ] ;
+                     rdfs:subClassOf :Collezione .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Dipinto
+:Dipinto rdf:type owl:Class ;
+         rdfs:subClassOf :Opera .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Musicista
+:Musicista rdf:type owl:Class ;
+           rdfs:subClassOf :Artista .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Opera
+:Opera rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#OperaLetteraria
+:OperaLetteraria rdf:type owl:Class ;
+                 rdfs:subClassOf :Opera .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#OperaMultimediale
+:OperaMultimediale rdf:type owl:Class ;
+                   rdfs:subClassOf :Opera .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#OperaMusicale
+:OperaMusicale rdf:type owl:Class ;
+               rdfs:subClassOf :Opera .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Pittore
+:Pittore rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :creaOpera ;
+                               owl:someValuesFrom :Dipinto
+                             ] ;
+         rdfs:subClassOf :Artista .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#PittorePuro
+:PittorePuro rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :creaOpera ;
+                                   owl:allValuesFrom :Dipinto
+                                 ] ;
+             rdfs:subClassOf :Artista .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/ontologiaArtisti#Scultura
+:Scultura rdf:type owl:Class ;
+          rdfs:subClassOf :Opera .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,3088 @@
+@prefix : <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cinema: <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#> .
+@base <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema> .
+
+<http://www.semanticweb.org/mario/ontologies/esame/progettoCinema> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://www.ontologydesignpatterns.org/cp/owl/bag.owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+<http://xmlns.com/foaf/0.1/knows> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AmbientatoIn
+cinema:AmbientatoIn rdf:type owl:ObjectProperty ;
+                    owl:inverseOf cinema:AmbientazioneDi ;
+                    rdfs:domain cinema:Film ;
+                    rdfs:range cinema:Ambientazione .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AmbientazioneDi
+cinema:AmbientazioneDi rdf:type owl:ObjectProperty ;
+                       rdfs:domain cinema:Ambientazione ;
+                       rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ContieneCast
+cinema:ContieneCast rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain cinema:Film ;
+                    rdfs:range cinema:Cast .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DIrettoDa
+cinema:DIrettoDa rdf:type owl:ObjectProperty ;
+                 owl:inverseOf cinema:Dirige ;
+                 rdfs:domain cinema:Film ;
+                 rdfs:range cinema:NazionalitaRegista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DirettoreAllaMusicaDi
+cinema:DirettoreAllaMusicaDi rdf:type owl:ObjectProperty ;
+                             owl:inverseOf cinema:HaDirettore ;
+                             rdfs:domain cinema:DirettoreAllaMusica ;
+                             rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Dirige
+cinema:Dirige rdf:type owl:ObjectProperty ;
+              rdfs:domain cinema:NazionalitaRegista ;
+              rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventoDi
+cinema:EventoDi rdf:type owl:ObjectProperty ;
+                owl:inverseOf cinema:haEventi ;
+                rdfs:domain cinema:Eventi ;
+                rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmProdotto
+cinema:FilmProdotto rdf:type owl:ObjectProperty ;
+                    rdfs:domain cinema:OrigineDiProduzione ;
+                    rdfs:range cinema:Film ;
+                    owl:propertyChainAxiom ( cinema:ProdottoDa
+                                             cinema:Dirige
+                                           ) .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaAttore
+cinema:HaAttore rdf:type owl:ObjectProperty ;
+                owl:inverseOf cinema:RecintaIn ;
+                rdfs:domain cinema:Film ;
+                rdfs:range cinema:Attore .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaDirettore
+cinema:HaDirettore rdf:type owl:ObjectProperty ;
+                   rdfs:domain cinema:Film ;
+                   rdfs:range cinema:DirettoreAllaMusica .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaPersonaggio
+cinema:HaPersonaggio rdf:type owl:ObjectProperty ;
+                     owl:inverseOf cinema:PersonaggioDi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#InterpretaPersonaggio
+cinema:InterpretaPersonaggio rdf:type owl:ObjectProperty ;
+                             owl:inverseOf cinema:InterpretatoDa ;
+                             rdfs:domain cinema:Attore ;
+                             rdfs:range cinema:Personaggio .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#InterpretatoDa
+cinema:InterpretatoDa rdf:type owl:ObjectProperty ;
+                      rdfs:domain cinema:Personaggio ;
+                      rdfs:range cinema:Attore .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioDi
+cinema:PersonaggioDi rdf:type owl:ObjectProperty ;
+                     rdfs:domain cinema:Personaggio ;
+                     rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProdottoDa
+cinema:ProdottoDa rdf:type owl:ObjectProperty ;
+                  owl:inverseOf cinema:ProduceFilm ;
+                  rdfs:domain cinema:OrigineDiProduzione ;
+                  rdfs:range cinema:NazionalitaRegista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduceFilm
+cinema:ProduceFilm rdf:type owl:ObjectProperty ;
+                   rdfs:domain cinema:NazionalitaRegista ;
+                   rdfs:range cinema:OrigineDiProduzione .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RecintaIn
+cinema:RecintaIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain cinema:Attore ;
+                 rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaDi
+cinema:RegistaDi rdf:type owl:ObjectProperty ;
+                 owl:inverseOf cinema:haRegista ;
+                 rdfs:domain cinema:Regista ;
+                 rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ScrittoreDi
+cinema:ScrittoreDi rdf:type owl:ObjectProperty ;
+                   owl:inverseOf cinema:haScrittore ;
+                   rdfs:domain cinema:Scrittore ;
+                   rdfs:range cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haComeCast
+cinema:haComeCast rdf:type owl:ObjectProperty ;
+                  rdfs:domain cinema:Cast ;
+                  rdfs:range cinema:Attore .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi
+cinema:haEventi rdf:type owl:ObjectProperty ;
+                rdfs:domain cinema:Film ;
+                rdfs:range cinema:Eventi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haNazionalita
+cinema:haNazionalita rdf:type owl:ObjectProperty ;
+                     rdfs:domain cinema:Regista ;
+                     rdfs:range cinema:NazionalitaRegista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRegista
+cinema:haRegista rdf:type owl:ObjectProperty ;
+                 rdfs:domain cinema:Film ;
+                 rdfs:range cinema:Regista .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo
+cinema:haRuolo rdf:type owl:ObjectProperty ;
+               rdfs:domain cinema:Persona ;
+               rdfs:range cinema:Ruolo .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haScrittore
+cinema:haScrittore rdf:type owl:ObjectProperty ;
+                   rdfs:domain cinema:Film ;
+                   rdfs:range cinema:Scrittore .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnnoDiUscita
+cinema:AnnoDiUscita rdf:type owl:DatatypeProperty ;
+                    rdfs:domain cinema:Film ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "anno in cui un film è stato rilasciato" ;
+                    rdfs:label "AnnoDiUscita" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CasaCinematografica
+cinema:CasaCinematografica rdf:type owl:DatatypeProperty ;
+                           rdfs:domain cinema:Film ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Casa produttoria di un film" ;
+                           rdfs:label "CasaCinematografica" ;
+                           rdfs:seeAlso <https://dbpedia.org/page/Production_company> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaNrFilm
+cinema:HaNrFilm rdf:type owl:DatatypeProperty ;
+                rdfs:domain cinema:Film ;
+                rdfs:range xsd:integer ;
+                rdfs:label "HaNrFilm" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Nome
+cinema:Nome rdf:type owl:DatatypeProperty ;
+            rdfs:domain cinema:Film ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Titolo di un film" ;
+            rdfs:label "Nome" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RankingAttore
+cinema:RankingAttore rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cinema:Attore ;
+                     rdfs:range xsd:int ;
+                     rdfs:label "RankingAttore" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RankingFilm
+cinema:RankingFilm rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cinema:Film ;
+                   rdfs:range xsd:int ;
+                   rdfs:label "RankingFilm" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Valutazione
+cinema:Valutazione rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cinema:Film ;
+                   rdfs:range xsd:float ;
+                   rdfs:comment "Valutazione che un film ha ricevuto dalla critica" ;
+                   rdfs:label "Valutazione" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AcclamatiDallaCritica
+cinema:AcclamatiDallaCritica rdf:type owl:Class ;
+                             owl:equivalentClass cinema:TopRated ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty cinema:Valutazione ;
+                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                        owl:onDatatype xsd:float ;
+                                                                        owl:withRestrictions ( [ xsd:minExclusive "8.3"^^xsd:float
+                                                                                               ]
+                                                                                             )
+                                                                      ]
+                                                 ] ;
+                             rdfs:subClassOf cinema:Critica ;
+                             rdfs:comment "I film Acclamati dalla critica sono quei film che hanno ricevuto una valutazione molto positiva da un gruppo di esperti critici" ;
+                             rdfs:label "Acclamati dalla critica" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Ambientazione
+cinema:Ambientazione rdf:type owl:Class ;
+                     rdfs:subClassOf cinema:Film ;
+                     rdfs:comment "Luogo in cui viene ambientato un film" ;
+                     rdfs:label "Ambientazione" ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Filming_location> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Attore
+cinema:Attore rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty cinema:haRuolo ;
+                                    owl:someValuesFrom cinema:Attore
+                                  ] ;
+              rdfs:subClassOf cinema:Ruolo ;
+              rdfs:comment "Un attore  è chi rappresenta o interpreta una parte o un ruolo in uno spettacolo teatrale, cinematografico, televisivo, radiofonico o di strada." ;
+              rdfs:label "Attore" ;
+              rdfs:seeAlso <https://dbpedia.org/page/Actor> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AttorePopolare
+cinema:AttorePopolare rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty cinema:RankingAttore ;
+                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                        owl:onDatatype xsd:int ;
+                                                                                        owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:int
+                                                                                                               ]
+                                                                                                             )
+                                                                                      ]
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty cinema:RankingAttore ;
+                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                        owl:onDatatype xsd:int ;
+                                                                                        owl:withRestrictions ( [ xsd:maxInclusive "100"^^xsd:int
+                                                                                                               ]
+                                                                                                             )
+                                                                                      ]
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf cinema:Attore ;
+                      rdfs:comment "Gli attori popolari sono gli attori più visti dagli utenti" ;
+                      rdfs:label "AttorePopolare" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BiancoNero
+cinema:BiancoNero rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty cinema:AnnoDiUscita ;
+                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:onDatatype xsd:int ;
+                                                             owl:withRestrictions ( [ xsd:maxExclusive "1965"^^xsd:int
+                                                                                    ]
+                                                                                  )
+                                                           ]
+                                      ] ;
+                  rdfs:subClassOf cinema:Pellicola ;
+                  rdfs:comment "vecchia pellicola in bianco e nero, tipica dei film prodotti prima del 1965" ;
+                  rdfs:label "BiancoNero" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Cast
+cinema:Cast rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty cinema:haComeCast ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass cinema:Attore
+                                ] ;
+            rdfs:subClassOf cinema:Film ;
+            rdfs:comment "gruppo di persone che lavora nella produzione di un film" ;
+            rdfs:label "Cast" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Colori
+cinema:Colori rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty cinema:AnnoDiUscita ;
+                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                         owl:onDatatype xsd:int ;
+                                                         owl:withRestrictions ( [ xsd:minInclusive "1965"^^xsd:int
+                                                                                ]
+                                                                              )
+                                                       ]
+                                  ] ;
+              rdfs:subClassOf cinema:Pellicola ;
+              rdfs:comment "pellicola a colori dei film dopo il 1965" ;
+              rdfs:label "Colori" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ConsigliatiDagliUtenti
+cinema:ConsigliatiDagliUtenti rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty cinema:Valutazione ;
+                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                         owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                owl:datatypeComplementOf [ rdf:type rdfs:Datatype ;
+                                                                                                                           owl:onDatatype xsd:float ;
+                                                                                                                           owl:withRestrictions ( [ xsd:minExclusive "8.3"^^xsd:float
+                                                                                                                                                  ]
+                                                                                                                                                )
+                                                                                                                         ]
+                                                                                              ]
+                                                                                              [ rdf:type rdfs:Datatype ;
+                                                                                                owl:onDatatype xsd:float ;
+                                                                                                owl:withRestrictions ( [ xsd:minInclusive "7.5"^^xsd:float
+                                                                                                                       ]
+                                                                                                                     )
+                                                                                              ]
+                                                                                            )
+                                                                       ]
+                                                  ] ;
+                              rdfs:subClassOf cinema:Popolarità ;
+                              rdfs:comment "Film consigliati dalla critica con valutazione almeno 7.5 e non maggiore di 8.3" ;
+                              rdfs:label "ConsigliatiDagliUtenti"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Critica
+cinema:Critica rdf:type owl:Class ;
+               rdfs:label "Critica" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Cult
+cinema:Cult rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty cinema:AnnoDiUscita ;
+                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                     owl:onDatatype xsd:int ;
+                                                                                                     owl:withRestrictions ( [ xsd:minInclusive "1930"^^xsd:int
+                                                                                                                            ]
+                                                                                                                          )
+                                                                                                   ]
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty cinema:AnnoDiUscita ;
+                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                     owl:onDatatype xsd:int ;
+                                                                                                     owl:withRestrictions ( [ xsd:maxInclusive "1999"^^xsd:int
+                                                                                                                            ]
+                                                                                                                          )
+                                                                                                   ]
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty cinema:Valutazione ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:onDatatype xsd:float ;
+                                                                              owl:withRestrictions ( [ xsd:minInclusive "8.0"^^xsd:float
+                                                                                                     ]
+                                                                                                   )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf cinema:Popolarità ;
+            rdfs:comment "Film in bianco e nero e a colori che hanno riscontrato grande successo tra la critica e il pubblico, tali da definirsi \"Film di Culto\"" ;
+            rdfs:label "Cult" ;
+            rdfs:seeAlso <https://dbpedia.org/page/DBCult_Film_Institute> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DirettoreAllaMusica
+cinema:DirettoreAllaMusica rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty cinema:haRuolo ;
+                                                 owl:someValuesFrom cinema:DirettoreAllaMusica
+                                               ] ;
+                           rdfs:subClassOf cinema:Ruolo ;
+                           rdfs:comment "dirige le musiche del film" ;
+                           rdfs:label "DirettoreAllaMusica" ;
+                           rdfs:seeAlso <https://dbpedia.org/page/Film_score> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Drama
+cinema:Drama rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty cinema:haEventi ;
+                                   owl:someValuesFrom cinema:Eventi_Drama
+                                 ] ;
+             rdfs:subClassOf cinema:Genere ;
+             rdfs:comment "Film con risvolti drammatici."^^xsd:string ;
+             rdfs:label "Drama" ;
+             rdfs:seeAlso <https://dbpedia.org/page/Drama_(film_and_television)> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi
+cinema:Eventi rdf:type owl:Class ;
+              rdfs:label "Eventi" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiComici_Divertenti
+cinema:EventiComici_Divertenti rdf:type owl:Class ;
+                               rdfs:subClassOf cinema:Eventi ;
+                               rdfs:comment "eventi divertenti nel film" ;
+                               rdfs:label "Eventi comici e divertenti" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiFuturistici
+cinema:EventiFuturistici rdf:type owl:Class ;
+                         rdfs:subClassOf cinema:Eventi ;
+                         rdfs:comment "eventi che potrebbero verificarsi in un futuro prossimo" ;
+                         rdfs:label "Eventi Futuristici" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiImmaginari
+cinema:EventiImmaginari rdf:type owl:Class ;
+                        rdfs:subClassOf cinema:Eventi ;
+                        rdfs:comment "eventi che sono frutto della fantasia" ;
+                        rdfs:label "Eventi Immaginari" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiStorici
+cinema:EventiStorici rdf:type owl:Class ;
+                     rdfs:subClassOf cinema:Eventi ;
+                     rdfs:comment "eventi avvenuti nel passato" ;
+                     rdfs:label "Eventi Storici" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi_Drama
+cinema:Eventi_Drama rdf:type owl:Class ;
+                    rdfs:subClassOf cinema:Eventi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Film
+cinema:Film rdf:type owl:Class ;
+            rdfs:label "Film" ;
+            rdfs:seeAlso <https://dbpedia.org/page/Film> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmAmericano
+cinema:FilmAmericano rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty cinema:DIrettoDa ;
+                                           owl:someValuesFrom cinema:RegistaAmericano
+                                         ] ;
+                     rdfs:subClassOf cinema:Filmografia ;
+                     rdfs:comment "film diretti da un regista americano e prodotti in america" ;
+                     rdfs:label "FilmAmericano" ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Category:American_films> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmItaliano
+cinema:FilmItaliano rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty cinema:DIrettoDa ;
+                                          owl:someValuesFrom cinema:RegistaItaliano
+                                        ] ;
+                    rdfs:subClassOf cinema:Filmografia ;
+                    rdfs:comment "film diretti da un regista italiano" ;
+                    rdfs:label "FilmItaliano" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Filmografia
+cinema:Filmografia rdf:type owl:Class ;
+                   rdfs:subClassOf cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Genere
+cinema:Genere rdf:type owl:Class ;
+              rdfs:subClassOf cinema:Film .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Guerra
+cinema:Guerra rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty cinema:haEventi ;
+                                    owl:someValuesFrom cinema:EventiStorici
+                                  ] ;
+              rdfs:subClassOf cinema:Genere .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MostPopular
+cinema:MostPopular rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty cinema:RankingFilm ;
+                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:int ;
+                                                                                     owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:int
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ]
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty cinema:RankingFilm ;
+                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:int ;
+                                                                                     owl:withRestrictions ( [ xsd:maxInclusive "500"^^xsd:int
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ]
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf cinema:Popolarità ;
+                   rdfs:comment "Film più visti" ;
+                   rdfs:label "Most Popular" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NazionalitaRegista
+cinema:NazionalitaRegista rdf:type owl:Class ;
+                          rdfs:subClassOf cinema:Regista ;
+                          rdfs:label "NazionalitaRegista" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#OrigineDiProduzione
+cinema:OrigineDiProduzione rdf:type owl:Class ;
+                           rdfs:subClassOf cinema:Film ;
+                           rdfs:label "OrigineDiProduzione" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Pellicola
+cinema:Pellicola rdf:type owl:Class ;
+                 rdfs:subClassOf cinema:Film ;
+                 rdfs:label "Pellicola" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Persona
+cinema:Persona rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty cinema:haRuolo ;
+                                     owl:someValuesFrom cinema:Ruolo
+                                   ] ;
+               rdfs:comment "individuo che occupa un ruolo all'interno del film" ;
+               rdfs:label "Persona" ;
+               rdfs:seeAlso <https://dbpedia.org/ontology/Person> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Personaggio
+cinema:Personaggio rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty cinema:PersonaggioDi ;
+                                         owl:someValuesFrom cinema:Film
+                                       ] ;
+                   rdfs:label "Personaggio" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioImmaginario
+cinema:PersonaggioImmaginario rdf:type owl:Class ;
+                              rdfs:subClassOf cinema:Personaggio ;
+                              rdfs:comment "personaggio puramente inventato" ;
+                              rdfs:label "PersonaggioImmaginario" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioReale
+cinema:PersonaggioReale rdf:type owl:Class ;
+                        rdfs:subClassOf cinema:Personaggio ;
+                        rdfs:comment "personaggio che esiste realmente" ;
+                        rdfs:label "PersonaggioReale" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioStorico
+cinema:PersonaggioStorico rdf:type owl:Class ;
+                          rdfs:subClassOf cinema:Personaggio ;
+                          rdfs:comment "personaggio d'epoca, vissuto realmente in un determinato periodo storico" ;
+                          rdfs:label "PersonaggioStorico" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Popolarità
+cinema:Popolarità rdf:type owl:Class ;
+                  rdfs:comment "Film Popolari o del momento" ;
+                  rdfs:label "Popolarità" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduzioneAmericana
+cinema:ProduzioneAmericana rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty cinema:ProdottoDa ;
+                                                 owl:someValuesFrom cinema:RegistaAmericano
+                                               ] ;
+                           rdfs:subClassOf cinema:OrigineDiProduzione ;
+                           owl:disjointWith cinema:ProduzioneItaliana ;
+                           rdfs:comment "Produzione di origine americana. i film vengono prodotti da registi Americani" ;
+                           rdfs:label "ProduzioneAmericana" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduzioneItaliana
+cinema:ProduzioneItaliana rdf:type owl:Class ;
+                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                owl:onProperty cinema:ProdottoDa ;
+                                                owl:someValuesFrom cinema:RegistaItaliano
+                                              ] ;
+                          rdfs:subClassOf cinema:OrigineDiProduzione ;
+                          rdfs:comment "film con origine di produzione italiana. sono diretti da registi italiani" ;
+                          rdfs:label "ProduzioneItaliana" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista
+cinema:Regista rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty cinema:haRuolo ;
+                                     owl:someValuesFrom cinema:Regista
+                                   ] ;
+               rdfs:subClassOf cinema:Ruolo ;
+               rdfs:comment "responsabile tecnico e artistico di un opera cinematografica" ;
+               rdfs:label "Regista" ;
+               rdfs:seeAlso <https://dbpedia.org/ontology/director> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaAmericano
+cinema:RegistaAmericano rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty cinema:haNazionalita ;
+                                              owl:someValuesFrom cinema:RegistaAmericano
+                                            ] ;
+                        rdfs:subClassOf cinema:NazionalitaRegista ;
+                        owl:disjointWith cinema:RegistaItaliano ;
+                        rdfs:comment "Regista di nazionalità americana" ;
+                        rdfs:label "RegistaAmericano" ;
+                        rdfs:seeAlso <https://dbpedia.org/page/Category:American_film_directors> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaItaliano
+cinema:RegistaItaliano rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                             owl:onProperty cinema:haNazionalita ;
+                                             owl:someValuesFrom cinema:RegistaItaliano
+                                           ] ;
+                       rdfs:subClassOf cinema:NazionalitaRegista ;
+                       rdfs:comment "regista di nazionalità italiana" ;
+                       rdfs:label "RegistaItaliano" ;
+                       rdfs:seeAlso <https://dbpedia.org/page/Category:Italian_film_directors> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Ruolo
+cinema:Ruolo rdf:type owl:Class ;
+             rdfs:label "Ruolo" ;
+             rdfs:seeAlso <https://dbpedia.org/page/Film_crew> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Saga
+cinema:Saga rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty cinema:HaNrFilm ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:int ;
+                                                       owl:withRestrictions ( [ xsd:minExclusive "3"^^xsd:int
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf cinema:Tipologia ;
+            rdfs:comment "Una saga  è un insieme di più film legati da una sequenzialità o successione, incentrati su un personaggio o un tema comune." ;
+            rdfs:label "Saga" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Scrittore
+cinema:Scrittore rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty cinema:haRuolo ;
+                                       owl:someValuesFrom cinema:Scrittore
+                                     ] ;
+                 rdfs:subClassOf cinema:Ruolo ;
+                 rdfs:comment "scrittore della storia di un opera cinematografica" ;
+                 rdfs:label "Scrittore" ;
+                 rdfs:seeAlso <https://dbpedia.org/page/Writer> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Sparatorie_Action
+cinema:Sparatorie_Action rdf:type owl:Class ;
+                         rdfs:subClassOf cinema:Eventi ;
+                         rdfs:comment "scene d'azione, durante le quali uno o più protagonisti si trovano a dover affrontare una serie di sfide che richiedono coraggio e prodezza fisica" ;
+                         rdfs:label "Sparatorie_Action" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Tipologia
+cinema:Tipologia rdf:type owl:Class ;
+                 rdfs:label "Tipologia" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TopRated
+cinema:TopRated rdf:type owl:Class ;
+                rdfs:subClassOf cinema:Popolarità ;
+                rdfs:comment "Film più votati dagli utenti e dalla critica" ;
+                rdfs:label "Top Rated" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Trilogia
+cinema:Trilogia rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty cinema:HaNrFilm ;
+                                      owl:hasValue 3
+                                    ] ;
+                rdfs:subClassOf cinema:Tipologia ;
+                rdfs:comment "3 film legati tra loro con la stessa tematica e personaggi" ;
+                rdfs:label "Trilogia" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#azione
+cinema:azione rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty cinema:haEventi ;
+                                    owl:someValuesFrom cinema:Sparatorie_Action
+                                  ] ;
+              rdfs:subClassOf cinema:Genere ;
+              rdfs:comment "film con scene d'azione" ;
+              rdfs:label "azione" ;
+              rdfs:seeAlso <https://dbpedia.org/page/Action_film> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#comedy
+cinema:comedy rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty cinema:haEventi ;
+                                    owl:someValuesFrom cinema:EventiComici_Divertenti
+                                  ] ;
+              rdfs:subClassOf cinema:Genere ;
+              rdfs:comment "film con risvolti comici" ;
+              rdfs:label "comedy" ;
+              rdfs:seeAlso <https://dbpedia.org/page/Comedy_film> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#eventi_Western
+cinema:eventi_Western rdf:type owl:Class ;
+                      rdfs:subClassOf cinema:Eventi .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#fantasy
+cinema:fantasy rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty cinema:haEventi ;
+                                     owl:someValuesFrom cinema:EventiImmaginari
+                                   ] ;
+               rdfs:subClassOf cinema:Genere ;
+               rdfs:comment "film con eventi fantasy" ;
+               rdfs:label "fantasy" ;
+               rdfs:seeAlso <https://dbpedia.org/page/Fantasy> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#western
+cinema:western rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty cinema:haEventi ;
+                                                            owl:someValuesFrom cinema:EventiStorici
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty cinema:haEventi ;
+                                                            owl:someValuesFrom cinema:eventi_Western
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf cinema:Genere ;
+               rdfs:comment "film ambientati nel FarWest" ;
+               rdfs:label "western" ;
+               rdfs:seeAlso <https://dbpedia.org/page/Western_(genre)> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnitaEkberg
+cinema:AnitaEkberg rdf:type owl:NamedIndividual ,
+                            cinema:Attore ,
+                            cinema:Persona ;
+                   cinema:RecintaIn cinema:LaDolceVita ;
+                   cinema:RankingAttore "594"^^xsd:int ;
+                   rdfs:seeAlso <https://dbpedia.org/page/Anita_Ekberg> ;
+                   <http://xmlns.com/foaf/0.1/knows> cinema:FedericoFellini ,
+                                                     cinema:MarcelloMastroianni ;
+                   <http://xmlns.com/foaf/0.1/name> cinema:AnitaEkberg .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BastardiSenzaGloria
+cinema:BastardiSenzaGloria rdf:type owl:NamedIndividual ,
+                                    cinema:Film ;
+                           cinema:haRegista cinema:QuentinTarantino ;
+                           cinema:haScrittore cinema:QuentinTarantino ;
+                           cinema:AnnoDiUscita "2009"^^xsd:int ;
+                           cinema:HaNrFilm "1"^^xsd:int ;
+                           cinema:Nome "Inglorious Basterds"^^xsd:string ;
+                           cinema:RankingFilm "113"^^xsd:int ;
+                           cinema:Valutazione "8.3"^^xsd:float ;
+                           <http://purl.org/dc/elements/1.1/creator> cinema:QuentinTarantino ;
+                           <http://purl.org/dc/elements/1.1/description> "Nella Francia occupata dai nazisti durante la seconda guerra mondiale, un progetto per assassinare i leader nazisti da parte di un gruppo di soldati ebrei americani coincide con i stessi piani vendicativi della proprietaria di un cinema."^^xsd:string ;
+                           <http://purl.org/dc/elements/1.1/language> "English"^^xsd:string ;
+                           <http://purl.org/dc/elements/1.1/title> cinema:BastardiSenzaGloria ;
+                           rdfs:label "Inglorious Basterds"^^xsd:string ;
+                           rdfs:seeAlso <https://dbpedia.org/page/Inglourious_Basterds> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Bruce_Wayne
+cinema:Bruce_Wayne rdf:type owl:NamedIndividual ,
+                            cinema:PersonaggioImmaginario ;
+                   cinema:PersonaggioDi cinema:IlCavaliereOscuro ;
+                   rdfs:label "Bruce Wayne"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CalvinCandie
+cinema:CalvinCandie rdf:type owl:NamedIndividual ,
+                             cinema:PersonaggioImmaginario ;
+                    cinema:PersonaggioDi cinema:Django ;
+                    rdfs:label "Calvin Candie"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastDjango
+cinema:CastDjango rdf:type owl:NamedIndividual ;
+                  cinema:haComeCast cinema:Christoph_Waltz ,
+                                    cinema:JamieFoxx ,
+                                    cinema:LeonardoDiCaprio ;
+                  rdfs:label "CastDjango" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastLaDolceVita
+cinema:CastLaDolceVita rdf:type owl:NamedIndividual ;
+                       cinema:haComeCast cinema:AnitaEkberg ,
+                                         cinema:MarcelloMastroianni ;
+                       rdfs:label "CastLaDolceVita"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastPulpFiction
+cinema:CastPulpFiction rdf:type owl:NamedIndividual ;
+                       cinema:haComeCast cinema:JohnTravolta ,
+                                         cinema:SamuelJackson ;
+                       rdfs:label "CastPulpFiction"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastTheAvengers
+cinema:CastTheAvengers rdf:type owl:NamedIndividual ;
+                       cinema:haComeCast cinema:ChrisHemsworth ,
+                                         cinema:JoshBrolin ,
+                                         cinema:RobertDowneyJr ;
+                       rdfs:label "CastTheAvengers"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CastTrilogia
+cinema:CastTrilogia rdf:type owl:NamedIndividual ;
+                    cinema:haComeCast cinema:Clint_Eastowood ,
+                                      cinema:EliWallach ,
+                                      cinema:LeeVanCliff ;
+                    rdfs:label "CastTrilogia"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChrisHemsworth
+cinema:ChrisHemsworth rdf:type owl:NamedIndividual ,
+                               cinema:Attore ,
+                               cinema:Persona ;
+                      cinema:InterpretaPersonaggio cinema:Thor ;
+                      cinema:RecintaIn cinema:TheAvengers ;
+                      cinema:RankingAttore "75"^^xsd:int ;
+                      rdfs:seeAlso <https://dbpedia.org/page/Chris_Hemsworth> ;
+                      <http://xmlns.com/foaf/0.1/knows> cinema:JoshBrolin ,
+                                                        cinema:RobertDowneyJr ;
+                      <http://xmlns.com/foaf/0.1/name> cinema:ChrisHemsworth .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChristianBale
+cinema:ChristianBale rdf:type owl:NamedIndividual ,
+                              cinema:Attore ,
+                              cinema:Persona ;
+                     cinema:InterpretaPersonaggio cinema:Bruce_Wayne ;
+                     cinema:RecintaIn cinema:IlCavaliereOscuro ;
+                     cinema:RankingAttore "62"^^xsd:int ;
+                     rdfs:label "Christian Bale"^^xsd:string ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Christian_Bale> ;
+                     <http://xmlns.com/foaf/0.1/name> cinema:ChristianBale ,
+                                                      cinema:Christopher_Nolan .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christoph_Waltz
+cinema:Christoph_Waltz rdf:type owl:NamedIndividual ,
+                                cinema:Attore ,
+                                cinema:Persona ;
+                       cinema:InterpretaPersonaggio cinema:DrKingSchultz ,
+                                                    cinema:Hans_Landa ;
+                       cinema:RecintaIn cinema:BastardiSenzaGloria ,
+                                        cinema:Django ;
+                       cinema:RankingAttore "12"^^xsd:int ;
+                       rdfs:seeAlso <https://dbpedia.org/page/Christoph_Waltz> ;
+                       <http://xmlns.com/foaf/0.1/knows> cinema:JamieFoxx ,
+                                                         cinema:LeonardoDiCaprio ,
+                                                         cinema:QuentinTarantino ,
+                                                         cinema:SamuelJackson ;
+                       <http://xmlns.com/foaf/0.1/name> cinema:Christoph_Waltz .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan
+cinema:Christopher_Nolan rdf:type owl:NamedIndividual ,
+                                  cinema:Persona ,
+                                  cinema:Regista ;
+                         cinema:haNazionalita cinema:Regista_Americano ;
+                         rdfs:label "Christopher Nolan"^^xsd:string ;
+                         rdfs:seeAlso <https://dbpedia.org/page/Christopher_Nolan> ;
+                         <http://xmlns.com/foaf/0.1/knows> cinema:ChristianBale ,
+                                                           cinema:LeonardoDiCaprio ,
+                                                           cinema:Metthew_McCounaghey ;
+                         <http://xmlns.com/foaf/0.1/name> cinema:Christopher_Nolan .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Clint_Eastowood
+cinema:Clint_Eastowood rdf:type owl:NamedIndividual ,
+                                cinema:Attore ,
+                                cinema:Persona ;
+                       cinema:RecintaIn cinema:TrilogiaDelDollaro ;
+                       cinema:RankingAttore "20"^^xsd:int ;
+                       rdfs:seeAlso <https://dbpedia.org/page/Clint_Eastwood> ;
+                       <http://xmlns.com/foaf/0.1/knows> cinema:EliWallach ,
+                                                         cinema:LeeVanCliff ,
+                                                         cinema:SergioLeone ;
+                       <http://xmlns.com/foaf/0.1/name> cinema:Clint_Eastowood .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Comicita_Umorismo
+cinema:Comicita_Umorismo rdf:type owl:NamedIndividual ,
+                                  cinema:EventiComici_Divertenti ;
+                         cinema:EventoDi cinema:LaDolceVita ,
+                                         <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                         rdfs:label "Comicita_Umorismo" .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Django
+cinema:Django rdf:type owl:NamedIndividual ,
+                       cinema:Film ;
+              cinema:ContieneCast cinema:CastDjango ;
+              cinema:haRegista cinema:QuentinTarantino ;
+              cinema:haScrittore cinema:QuentinTarantino ;
+              cinema:AnnoDiUscita "2010"^^xsd:int ;
+              cinema:CasaCinematografica "A Band Apart"^^xsd:string ;
+              cinema:Nome "Django Unchained"^^xsd:string ;
+              cinema:RankingFilm "268"^^xsd:int ;
+              cinema:Valutazione "8.4"^^xsd:float ;
+              <http://purl.org/dc/elements/1.1/creator> cinema:QuentinTarantino ;
+              <http://purl.org/dc/elements/1.1/description> "Con l'aiuto di un cacciatore di taglie tedesco, uno schiavo liberato si mette in viaggio per salvare sua moglie da un brutale proprietario di piantagione del Mississippi." ;
+              <http://purl.org/dc/elements/1.1/language> "English"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/title> cinema:Django ;
+              <http://purl.org/dc/elements/1.1/type> cinema:western ;
+              rdfs:label "Django"^^xsd:string ;
+              rdfs:seeAlso <https://dbpedia.org/page/Django_Unchained> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DjangoFreeman
+cinema:DjangoFreeman rdf:type owl:NamedIndividual ,
+                              cinema:PersonaggioImmaginario ;
+                     cinema:PersonaggioDi cinema:Django ;
+                     rdfs:label "DjangoFreeman"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DrKingSchultz
+cinema:DrKingSchultz rdf:type owl:NamedIndividual ,
+                              cinema:PersonaggioImmaginario ;
+                     cinema:PersonaggioDi cinema:Django ;
+                     rdfs:label "DrKingShultz"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EliWallach
+cinema:EliWallach rdf:type owl:NamedIndividual ,
+                           cinema:Attore ,
+                           cinema:Persona ;
+                  cinema:RecintaIn cinema:TrilogiaDelDollaro ;
+                  cinema:RankingAttore "287"^^xsd:int ;
+                  rdfs:seeAlso <https://dbpedia.org/page/Eli_Wallach> ;
+                  <http://xmlns.com/foaf/0.1/knows> cinema:Clint_Eastowood ,
+                                                    cinema:LeeVanCliff ,
+                                                    cinema:SergioLeone ;
+                  <http://xmlns.com/foaf/0.1/name> cinema:EliWallach .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EnnioMorricone
+cinema:EnnioMorricone rdf:type owl:NamedIndividual ,
+                               cinema:DirettoreAllaMusica ;
+                      cinema:DirettoreAllaMusicaDi cinema:Django ,
+                                                   cinema:TrilogiaDelDollaro ;
+                      rdfs:seeAlso <https://dbpedia.org/page/Ennio_Morricone> ;
+                      <http://xmlns.com/foaf/0.1/knows> cinema:QuentinTarantino ,
+                                                        cinema:SergioLeone ;
+                      <http://xmlns.com/foaf/0.1/name> cinema:EnnioMorricone .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiDrama
+cinema:EventiDrama rdf:type owl:NamedIndividual ,
+                            cinema:Eventi_Drama ;
+                   cinema:EventoDi cinema:BastardiSenzaGloria ,
+                                   <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                   rdfs:label "EventiDrama"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiFantasi
+cinema:EventiFantasi rdf:type owl:NamedIndividual ,
+                              cinema:EventiImmaginari ;
+                     cinema:EventoDi cinema:IlCavaliereOscuro ,
+                                     cinema:Inception ,
+                                     cinema:Interstellar ,
+                                     cinema:TheAvengers ;
+                     rdfs:label "EventiFantasy"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi_Western
+cinema:Eventi_Western rdf:type owl:NamedIndividual ,
+                               cinema:eventi_Western ;
+                      cinema:EventoDi cinema:Django ,
+                                      cinema:TrilogiaDelDollaro ;
+                      rdfs:label "Eventi_Western"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventoStorico
+cinema:EventoStorico rdf:type owl:NamedIndividual ,
+                              cinema:EventiStorici ;
+                     cinema:EventoDi cinema:BastardiSenzaGloria ,
+                                     cinema:Django ,
+                                     cinema:TrilogiaDelDollaro ;
+                     rdfs:label "EventoStorico"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Far_West
+cinema:Far_West rdf:type owl:NamedIndividual ,
+                         cinema:Ambientazione ;
+                cinema:AmbientazioneDi cinema:Django ,
+                                       cinema:TrilogiaDelDollaro ;
+                rdfs:label "Far_West"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FedericoFellini
+cinema:FedericoFellini rdf:type owl:NamedIndividual ,
+                                cinema:Persona ;
+                       cinema:haNazionalita cinema:Regista_Italiano ;
+                       rdfs:seeAlso <https://dbpedia.org/page/Federico_Fellini> ;
+                       <http://xmlns.com/foaf/0.1/knows> cinema:AnitaEkberg ,
+                                                         cinema:MarcelloMastroianni ;
+                       <http://xmlns.com/foaf/0.1/name> cinema:FedericoFellini .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmAmericani
+cinema:FilmAmericani rdf:type owl:NamedIndividual ;
+                     cinema:ProdottoDa cinema:Regista_Americano ;
+                     rdfs:label "FilmAmericani"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmItaliani
+cinema:FilmItaliani rdf:type owl:NamedIndividual ;
+                    cinema:ProdottoDa cinema:Regista_Italiano ;
+                    rdfs:label "FilmItaliani"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Fulvio_Morsella
+cinema:Fulvio_Morsella rdf:type owl:NamedIndividual ,
+                                cinema:Persona ,
+                                cinema:Scrittore ;
+                       <http://xmlns.com/foaf/0.1/knows> cinema:SergioLeone ;
+                       <http://xmlns.com/foaf/0.1/name> cinema:Fulvio_Morsella .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#GermaniaNazista
+cinema:GermaniaNazista rdf:type owl:NamedIndividual ,
+                                cinema:Ambientazione ;
+                       cinema:AmbientazioneDi cinema:BastardiSenzaGloria ;
+                       rdfs:label "GermaniaNazista"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Gotham_City
+cinema:Gotham_City rdf:type owl:NamedIndividual ,
+                            cinema:Ambientazione ;
+                   cinema:AmbientazioneDi cinema:IlCavaliereOscuro ;
+                   rdfs:label "GothamCity"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Hans_Landa
+cinema:Hans_Landa rdf:type owl:NamedIndividual ,
+                           cinema:PersonaggioStorico ;
+                  cinema:PersonaggioDi cinema:BastardiSenzaGloria ;
+                  rdfs:label "Hans_Landa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IlCavaliereOscuro
+cinema:IlCavaliereOscuro rdf:type owl:NamedIndividual ,
+                                  cinema:Film ;
+                         cinema:haRegista cinema:Christopher_Nolan ;
+                         cinema:AnnoDiUscita "2008"^^xsd:int ;
+                         cinema:HaNrFilm "1"^^xsd:int ;
+                         cinema:Nome "The Dark Knght"^^xsd:string ;
+                         cinema:RankingFilm "68"^^xsd:int ;
+                         cinema:Valutazione "9.0"^^xsd:float ;
+                         <http://purl.org/dc/elements/1.1/creator> cinema:Christopher_Nolan ;
+                         <http://purl.org/dc/elements/1.1/description> "Quando una minaccia chiamata Joker emerge dal suo misterioso passato creando scompiglio e caos nella città di Gotham, il Cavaliere Oscuro deve affrontare le più grandi sfide psicologiche e fisiche per combattere l'ingiustizia"^^xsd:string ;
+                         <http://purl.org/dc/elements/1.1/language> "English"^^xsd:string ;
+                         <http://purl.org/dc/elements/1.1/title> cinema:IlCavaliereOscuro ;
+                         rdfs:label "IlCavaliereOscuro"^^xsd:string ;
+                         rdfs:seeAlso <https://dbpedia.org/page/The_Dark_Knight_(film)> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Inception
+cinema:Inception rdf:type owl:NamedIndividual ,
+                          cinema:Film ;
+                 cinema:haRegista cinema:Christopher_Nolan ;
+                 cinema:AnnoDiUscita "2010"^^xsd:int ;
+                 cinema:HaNrFilm "1"^^xsd:int ;
+                 cinema:RankingFilm "123"^^xsd:int ;
+                 cinema:Valutazione "8.8"^^xsd:float ;
+                 <http://purl.org/dc/elements/1.1/creator> cinema:Christopher_Nolan ;
+                 <http://purl.org/dc/elements/1.1/description> "Un ladro che ruba i segreti aziendali attraverso l'uso della tecnologia di condivisione dei sogni ha il compito inverso di inserire un'idea nella mente di un direttore generale."^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/language> "English"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/title> cinema:Inception ;
+                 rdfs:label "Inception"^^xsd:string ;
+                 rdfs:seeAlso <https://dbpedia.org/page/Inception> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Interstellar
+cinema:Interstellar rdf:type owl:NamedIndividual ,
+                             cinema:Film ;
+                    cinema:haRegista cinema:Christopher_Nolan ;
+                    cinema:AnnoDiUscita "2014"^^xsd:int ;
+                    cinema:HaNrFilm "1"^^xsd:int ;
+                    cinema:Nome "Interstellar"^^xsd:string ;
+                    cinema:RankingFilm "78"^^xsd:int ;
+                    cinema:Valutazione "8.6"^^xsd:float ;
+                    <http://purl.org/dc/elements/1.1/creator> cinema:Christopher_Nolan ;
+                    <http://purl.org/dc/elements/1.1/description> "Una squadra di esploratori viaggia attraverso un tunnel spaziale nel tentativo di assicurare la sopravvivenza dell'umanità."^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/language> "English"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/title> cinema:Interstellar ;
+                    rdfs:label "Interstellar"^^xsd:string ;
+                    rdfs:seeAlso <https://dbpedia.org/page/Interstellar_(film)> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IronMan
+cinema:IronMan rdf:type owl:NamedIndividual ,
+                        cinema:PersonaggioImmaginario ;
+               cinema:PersonaggioDi cinema:TheAvengers ;
+               rdfs:label "IronMan"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JamieFoxx
+cinema:JamieFoxx rdf:type owl:NamedIndividual ,
+                          cinema:Attore ,
+                          cinema:Persona ;
+                 cinema:InterpretaPersonaggio cinema:DjangoFreeman ;
+                 cinema:RecintaIn cinema:Django ;
+                 cinema:RankingAttore "55"^^xsd:int ;
+                 rdfs:seeAlso <https://dbpedia.org/page/Jamie_Foxx> ;
+                 <http://xmlns.com/foaf/0.1/knows> cinema:Christoph_Waltz ,
+                                                   cinema:LeonardoDiCaprio ,
+                                                   cinema:QuentinTarantino ;
+                 <http://xmlns.com/foaf/0.1/name> cinema:JamieFoxx .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JohnTravolta
+cinema:JohnTravolta rdf:type owl:NamedIndividual ,
+                             cinema:Attore ,
+                             cinema:Persona ;
+                    cinema:RecintaIn cinema:PulpFiction ;
+                    cinema:RankingAttore "156"^^xsd:int ;
+                    rdfs:seeAlso <https://dbpedia.org/page/John_Travolta> ;
+                    <http://xmlns.com/foaf/0.1/knows> cinema:QuentinTarantino ,
+                                                      cinema:SamuelJackson ;
+                    <http://xmlns.com/foaf/0.1/name> cinema:JohnTravolta .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JoshBrolin
+cinema:JoshBrolin rdf:type owl:NamedIndividual ,
+                           cinema:Attore ,
+                           cinema:Persona ;
+                  cinema:InterpretaPersonaggio cinema:Thanos ;
+                  cinema:RecintaIn cinema:TheAvengers ;
+                  cinema:RankingAttore "155"^^xsd:int ;
+                  rdfs:seeAlso <https://dbpedia.org/page/Josh_Brolin> ;
+                  <http://xmlns.com/foaf/0.1/knows> cinema:ChrisHemsworth ,
+                                                    cinema:RobertDowneyJr ,
+                                                    cinema:RussoBrothers ;
+                  <http://xmlns.com/foaf/0.1/name> cinema:JoshBrolin .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LaDolceVita
+cinema:LaDolceVita rdf:type owl:NamedIndividual ,
+                            cinema:Film ;
+                   cinema:haRegista cinema:FedericoFellini ;
+                   cinema:haScrittore cinema:FedericoFellini ;
+                   cinema:AnnoDiUscita "1960"^^xsd:int ;
+                   cinema:CasaCinematografica "Cinecittà, Pathé Consortium Cinéma"^^xsd:string ;
+                   cinema:Nome "La Dolce Vita"^^xsd:string ;
+                   cinema:RankingFilm "3650"^^xsd:int ;
+                   cinema:Valutazione "8.0"^^xsd:float ;
+                   <http://purl.org/dc/elements/1.1/creator> cinema:FedericoFellini ;
+                   <http://purl.org/dc/elements/1.1/description> "Una serie di storie che raccontano una settimana della vita di un paparazzo donnaiolo a Roma" ;
+                   <http://purl.org/dc/elements/1.1/language> "Italiano" ;
+                   <http://purl.org/dc/elements/1.1/title> "La Dolce Vita"^^xsd:string ;
+                   <http://purl.org/dc/elements/1.1/type> cinema:comedy ;
+                   rdfs:label "LaDolceVita"^^xsd:string ;
+                   rdfs:seeAlso <https://dbpedia.org/page/La_Dolce_Vita> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeeVanCliff
+cinema:LeeVanCliff rdf:type owl:NamedIndividual ,
+                            cinema:Attore ,
+                            cinema:Persona ;
+                   cinema:RecintaIn cinema:TrilogiaDelDollaro ;
+                   cinema:RankingAttore "111"^^xsd:int ;
+                   rdfs:seeAlso <http://de.dbpedia.org/page/Lee_van_Cleef> ;
+                   <http://xmlns.com/foaf/0.1/knows> cinema:Clint_Eastowood ,
+                                                     cinema:EliWallach ,
+                                                     cinema:SergioLeone ;
+                   <http://xmlns.com/foaf/0.1/name> cinema:LeeVanCliff .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeonardoDiCaprio
+cinema:LeonardoDiCaprio rdf:type owl:NamedIndividual ,
+                                 cinema:Attore ,
+                                 cinema:Persona ;
+                        cinema:InterpretaPersonaggio cinema:CalvinCandie ;
+                        cinema:RecintaIn cinema:Django ,
+                                         cinema:Inception ;
+                        cinema:RankingAttore "4"^^xsd:int ;
+                        rdfs:seeAlso <https://dbpedia.org/page/Leonardo_DiCaprio> ;
+                        <http://xmlns.com/foaf/0.1/knows> cinema:Christoph_Waltz ,
+                                                          cinema:Christopher_Nolan ,
+                                                          cinema:JamieFoxx ,
+                                                          cinema:QuentinTarantino ,
+                                                          cinema:SamuelJackson ;
+                        <http://xmlns.com/foaf/0.1/name> cinema:LeonardoDiCaprio .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LosAngeles
+cinema:LosAngeles rdf:type owl:NamedIndividual ,
+                           cinema:Ambientazione ;
+                  cinema:AmbientazioneDi cinema:PulpFiction ;
+                  rdfs:label "LosAngeles"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MarcelloMastroianni
+cinema:MarcelloMastroianni rdf:type owl:NamedIndividual ,
+                                    cinema:Attore ,
+                                    cinema:Persona ;
+                           cinema:RecintaIn cinema:LaDolceVita ,
+                                            <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                           cinema:RankingAttore "257"^^xsd:int ;
+                           rdfs:seeAlso <https://dbpedia.org/page/Marcello_Mastroianni> ;
+                           <http://xmlns.com/foaf/0.1/knows> cinema:AnitaEkberg ,
+                                                             cinema:FedericoFellini ;
+                           <http://xmlns.com/foaf/0.1/name> cinema:MarcelloMastroianni .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Marocco
+cinema:Marocco rdf:type owl:NamedIndividual ,
+                        cinema:Ambientazione ;
+               cinema:AmbientazioneDi cinema:Inception ;
+               rdfs:label "Marocco"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Metthew_McCounaghey
+cinema:Metthew_McCounaghey rdf:type owl:NamedIndividual ,
+                                    cinema:Attore ;
+                           cinema:RecintaIn cinema:Interstellar ;
+                           cinema:RankingAttore "55"^^xsd:int ;
+                           rdfs:label "Matthew McCounaghey"^^xsd:string ;
+                           rdfs:seeAlso <https://dbpedia.org/page/Matthew_McConaughey> ;
+                           <http://xmlns.com/foaf/0.1/knows> cinema:Christopher_Nolan ;
+                           <http://xmlns.com/foaf/0.1/name> cinema:Metthew_McCounaghey .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PulpFiction
+cinema:PulpFiction rdf:type owl:NamedIndividual ,
+                            cinema:Film ;
+                   cinema:haRegista cinema:QuentinTarantino ;
+                   cinema:haScrittore cinema:QuentinTarantino ;
+                   cinema:AnnoDiUscita "1994"^^xsd:int ;
+                   cinema:CasaCinematografica "Miramax Films, A Band Apart, Jersey Films"^^xsd:string ;
+                   cinema:HaNrFilm "1"^^xsd:int ;
+                   cinema:Nome "Pulp Fiction"^^xsd:string ;
+                   cinema:RankingFilm "114"^^xsd:int ;
+                   cinema:Valutazione "8.9"^^xsd:float ;
+                   <http://purl.org/dc/elements/1.1/creator> cinema:QuentinTarantino ;
+                   <http://purl.org/dc/elements/1.1/description> "Le vicende di due sicari della mafia, un pugile, la moglie di un gangster e due banditi di diner si intrecciano in quattro storie di violenza e redenzione." ;
+                   <http://purl.org/dc/elements/1.1/language> "English" ;
+                   <http://purl.org/dc/elements/1.1/title> cinema:PulpFiction ;
+                   <http://purl.org/dc/elements/1.1/type> cinema:azione ;
+                   rdfs:label "PulpFiction"^^xsd:string ;
+                   rdfs:seeAlso <https://dbpedia.org/page/Pulp_Fiction> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#QuentinTarantino
+cinema:QuentinTarantino rdf:type owl:NamedIndividual ,
+                                 cinema:Persona ;
+                        cinema:haNazionalita cinema:Regista_Americano ;
+                        rdfs:label "QuentinTarantino"^^xsd:string ;
+                        rdfs:seeAlso <https://dbpedia.org/page/Quentin_Tarantino> ;
+                        <http://xmlns.com/foaf/0.1/knows> cinema:Christoph_Waltz ,
+                                                          cinema:EnnioMorricone ,
+                                                          cinema:JamieFoxx ,
+                                                          cinema:JohnTravolta ,
+                                                          cinema:LeonardoDiCaprio ;
+                        <http://xmlns.com/foaf/0.1/name> cinema:QuentinTarantino .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista_Americano
+cinema:Regista_Americano rdf:type owl:NamedIndividual ,
+                                  cinema:RegistaAmericano ;
+                         cinema:Dirige cinema:BastardiSenzaGloria ,
+                                       cinema:Django ,
+                                       cinema:IlCavaliereOscuro ,
+                                       cinema:Inception ,
+                                       cinema:Interstellar ,
+                                       cinema:PulpFiction ,
+                                       cinema:TheAvengers ;
+                         rdfs:label "RegistaAmericano"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista_Italiano
+cinema:Regista_Italiano rdf:type owl:NamedIndividual ,
+                                 cinema:RegistaItaliano ;
+                        cinema:Dirige cinema:LaDolceVita ,
+                                      cinema:TrilogiaDelDollaro ,
+                                      <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                        rdfs:label "RegistaItaliano"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RobertDowneyJr
+cinema:RobertDowneyJr rdf:type owl:NamedIndividual ,
+                               cinema:Attore ,
+                               cinema:Persona ;
+                      cinema:InterpretaPersonaggio cinema:IronMan ;
+                      cinema:RecintaIn cinema:TheAvengers ;
+                      cinema:RankingAttore "95"^^xsd:int ;
+                      rdfs:seeAlso <https://dbpedia.org/page/Robert_Downey_Jr.> ;
+                      <http://xmlns.com/foaf/0.1/knows> cinema:ChrisHemsworth ,
+                                                        cinema:JoshBrolin ,
+                                                        cinema:RussoBrothers ;
+                      <http://xmlns.com/foaf/0.1/name> cinema:RobertDowneyJr .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Roma
+cinema:Roma rdf:type owl:NamedIndividual ,
+                     cinema:Ambientazione ;
+            cinema:AmbientazioneDi cinema:LaDolceVita ,
+                                   <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+            rdfs:label "Roma"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RussoBrothers
+cinema:RussoBrothers rdf:type owl:NamedIndividual ,
+                              cinema:Persona ;
+                     cinema:haNazionalita cinema:Regista_Americano ;
+                     rdfs:label "RussoBrothers"^^xsd:string ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Russo_brothers> ;
+                     <http://xmlns.com/foaf/0.1/knows> cinema:ChrisHemsworth ,
+                                                       cinema:JoshBrolin ,
+                                                       cinema:RobertDowneyJr ;
+                     <http://xmlns.com/foaf/0.1/name> cinema:RussoBrothers .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SamuelJackson
+cinema:SamuelJackson rdf:type owl:NamedIndividual ,
+                              cinema:Attore ,
+                              cinema:Persona ;
+                     cinema:RecintaIn cinema:Django ,
+                                      cinema:PulpFiction ;
+                     cinema:RankingAttore "73"^^xsd:int ;
+                     rdfs:seeAlso <https://dbpedia.org/page/Samuel_L._Jackson> ;
+                     <http://xmlns.com/foaf/0.1/knows> cinema:JohnTravolta ,
+                                                       cinema:QuentinTarantino ;
+                     <http://xmlns.com/foaf/0.1/name> cinema:SamuelJackson .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SergioLeone
+cinema:SergioLeone rdf:type owl:NamedIndividual ,
+                            cinema:Persona ;
+                   cinema:haNazionalita cinema:Regista_Italiano ;
+                   rdfs:label "SergioLeone"^^xsd:string ;
+                   rdfs:seeAlso <https://dbpedia.org/page/Sergio_Leone> ;
+                   <http://xmlns.com/foaf/0.1/knows> cinema:Clint_Eastowood ,
+                                                     cinema:EliWallach ,
+                                                     cinema:Fulvio_Morsella ,
+                                                     cinema:LeeVanCliff ;
+                   <http://xmlns.com/foaf/0.1/name> cinema:SergioLeone .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Texas
+cinema:Texas rdf:type owl:NamedIndividual ,
+                      cinema:Ambientazione ;
+             cinema:AmbientazioneDi cinema:Django ,
+                                    cinema:TrilogiaDelDollaro ;
+             rdfs:label "Texas"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Thanos
+cinema:Thanos rdf:type owl:NamedIndividual ,
+                       cinema:PersonaggioImmaginario ;
+              cinema:PersonaggioDi cinema:TheAvengers ;
+              rdfs:label "Thanos"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TheAvengers
+cinema:TheAvengers rdf:type owl:NamedIndividual ,
+                            cinema:Film ;
+                   cinema:haRegista cinema:RussoBrothers ;
+                   cinema:AnnoDiUscita "2012"^^xsd:int ;
+                   cinema:CasaCinematografica "Marvel Studios, Walt Disney Pictures"^^xsd:string ;
+                   cinema:HaNrFilm "4"^^xsd:int ;
+                   cinema:Nome "The Avengers"^^xsd:string ;
+                   cinema:RankingFilm "168"^^xsd:int ;
+                   cinema:Valutazione "8.3"^^xsd:float ;
+                   <http://purl.org/dc/elements/1.1/creator> "Stan Lee" ;
+                   <http://purl.org/dc/elements/1.1/description> "Gli Avengers e i loro alleati dovranno essere pronti a sacrificare tutto nel tentativo di sconfiggere il potente Thanos prima che il suo impeto di devastazione e rovina porti alla fine dell'universo." ;
+                   <http://purl.org/dc/elements/1.1/language> "English" ;
+                   <http://purl.org/dc/elements/1.1/title> cinema:TheAvengers ;
+                   <http://purl.org/dc/elements/1.1/type> cinema:fantasy ;
+                   rdfs:label "TheAvengers"^^xsd:string ;
+                   rdfs:seeAlso <https://dbpedia.org/page/The_Avengers_(2012_film)> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Thor
+cinema:Thor rdf:type owl:NamedIndividual ,
+                     cinema:PersonaggioImmaginario ;
+            cinema:PersonaggioDi cinema:TheAvengers ;
+            rdfs:label "Thor"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TrilogiaDelDollaro
+cinema:TrilogiaDelDollaro rdf:type owl:NamedIndividual ,
+                                   cinema:Film ;
+                          cinema:haRegista cinema:SergioLeone ;
+                          cinema:haScrittore cinema:Fulvio_Morsella ,
+                                             cinema:SergioLeone ;
+                          cinema:AnnoDiUscita "1965"^^xsd:int ;
+                          cinema:CasaCinematografica "Produzioni Europee Associati, Constantin Film"^^xsd:string ;
+                          cinema:HaNrFilm "3"^^xsd:int ;
+                          cinema:RankingFilm "394"^^xsd:int ;
+                          cinema:Valutazione "8.2"^^xsd:float ;
+                          <http://purl.org/dc/elements/1.1/creator> cinema:SergioLeone ;
+                          <http://purl.org/dc/elements/1.1/description> "trilogia ambientata nel Far West detta anche Trilogia dell'uomo senza nome" ;
+                          <http://purl.org/dc/elements/1.1/language> "English" ;
+                          <http://purl.org/dc/elements/1.1/title> """Per Qualche dollaro in più
+Per un pugno di dollari
+il buono,il brutto, e il cattivo""" ;
+                          <http://purl.org/dc/elements/1.1/type> cinema:western ;
+                          rdfs:label "TrilogiaDelDollaro"^^xsd:string ;
+                          rdfs:seeAlso <https://dbpedia.org/page/A_Fistful_of_Dollars> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#sparatorie_e_gangstar
+cinema:sparatorie_e_gangstar rdf:type owl:NamedIndividual ,
+                                      cinema:Sparatorie_Action ;
+                             cinema:EventoDi cinema:PulpFiction ;
+                             rdfs:label "SparatorieGangstar"^^xsd:string .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo
+<http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> rdf:type owl:NamedIndividual ,
+                                                                                      cinema:Film ;
+                                                                             cinema:haRegista cinema:FedericoFellini ;
+                                                                             cinema:haScrittore cinema:FedericoFellini ;
+                                                                             cinema:AnnoDiUscita "1963"^^xsd:int ;
+                                                                             cinema:HaNrFilm "1"^^xsd:int ;
+                                                                             cinema:Nome "8½"^^xsd:string ;
+                                                                             cinema:RankingFilm "3416"^^xsd:int ;
+                                                                             cinema:Valutazione "8.0"^^xsd:float ;
+                                                                             <http://purl.org/dc/elements/1.1/creator> cinema:FedericoFellini ;
+                                                                             <http://purl.org/dc/elements/1.1/description> "Un regista cinematografico tormentato si ritira tra i suoi ricordi e le sue fantasie."^^xsd:string ;
+                                                                             <http://purl.org/dc/elements/1.1/language> "italiano"^^xsd:string ;
+                                                                             <http://purl.org/dc/elements/1.1/title> <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo> ;
+                                                                             rdfs:label "8½"^^xsd:string ;
+                                                                             rdfs:seeAlso <https://dbpedia.org/page/8%C2%BD> .
+
+
+###  http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia
+<http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia> rdf:type owl:NamedIndividual ,
+                                                                                             cinema:Ambientazione ;
+                                                                                    cinema:AmbientazioneDi cinema:TheAvengers ;
+                                                                                    rdfs:label "Galassia"^^xsd:string .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:ChrisHemsworth
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:ChristianBale
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:Christoph_Waltz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:Clint_Eastowood
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:EliWallach
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:AnitaEkberg
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:Django
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:IlCavaliereOscuro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:Inception
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:Interstellar
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:LaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:BastardiSenzaGloria
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CalvinCandie
+                        cinema:DrKingSchultz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastDjango
+                        cinema:CastLaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastDjango
+                        cinema:CastPulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastDjango
+                        cinema:CastTheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastDjango
+                        cinema:CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastLaDolceVita
+                        cinema:CastPulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastLaDolceVita
+                        cinema:CastTheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastLaDolceVita
+                        cinema:CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastPulpFiction
+                        cinema:CastTheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastPulpFiction
+                        cinema:CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:CastTheAvengers
+                        cinema:CastTrilogia
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:ChristianBale
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:Christoph_Waltz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:Clint_Eastowood
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:EliWallach
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChrisHemsworth
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:Christoph_Waltz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:Clint_Eastowood
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:EliWallach
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:ChristianBale
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:Clint_Eastowood
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:EliWallach
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christoph_Waltz
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christopher_Nolan
+                        cinema:FedericoFellini
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christopher_Nolan
+                        cinema:QuentinTarantino
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christopher_Nolan
+                        cinema:RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Christopher_Nolan
+                        cinema:SergioLeone
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:EliWallach
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Clint_Eastowood
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:IlCavaliereOscuro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:Inception
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:Interstellar
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:LaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Django
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:DjangoFreeman
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:JamieFoxx
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:EliWallach
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:FedericoFellini
+                        cinema:QuentinTarantino
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:FedericoFellini
+                        cinema:RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:FilmAmericani
+                        cinema:FilmItaliani
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Fulvio_Morsella
+                        cinema:QuentinTarantino
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Fulvio_Morsella
+                        cinema:RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        cinema:Inception
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        cinema:Interstellar
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        cinema:LaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        cinema:PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:IlCavaliereOscuro
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Inception
+                        cinema:Interstellar
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Inception
+                        cinema:LaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Inception
+                        cinema:PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Inception
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Inception
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Inception
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Interstellar
+                        cinema:LaDolceVita
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Interstellar
+                        cinema:PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Interstellar
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Interstellar
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Interstellar
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:JohnTravolta
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JamieFoxx
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:JoshBrolin
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JohnTravolta
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JoshBrolin
+                        cinema:LeeVanCliff
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JoshBrolin
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JoshBrolin
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:JoshBrolin
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LaDolceVita
+                        cinema:PulpFiction
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LaDolceVita
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LaDolceVita
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LaDolceVita
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeeVanCliff
+                        cinema:LeonardoDiCaprio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeeVanCliff
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeeVanCliff
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeeVanCliff
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeonardoDiCaprio
+                        cinema:MarcelloMastroianni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeonardoDiCaprio
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeonardoDiCaprio
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LeonardoDiCaprio
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LosAngeles
+                        cinema:Roma
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LosAngeles
+                        cinema:Texas
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:LosAngeles
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:MarcelloMastroianni
+                        cinema:Metthew_McCounaghey
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:MarcelloMastroianni
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:MarcelloMastroianni
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Metthew_McCounaghey
+                        cinema:RobertDowneyJr
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Metthew_McCounaghey
+                        cinema:SamuelJackson
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:PulpFiction
+                        cinema:TheAvengers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:PulpFiction
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:PulpFiction
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:QuentinTarantino
+                        cinema:RussoBrothers
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Regista_Americano
+                        cinema:Regista_Italiano
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Roma
+                        cinema:Texas
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Roma
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:Thanos
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:TheAvengers
+                        cinema:TrilogiaDelDollaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:TheAvengers
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( cinema:TrilogiaDelDollaro
+                        <http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo>
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+cinema:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+cinema:f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+cinema:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+cinema:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+cinema:v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "se un attore che recita in un film ha un ranking inferiore a 100, allora è un attore popolare"^^xsd:string ;
+   rdfs:label "S1"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Attore ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:RecintaIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:a ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> cinema:f
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:RankingAttore ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> cinema:a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> cinema:r
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first cinema:r ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 100 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:AttorePopolare ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "se un film ha come regista un certo regista che ha una certa nazionalità e produce film di una origine di produzione, allora il film è di una certa origine"^^xsd:string ;
+   rdfs:label "S2"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Film ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:haRegista ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> cinema:r
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:haNazionalita ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> cinema:r ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> cinema:n
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:Dirige ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> cinema:n ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> cinema:f
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:DIrettoDa ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> cinema:n
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Dato un film che è una trilogia e ha una valutazione superiore a 8.0 e ha come anno di uscita tra 1930 e 1999, allora quel film è un cult ed una trilogia"^^xsd:string ;
+   rdfs:label "S4"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Film ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:AnnoDiUscita ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> cinema:a
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:Valutazione ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> cinema:v
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:HaNrFilm ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> cinema:n
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first cinema:a ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 1930 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first cinema:a ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 1999 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first cinema:v ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 8.0 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first cinema:n ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 3 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Cult ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Trilogia ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "dato un film  che ha come anno di uscita maggiore o ugale a 1965 e una valutazione compresa tra 7.5 e 8.3, allora è un film a colori e consigliato dagli utenti"^^xsd:string ;
+   rdfs:label "S5"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Film ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:Valutazione ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> cinema:v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:AnnoDiUscita ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> cinema:a
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first cinema:v ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 8.3 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first cinema:v ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 7.5 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first cinema:a ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 1965 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:ConsigliatiDagliUtenti ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Colori ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "se un film ha un ranking con valori compresi tra 1 e 500, allora il film è Most Popular"^^xsd:string ;
+   rdfs:label "S3"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:Film ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> cinema:RankingFilm ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> cinema:f ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> cinema:r
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first cinema:r ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 1 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first cinema:r ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 500 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> cinema:MostPopular ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> cinema:f
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,3154 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl", "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema", "http://www.w3.org/2000/01/rdf-schema", "http://www.ontologydesignpatterns.org/cp/owl/bag.owl", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:complementOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Film",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Film",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Film",
+      "undefined" : "Film"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Django",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Con l'aiuto di un cacciatore di taglie tedesco, uno schiavo liberato si mette in viaggio per salvare sua moglie da un brutale proprietario di piantagione del Mississippi."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#QuentinTarantino",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "type" : [ {
+          "identifier" : "type",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#western",
+          "type" : "iri"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Django",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Django",
+        "undefined" : "Django"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Interstellar",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Una squadra di esploratori viaggia attraverso un tunnel spaziale nel tentativo di assicurare la sopravvivenza dell'umanità."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Interstellar",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Interstellar",
+        "undefined" : "Interstellar"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Inception",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Un ladro che ruba i segreti aziendali attraverso l'uso della tecnologia di condivisione dei sogni ha il compito inverso di inserire un'idea nella mente di un direttore generale."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Inception",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Inception",
+        "undefined" : "Inception"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LaDolceVita",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Una serie di storie che raccontano una settimana della vita di un paparazzo donnaiolo a Roma"
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FedericoFellini",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "Italiano",
+          "type" : "label"
+        } ],
+        "type" : [ {
+          "identifier" : "type",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#comedy",
+          "type" : "iri"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "La Dolce Vita",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LaDolceVita",
+        "undefined" : "LaDolceVita"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Un regista cinematografico tormentato si ritira tra i suoi ricordi e le sue fantasie."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FedericoFellini",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "italiano",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#8_e_mezzo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "8_e_mezzo",
+        "undefined" : "8½"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TheAvengers",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Gli Avengers e i loro alleati dovranno essere pronti a sacrificare tutto nel tentativo di sconfiggere il potente Thanos prima che il suo impeto di devastazione e rovina porti alla fine dell'universo."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "Stan Lee",
+          "type" : "label"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TheAvengers",
+          "type" : "iri"
+        } ],
+        "type" : [ {
+          "identifier" : "type",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#fantasy",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "TheAvengers",
+        "undefined" : "TheAvengers"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BastardiSenzaGloria",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Nella Francia occupata dai nazisti durante la seconda guerra mondiale, un progetto per assassinare i leader nazisti da parte di un gruppo di soldati ebrei americani coincide con i stessi piani vendicativi della proprietaria di un cinema."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#QuentinTarantino",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BastardiSenzaGloria",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "BastardiSenzaGloria",
+        "undefined" : "Inglorious Basterds"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PulpFiction",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Le vicende di due sicari della mafia, un pugile, la moglie di un gangster e due banditi di diner si intrecciano in quattro storie di violenza e redenzione."
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#QuentinTarantino",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "type" : [ {
+          "identifier" : "type",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#azione",
+          "type" : "iri"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PulpFiction",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PulpFiction",
+        "undefined" : "PulpFiction"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IlCavaliereOscuro",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "Quando una minaccia chiamata Joker emerge dal suo misterioso passato creando scompiglio e caos nella città di Gotham, il Cavaliere Oscuro deve affrontare le più grandi sfide psicologiche e fisiche per combattere l'ingiustizia"
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IlCavaliereOscuro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IlCavaliereOscuro",
+        "undefined" : "IlCavaliereOscuro"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TrilogiaDelDollaro",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "description" : {
+        "undefined" : "trilogia ambientata nel Far West detta anche Trilogia dell'uomo senza nome"
+      },
+      "annotations" : {
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SergioLeone",
+          "type" : "iri"
+        } ],
+        "language" : [ {
+          "identifier" : "language",
+          "language" : "undefined",
+          "value" : "English",
+          "type" : "label"
+        } ],
+        "type" : [ {
+          "identifier" : "type",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#western",
+          "type" : "iri"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "undefined",
+          "value" : "Per Qualche dollaro in più\nPer un pugno di dollari\nil buono,il brutto, e il cattivo",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "TrilogiaDelDollaro",
+        "undefined" : "TrilogiaDelDollaro"
+      }
+    } ],
+    "subClasses" : [ "1", "2", "3", "4", "5", "6" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioReale",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PersonaggioReale",
+      "undefined" : "PersonaggioReale"
+    },
+    "comment" : {
+      "undefined" : "personaggio che esiste realmente"
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmItaliano",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FilmItaliano",
+      "undefined" : "FilmItaliano"
+    },
+    "comment" : {
+      "undefined" : "film diretti da un regista italiano"
+    },
+    "id" : "9",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Critica",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Critica",
+      "undefined" : "Critica"
+    },
+    "subClasses" : [ "12" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Cult",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/DBCult_Film_Institute",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cult",
+      "undefined" : "Cult"
+    },
+    "comment" : {
+      "undefined" : "Film in bianco e nero e a colori che hanno riscontrato grande successo tra la critica e il pubblico, tali da definirsi \"Film di Culto\""
+    },
+    "id" : "15",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MostPopular",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MostPopular",
+      "undefined" : "Most Popular"
+    },
+    "comment" : {
+      "undefined" : "Film più visti"
+    },
+    "id" : "18",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduzioneItaliana",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProduzioneItaliana",
+      "undefined" : "ProduzioneItaliana"
+    },
+    "comment" : {
+      "undefined" : "film con origine di produzione italiana. sono diretti da registi italiani"
+    },
+    "id" : "19",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "23",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#azione",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Action_film",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "azione",
+      "undefined" : "azione"
+    },
+    "comment" : {
+      "undefined" : "film con scene d'azione"
+    },
+    "id" : "36",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Popolarità",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Popolarità",
+      "undefined" : "Popolarità"
+    },
+    "subClasses" : [ "37", "38", "15", "18" ],
+    "comment" : {
+      "undefined" : "Film Popolari o del momento"
+    },
+    "id" : "16"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#comedy",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Comedy_film",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "comedy",
+      "undefined" : "comedy"
+    },
+    "comment" : {
+      "undefined" : "film con risvolti comici"
+    },
+    "id" : "41",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/ontology/director",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Regista",
+      "undefined" : "Regista"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChristianBale",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Christopher_Nolan",
+        "undefined" : "Christopher Nolan"
+      }
+    } ],
+    "subClasses" : [ "21" ],
+    "comment" : {
+      "undefined" : "responsabile tecnico e artistico di un opera cinematografica"
+    },
+    "id" : "40",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ConsigliatiDagliUtenti",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsigliatiDagliUtenti",
+      "undefined" : "ConsigliatiDagliUtenti"
+    },
+    "comment" : {
+      "undefined" : "Film consigliati dalla critica con valutazione almeno 7.5 e non maggiore di 8.3"
+    },
+    "id" : "37",
+    "superClasses" : [ "16" ]
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous", "complement" ],
+    "id" : "54",
+    "complement" : [ "26" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiComici_Divertenti",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventiComici_Divertenti",
+      "undefined" : "Eventi comici e divertenti"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Comicita_Umorismo",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Comicita_Umorismo",
+        "undefined" : "Comicita_Umorismo"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "eventi divertenti nel film"
+    },
+    "id" : "59",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Saga",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Saga",
+      "undefined" : "Saga"
+    },
+    "comment" : {
+      "undefined" : "Una saga  è un insieme di più film legati da una sequenzialità o successione, incentrati su un personaggio o un tema comune."
+    },
+    "id" : "65",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Persona",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/ontology/Person",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Persona",
+      "undefined" : "Persona"
+    },
+    "comment" : {
+      "undefined" : "individuo che occupa un ruolo all'interno del film"
+    },
+    "id" : "71"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AcclamatiDallaCritica",
+    "equivalent" : [ "38" ],
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcclamatiDallaCritica",
+      "undefined" : "Acclamati dalla critica"
+    },
+    "comment" : {
+      "undefined" : "I film Acclamati dalla critica sono quei film che hanno ricevuto una valutazione molto positiva da un gruppo di esperti critici"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "12",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Attore",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Actor",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Attore",
+      "undefined" : "Attore"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MarcelloMastroianni",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MarcelloMastroianni",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnitaEkberg",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FedericoFellini",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "MarcelloMastroianni"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SamuelJackson",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SamuelJackson",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JohnTravolta",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamuelJackson"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JohnTravolta",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SamuelJackson",
+          "type" : "iri"
+        }, {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JohnTravolta",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "JohnTravolta"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeonardoDiCaprio",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeonardoDiCaprio",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JamieFoxx",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christoph_Waltz",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LeonardoDiCaprio"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChristianBale",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+          "type" : "iri"
+        }, {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChristianBale",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ChristianBale",
+        "undefined" : "Christian Bale"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChrisHemsworth",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChrisHemsworth",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RobertDowneyJr",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JoshBrolin",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ChrisHemsworth"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JoshBrolin",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RobertDowneyJr",
+          "type" : "iri"
+        }, {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JoshBrolin",
+          "type" : "iri"
+        }, {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChrisHemsworth",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "JoshBrolin"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JamieFoxx",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JamieFoxx",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christoph_Waltz",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeonardoDiCaprio",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "JamieFoxx"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christoph_Waltz",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christoph_Waltz",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeonardoDiCaprio",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JamieFoxx",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Christoph_Waltz"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RobertDowneyJr",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RobertDowneyJr",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ChrisHemsworth",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#JoshBrolin",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RobertDowneyJr"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeeVanCliff",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeeVanCliff",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EliWallach",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Clint_Eastowood",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LeeVanCliff"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Metthew_McCounaghey",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Metthew_McCounaghey",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Christopher_Nolan",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Metthew_McCounaghey",
+        "undefined" : "Matthew McCounaghey"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EliWallach",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EliWallach",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeeVanCliff",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Clint_Eastowood",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EliWallach"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Clint_Eastowood",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Clint_Eastowood",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EliWallach",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LeeVanCliff",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Clint_Eastowood"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnitaEkberg",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnitaEkberg",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#MarcelloMastroianni",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FedericoFellini",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AnitaEkberg"
+      }
+    } ],
+    "subClasses" : [ "76" ],
+    "comment" : {
+      "undefined" : "Un attore  è chi rappresenta o interpreta una parte o un ruolo in uno spettacolo teatrale, cinematografico, televisivo, radiofonico o di strada."
+    },
+    "id" : "46",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Sparatorie_Action",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sparatorie_Action",
+      "undefined" : "Sparatorie_Action"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#sparatorie_e_gangstar",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "sparatorie_e_gangstar",
+        "undefined" : "SparatorieGangstar"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "scene d'azione, durante le quali uno o più protagonisti si trovano a dover affrontare una serie di sfide che richiedono coraggio e prodezza fisica"
+    },
+    "id" : "63",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Genere",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Genere"
+    },
+    "subClasses" : [ "86", "36", "41", "52", "49" ],
+    "id" : "3",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection",
+      "en" : "Collection"
+    },
+    "subClasses" : [ "25" ],
+    "comment" : {
+      "undefined" : "Any container for entities that share one or more common properties. E.g. \"stone objects\", \"the nurses\", \"the Louvre Aegyptian collection\". A collection is not a logical class: a collection is a first-order entity, while a class is a second-order one."
+    },
+    "attributes" : [ "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#eventi_Western",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "eventi_Western"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi_Western",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Eventi_Western",
+        "undefined" : "Eventi_Western"
+      }
+    } ],
+    "id" : "50",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Colori",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Colori",
+      "undefined" : "Colori"
+    },
+    "comment" : {
+      "undefined" : "pellicola a colori dei film dopo il 1965"
+    },
+    "id" : "89",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#western",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Western_(genre)",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "western",
+      "undefined" : "western"
+    },
+    "comment" : {
+      "undefined" : "film ambientati nel FarWest"
+    },
+    "id" : "49",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiStorici",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventiStorici",
+      "undefined" : "Eventi Storici"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventoStorico",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "EventoStorico",
+        "undefined" : "EventoStorico"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "eventi avvenuti nel passato"
+    },
+    "id" : "101",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaAmericano",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Category:American_film_directors",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RegistaAmericano",
+      "undefined" : "RegistaAmericano"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista_Americano",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Regista_Americano",
+        "undefined" : "RegistaAmericano"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Regista di nazionalità americana"
+    },
+    "id" : "68",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Drama",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Drama"
+    },
+    "id" : "86",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bag",
+      "undefined" : "(collections) Bag"
+    },
+    "comment" : {
+      "undefined" : "Bag - Collection that can have a number of copies of each object"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioStorico",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PersonaggioStorico",
+      "undefined" : "PersonaggioStorico"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Hans_Landa",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Hans_Landa",
+        "undefined" : "Hans_Landa"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "personaggio d'epoca, vissuto realmente in un determinato periodo storico"
+    },
+    "id" : "106",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Pellicola",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Pellicola",
+      "undefined" : "Pellicola"
+    },
+    "subClasses" : [ "91", "89" ],
+    "id" : "4",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AttorePopolare",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AttorePopolare",
+      "undefined" : "AttorePopolare"
+    },
+    "comment" : {
+      "undefined" : "Gli attori popolari sono gli attori più visti dagli utenti"
+    },
+    "id" : "76",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi_Drama",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Eventi_Drama"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiDrama",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "EventiDrama",
+        "undefined" : "EventiDrama"
+      }
+    } ],
+    "id" : "118",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Filmografia",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Filmografia"
+    },
+    "subClasses" : [ "9", "75" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiFuturistici",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventiFuturistici",
+      "undefined" : "Eventi Futuristici"
+    },
+    "comment" : {
+      "undefined" : "eventi che potrebbero verificarsi in un futuro prossimo"
+    },
+    "id" : "123",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmAmericano",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Category:American_films",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FilmAmericano",
+      "undefined" : "FilmAmericano"
+    },
+    "comment" : {
+      "undefined" : "film diretti da un regista americano e prodotti in america"
+    },
+    "id" : "75",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#BiancoNero",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiancoNero",
+      "undefined" : "BiancoNero"
+    },
+    "comment" : {
+      "undefined" : "vecchia pellicola in bianco e nero, tipica dei film prodotti prima del 1965"
+    },
+    "id" : "91",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DirettoreAllaMusica",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Film_score",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DirettoreAllaMusica",
+      "undefined" : "DirettoreAllaMusica"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EnnioMorricone",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EnnioMorricone",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SergioLeone",
+          "type" : "iri"
+        }, {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#QuentinTarantino",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EnnioMorricone"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "dirige le musiche del film"
+    },
+    "id" : "43",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduzioneAmericana",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProduzioneAmericana",
+      "undefined" : "ProduzioneAmericana"
+    },
+    "comment" : {
+      "undefined" : "Produzione di origine americana. i film vengono prodotti da registi Americani"
+    },
+    "id" : "73",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#OrigineDiProduzione",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OrigineDiProduzione",
+      "undefined" : "OrigineDiProduzione"
+    },
+    "subClasses" : [ "73", "19" ],
+    "id" : "6",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Trilogia",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trilogia",
+      "undefined" : "Trilogia"
+    },
+    "comment" : {
+      "undefined" : "3 film legati tra loro con la stessa tematica e personaggi"
+    },
+    "id" : "130",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NazionalitaRegista",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NazionalitaRegista",
+      "undefined" : "NazionalitaRegista"
+    },
+    "subClasses" : [ "58", "68" ],
+    "id" : "21",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Eventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Eventi",
+      "undefined" : "Eventi"
+    },
+    "subClasses" : [ "118", "123", "63", "59", "50", "53", "101" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#TopRated",
+    "equivalent" : [ "12" ],
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TopRated",
+      "undefined" : "Top Rated"
+    },
+    "comment" : {
+      "undefined" : "Film più votati dagli utenti e dalla critica"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "38",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Cast",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cast",
+      "undefined" : "Cast"
+    },
+    "comment" : {
+      "undefined" : "gruppo di persone che lavora nella produzione di un film"
+    },
+    "id" : "5",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioImmaginario",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PersonaggioImmaginario",
+      "undefined" : "PersonaggioImmaginario"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#IronMan",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "IronMan",
+        "undefined" : "IronMan"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Thanos",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Thanos",
+        "undefined" : "Thanos"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DjangoFreeman",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "DjangoFreeman",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DjangoFreeman"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CalvinCandie",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "CalvinCandie",
+        "undefined" : "Calvin Candie"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Thor",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Thor",
+        "undefined" : "Thor"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Bruce_Wayne",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Bruce_Wayne",
+        "undefined" : "Bruce Wayne"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DrKingSchultz",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "DrKingSchultz",
+        "undefined" : "DrKingShultz"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "personaggio puramente inventato"
+    },
+    "id" : "125",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiImmaginari",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventiImmaginari",
+      "undefined" : "Eventi Immaginari"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventiFantasi",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "EventiFantasi",
+        "undefined" : "EventiFantasy"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "eventi che sono frutto della fantasia"
+    },
+    "id" : "53",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Item",
+      "undefined" : "item"
+    },
+    "comment" : {
+      "undefined" : "Item - Element belonging to a Bag"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaItaliano",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Category:Italian_film_directors",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RegistaItaliano",
+      "undefined" : "RegistaItaliano"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Regista_Italiano",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Regista_Italiano",
+        "undefined" : "RegistaItaliano"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "regista di nazionalità italiana"
+    },
+    "id" : "58",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Tipologia",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tipologia",
+      "undefined" : "Tipologia"
+    },
+    "subClasses" : [ "65", "130" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Ruolo",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Film_crew",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Ruolo",
+      "undefined" : "Ruolo"
+    },
+    "subClasses" : [ "46", "56", "43", "40" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Ambientazione",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Filming_location",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Ambientazione",
+      "undefined" : "Ambientazione"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#LosAngeles",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "LosAngeles",
+        "undefined" : "LosAngeles"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#GermaniaNazista",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "GermaniaNazista",
+        "undefined" : "GermaniaNazista"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#NewYork/Galassia",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "NewYork/Galassia",
+        "undefined" : "Galassia"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Roma",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Roma",
+        "undefined" : "Roma"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Texas",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Texas",
+        "undefined" : "Texas"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Far_West",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Far_West",
+        "undefined" : "Far_West"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Gotham_City",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Gotham_City",
+        "undefined" : "GothamCity"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Marocco",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "labels" : {
+        "IRI-based" : "Marocco",
+        "undefined" : "Marocco"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Luogo in cui viene ambientato un film"
+    },
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Personaggio",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Personaggio",
+      "undefined" : "Personaggio"
+    },
+    "subClasses" : [ "125", "7", "106" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Scrittore",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Writer",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Scrittore",
+      "undefined" : "Scrittore"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Fulvio_Morsella",
+      "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Fulvio_Morsella",
+          "type" : "iri"
+        } ],
+        "knows" : [ {
+          "identifier" : "knows",
+          "language" : "undefined",
+          "value" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#SergioLeone",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Fulvio_Morsella"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "scrittore della storia di un opera cinematografica"
+    },
+    "id" : "56",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#fantasy",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Fantasy",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fantasy",
+      "undefined" : "fantasy"
+    },
+    "comment" : {
+      "undefined" : "film con eventi fantasy"
+    },
+    "id" : "52",
+    "superClasses" : [ "3" ]
+  } ],
+  "property" : [ {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "51",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "55",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "61",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "62",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "64",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "67",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "69",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "152",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "153",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "154",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "155",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "156",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "158",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "162",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AmbientatoIn",
+    "inverse" : "14",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "AmbientatoIn"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioDi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "PersonaggioDi"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Dirige",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "Dirige"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasItem",
+      "undefined" : "has item"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "has item - The link to every item of the Bag"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRegista",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "haRegista"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaDirettore",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "HaDirettore"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#InterpretaPersonaggio",
+    "inverse" : "47",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "InterpretaPersonaggio"
+    },
+    "domain" : "46",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "haEventi"
+    },
+    "domain" : "49",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "haEventi"
+    },
+    "domain" : "52",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "haRuolo"
+    },
+    "domain" : "56",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haNazionalita",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "haNazionalita"
+    },
+    "domain" : "58",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "haEventi"
+    },
+    "domain" : "41",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "haEventi"
+    },
+    "domain" : "36",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "haRuolo"
+    },
+    "domain" : "40",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "58",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haNazionalita",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "haNazionalita"
+    },
+    "domain" : "68",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "2",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "6",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "2",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "haRuolo"
+    },
+    "domain" : "71",
+    "attributes" : [ "object" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#FilmProdotto",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "FilmProdotto"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RankingFilm",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "RankingFilm"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "range" : "81",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#EventoDi",
+    "inverse" : "83",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "EventoDi"
+    },
+    "domain" : "60",
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haNazionalita",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "haNazionalita"
+    },
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "84"
+  }, {
+    "range" : "3",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProduceFilm",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "ProduceFilm"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "range" : "4",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "4",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "3",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf",
+    "inverse" : "24",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "itemOf",
+      "undefined" : "item of"
+    },
+    "superproperty" : [ "94" ],
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "item of - The link from an item to the Bag where it is contained"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "3",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "itemContent",
+      "undefined" : "item content"
+    },
+    "cardinality" : "1",
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "itemContent - The link to the actual resource to which the item refers."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "3",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "range" : "3",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "46",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "40",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "16",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaPersonaggio",
+    "inverse" : "17",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "HaPersonaggio"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "range" : "16",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AnnoDiUscita",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "AnnoDiUscita",
+      "undefined" : "AnnoDiUscita"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "anno in cui un film è stato rilasciato"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DirettoreAllaMusicaDi",
+    "inverse" : "42",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "DirettoreAllaMusicaDi"
+    },
+    "domain" : "43",
+    "attributes" : [ "object" ],
+    "id" : "107"
+  }, {
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "16",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#AmbientazioneDi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "AmbientazioneDi"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "range" : "0",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DIrettoDa",
+    "inverse" : "20",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "DIrettoDa"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaAttore",
+    "inverse" : "115",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "HaAttore"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "114"
+  }, {
+    "range" : "0",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "0",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "8",
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ScrittoreDi",
+    "inverse" : "121",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "ScrittoreDi"
+    },
+    "domain" : "56",
+    "attributes" : [ "object" ],
+    "id" : "120"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "8",
+    "domain" : "125",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "44",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "126"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RankingAttore",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "RankingAttore"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype" ],
+    "id" : "127"
+  }, {
+    "range" : "44",
+    "domain" : "46",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
+  }, {
+    "range" : "66",
+    "domain" : "130",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haScrittore",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "haScrittore"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "121"
+  }, {
+    "range" : "44",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "44",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "60",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "60",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "66",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "60",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/bag.owl",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "size",
+      "undefined" : "size"
+    },
+    "domain" : "81",
+    "comment" : {
+      "undefined" : "size - The number of items belonging to a collection"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#CasaCinematografica",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "35",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Production_company",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CasaCinematografica",
+      "undefined" : "CasaCinematografica"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Casa produttoria di un film"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Nome",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "Nome",
+      "undefined" : "Nome"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Titolo di un film"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProdottoDa",
+    "inverse" : "87",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "ProdottoDa"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#HaNrFilm",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "HaNrFilm",
+      "undefined" : "HaNrFilm"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "141"
+  }, {
+    "range" : "60",
+    "domain" : "63",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "range" : "60",
+    "domain" : "123",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "60",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "21",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#InterpretatoDa",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "InterpretatoDa"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "range" : "6",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "60",
+    "domain" : "118",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "21",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember",
+    "inverse" : "94",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+    "range" : "23",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMember",
+      "en" : "has member"
+    },
+    "domain" : "81",
+    "subproperty" : [ "24" ],
+    "comment" : {
+      "undefined" : "A relation between collections and entities, e.g. 'my collection of saxophones includes an old Adolphe Sax original alto' (i.e. my collection has member an Adolphe Sax alto)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#Valutazione",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "Valutazione",
+      "undefined" : "Valutazione"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Valutazione che un film ha ricevuto dalla critica"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "haEventi"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haComeCast",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "haComeCast"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RecintaIn",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "RecintaIn"
+    },
+    "domain" : "46",
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "haRuolo"
+    },
+    "domain" : "43",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haEventi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "haEventi"
+    },
+    "domain" : "86",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "152"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DIrettoDa",
+    "inverse" : "20",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "DIrettoDa"
+    },
+    "domain" : "75",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "153"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#DIrettoDa",
+    "inverse" : "20",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "DIrettoDa"
+    },
+    "domain" : "9",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#PersonaggioDi",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "PersonaggioDi"
+    },
+    "domain" : "8",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProdottoDa",
+    "inverse" : "87",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "ProdottoDa"
+    },
+    "domain" : "73",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "156"
+  }, {
+    "range" : "19",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ProdottoDa",
+    "inverse" : "87",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "ProdottoDa"
+    },
+    "domain" : "19",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#RegistaDi",
+    "inverse" : "39",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "RegistaDi"
+    },
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#ContieneCast",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "ContieneCast"
+    },
+    "domain" : "0",
+    "attributes" : [ "functional", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "81",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema#haRuolo",
+    "baseIri" : "http://www.semanticweb.org/mario/ontologies/esame/progettoCinema",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "haRuolo"
+    },
+    "domain" : "46",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "162"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+    "range" : "81",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isMemberOf",
+      "en" : "is member of"
+    },
+    "domain" : "23",
+    "subproperty" : [ "93" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "94"
+  } ]
+}

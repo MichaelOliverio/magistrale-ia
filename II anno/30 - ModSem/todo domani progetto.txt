@@ -1,0 +1,3 @@
+todo:
+- vedere le 2 query nella documentazione e mettere i risultati
+- mettere nel paragrafo 8 lo screen di wikidata

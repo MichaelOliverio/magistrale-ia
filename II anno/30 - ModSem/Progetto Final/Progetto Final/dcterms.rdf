@@ -1,0 +1,588 @@
+<?xml version="1.0"?>
+<rdfns:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcns="http://purl.org/dc/elements/1.1/"
+     xmlns:owlns="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dcamns="http://purl.org/dc/dcam/"
+     xmlns:rdfsns="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skosns="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dctypens="http://purl.org/dc/dcmitype/"
+     xmlns:dctermsns="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/coverage -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/coverage"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/relation"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/abstract">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/description"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/accessRights">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/rights"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/alternative">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/title"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/available -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/available">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/conformsTo">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/contributor">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/contributor"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/coverage -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/coverage">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/coverage"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/created">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/creator">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/creator"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/date">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateAccepted -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/dateAccepted">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateCopyrighted -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/dateCopyrighted">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateSubmitted -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/description">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/description"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/extent -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/extent">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/format"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/format">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/format"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/hasFormat">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/hasPart">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/hasVersion">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/identifier">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isFormatOf -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/isFormatOf">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/isPartOf">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/isReferencedBy">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReplacedBy -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/isReplacedBy">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isRequiredBy -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/isRequiredBy">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/isVersionOf">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/issued">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/language">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/language"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/license">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/rights"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/medium -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/medium">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/format"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/modified">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/publisher">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/publisher"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/references">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/relation">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/replaces -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/replaces">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/requires -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/requires">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/rights">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/rights"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/source">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/source"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/relation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/spatial">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/coverage"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/subject">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/subject"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/tableOfContents -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/tableOfContents">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/terms/description"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/temporal">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/coverage"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/title">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/title"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/type">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/type"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/valid -->
+
+    <AnnotationProperty rdfns:about="http://purl.org/dc/terms/valid">
+        <rdfsns:subPropertyOf rdfns:resource="http://purl.org/dc/elements/1.1/date"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/Box -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/Box"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/ISO3166 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/ISO3166"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/ISO639-2 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/ISO639-2"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/ISO639-3 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/ISO639-3"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Period -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/Period"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Point -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/Point"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/RFC1766 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/RFC1766"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/RFC3066 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/RFC3066"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/RFC4646 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/RFC4646"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/RFC5646 -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/RFC5646"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/URI -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/URI"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/W3CDTF -->
+
+    <rdfsns:Datatype rdfns:about="http://purl.org/dc/terms/W3CDTF"/>
+</rdfns:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,11 @@
+RDF --> descrive risorse attraverso l'uso dei metadati
+	- si specifica che un risorsa appartiene ad una classe usando il predicato type
+	- vocabolari RDF
+		- FOAF --> vocabolario per reti sociali
+		- Dublin core --> vocabolario per risorse editoriali (film, giornali, ...) --> su di lui si basa Europeana
+		- Schema.org --> vocabolario per argometi pagine web 
+		- SKOS --> descrive e allinea terminologie diverse
+	- si crea un dizionario
+RDFS --> descrive relazioni tra risorse
+	- si crea una base di conoscenza
+OWL --> descrive relazioni complesse tra risorse

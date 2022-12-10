@@ -1,0 +1,66 @@
+- seleziona tutte le palestre che ci sono
+
+	SELECT ?palestra
+	WHERE { ?palestra rdf:type fo:Palestra }
+
+- seleziona tutti i peronal trainer della palestra
+
+	SELECT ?pt WHERE { ?pt rdf:type fo:PersonalTrainer.
+	?pt fo:lavoraIn fo:palestraGiovanni.}
+
+- seleziona tutte le schede di un personal trainer
+
+	SELECT ?scheda WHERE {
+	fo:Mentone fo:redige ?scheda.}
+
+- seleziona tutti i macchinari della palestra
+
+	SELECT ?attrezzo ?sala WHERE {
+	fo:palestraGiovanni fo:compostaDa ?sala.
+	?sala fo:contiene ?attrezzo}
+
+- seleziona le palestre con piu di n attrezzature
+
+	SELECT ?palestra (COUNT(?attrezzo) AS ?count) 
+	WHERE { ?palestra fo:compostaDa ?sala.
+	?sala fo:contiene ?attrezzo.} 
+	GROUP BY ?palestra HAVING (?count >= 2)
+
+- seleziona le sale di una palestra
+
+	SELECT ?sala	
+	WHERE {
+		fo:palestraGiovanni fo:compostaDa ?sala.
+	}
+
+- seleziona i corsi di una palestra
+
+	SELECT ?corso ?sala
+	WHERE {
+		?sala rdf:type fo:Sala.
+		fo:palestraGiovanni fo:compostaDa ?sala.
+		?sala fo:ospita ?corso
+	}
+
+- seleziona il numero di clienti (sportivi) della palestra
+
+
+	SELECT ?palestra (COUNT(?iscritto) AS ?count) 
+	WHERE { 
+		?iscritto fo:frequenta fo:palestraGiovanni
+	} 
+	GROUP BY ?palestra
+
+- seleziona il numero di atleti
+
+SE RIUSCIAMO A METTERE LA LOCALIZZAZIONE
+- selezioanre le palestre in un dato luogo
+- 
+
+
+
+PS. 
+- mettere persona disjoint union
+
+
+- si potrebbe usare owL:same as per poter allineare concetti uguali

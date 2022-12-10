@@ -1,0 +1,892 @@
+@prefix : <http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology> .
+
+<http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#allena
+:allena rdf:type owl:ObjectProperty ;
+        owl:inverseOf :èAllenatoDa ;
+        rdfs:domain :PersonalTrainer ;
+        rdfs:range :Atleta .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#compostaDa
+:compostaDa rdf:type owl:ObjectProperty ;
+            rdfs:domain :Palestra ;
+            rdfs:range :Sala .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#contiene
+:contiene rdf:type owl:ObjectProperty ;
+          rdfs:domain :Sala ;
+          rdfs:range :Attrezzatura .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#frequenta
+:frequenta rdf:type owl:ObjectProperty ;
+           rdfs:domain :Sportivo ;
+           rdfs:range :Palestra .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#gareggiaIn
+:gareggiaIn rdf:type owl:ObjectProperty ;
+            rdfs:domain :Atleta .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#haComePersonale
+:haComePersonale rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :lavoraIn .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#inerente
+:inerente rdf:type owl:ObjectProperty ;
+          rdfs:domain :SchedaDiAllenamento ;
+          rdfs:range :Disciplina .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#lavoraIn
+:lavoraIn rdf:type owl:ObjectProperty ;
+          rdfs:domain :Personale ;
+          rdfs:range :PalestraCommerciale .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#ospita
+:ospita rdf:type owl:ObjectProperty ;
+        rdfs:domain :SalaCorsi ;
+        rdfs:range :Corso .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#possiedeAttrezzo
+:possiedeAttrezzo rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Persona ;
+                  rdfs:range :Attrezzatura ;
+                  owl:propertyChainAxiom ( :èProprietarioDi
+                                           :compostaDa
+                                           :contiene
+                                         ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#pratica
+:pratica rdf:type owl:ObjectProperty ;
+         rdfs:domain :Sportivo ;
+         rdfs:range :Disciplina .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#redige
+:redige rdf:type owl:ObjectProperty ;
+        owl:inverseOf :èRedattaDa ;
+        rdfs:domain :PersonalTrainer ;
+        rdfs:range :SchedaDiAllenamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#segue
+:segue rdf:type owl:ObjectProperty ;
+       rdfs:domain :Sportivo ;
+       rdfs:range :SchedaDiAllenamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#siAllenaCon
+:siAllenaCon rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:domain :Sportivo ;
+             rdfs:range :Sportivo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#specializzatoIn
+:specializzatoIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain :PersonalTrainer ;
+                 rdfs:range :Disciplina ;
+                 owl:propertyChainAxiom ( :allena
+                                          :pratica
+                                        ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#supervisiona
+:supervisiona rdf:type owl:ObjectProperty ;
+              rdfs:domain :IstruttoreDiSala ;
+              rdfs:range :Sala .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èAllenatoDa
+:èAllenatoDa rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èCollegaDi
+:èCollegaDi rdf:type owl:ObjectProperty ,
+                     owl:TransitiveProperty ;
+            rdfs:domain :Personale ;
+            rdfs:range :Personale .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èContenutoIn
+:èContenutoIn rdf:type owl:ObjectProperty ;
+              owl:inverseOf :èContenutoIn ;
+              rdf:type owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èDatoreDiLavoroDi
+:èDatoreDiLavoroDi rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :èDipendenteDi ;
+                   rdfs:domain :Persona ;
+                   rdfs:range :Personale ;
+                   owl:propertyChainAxiom ( :èDatoreDiLavoroDi
+                                            :èCollegaDi
+                                          ) ,
+                                          ( :èProprietarioDi
+                                            :haComePersonale
+                                          ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èDiProprietàDi
+:èDiProprietàDi rdf:type owl:ObjectProperty ;
+                owl:inverseOf :èProprietarioDi .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èDipendenteDi
+:èDipendenteDi rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èProprietarioDi
+:èProprietarioDi rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Persona ;
+                 rdfs:range :Palestra .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#èRedattaDa
+:èRedattaDa rdf:type owl:ObjectProperty ;
+            rdfs:domain :SchedaDiAllenamento ;
+            rdfs:range :PersonalTrainer .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#_follows
+:_follows rdf:type owl:ObjectProperty ;
+          owl:inverseOf :_precedes ;
+          rdfs:domain owl:Thing ;
+          rdfs:range owl:Thing .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#_hasMember
+:_hasMember rdf:type owl:ObjectProperty ;
+            owl:inverseOf :_isMemberOf ;
+            rdfs:domain :Collection ;
+            rdfs:range owl:Thing .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#_isMemberOf
+:_isMemberOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#_itemContet
+:_itemContet rdf:type owl:ObjectProperty ;
+             rdfs:domain :Item ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:complementOf :Item
+                        ] .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#_itemOf
+:_itemOf rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :_isMemberOf ;
+         rdfs:domain :Item ;
+         rdfs:range :Bag .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#_precedes
+:_precedes rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#età
+:età rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Persona ;
+     rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#haAnniDiAllenamento
+:haAnniDiAllenamento rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Sportivo ;
+                     rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#haModello
+:haModello rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Attrezzatura ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#sesso
+:sesso rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Persona ;
+       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#modalitàEsecuzioneEsercizio
+:modalitàEsecuzioneEsercizio rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Esercizio ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#ripetizioniEsercizio
+:ripetizioniEsercizio rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Esercizio ;
+                      rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#serieEsercizio
+:serieEsercizio rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Esercizio ;
+                rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#tempoRecupero
+:tempoRecupero rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Esercizio ;
+               rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Amatoriale
+:Amatoriale rdf:type owl:Class ;
+            rdfs:subClassOf :Sportivo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Atleta
+:Atleta rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :pratica ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Disciplina
+                            ] ;
+        rdfs:subClassOf :Sportivo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#AtletaCalisthenics
+:AtletaCalisthenics rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Atleta
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :pratica ;
+                                                                 owl:allValuesFrom :Calisthenics
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf :Atleta .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Attrezzatura
+:Attrezzatura rdf:type owl:Class ;
+              owl:disjointUnionOf ( :AttrezzoCorpoLibero
+                                    :AttrezzoPesistica
+                                    :Equipaggiamento
+                                    :Macchinario
+                                  ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#AttrezzoCorpoLibero
+:AttrezzoCorpoLibero rdf:type owl:Class ;
+                     rdfs:subClassOf :Attrezzatura .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#AttrezzoPesistica
+:AttrezzoPesistica rdf:type owl:Class ;
+                   rdfs:subClassOf :Attrezzatura .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Avanzato
+:Avanzato rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :haAnniDiAllenamento ;
+                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:onDatatype xsd:integer ;
+                                                     owl:withRestrictions ( [ xsd:minExclusive 5
+                                                                            ]
+                                                                          )
+                                                   ]
+                              ] ;
+          rdfs:subClassOf :Sportivo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Bilanciere
+:Bilanciere rdf:type owl:Class ;
+            rdfs:subClassOf :AttrezzoPesistica .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Bodybuilder
+:Bodybuilder rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :Atleta
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :pratica ;
+                                                          owl:allValuesFrom :Bodybuilding
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :Atleta .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Bodybuilding
+:Bodybuilding rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:oneOf ( :enhancedBodybuilding
+                                                :naturalBodybuilding
+                                              )
+                                  ] ;
+              rdfs:subClassOf :Disciplina .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Calisthenics
+:Calisthenics rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:oneOf ( :endurance
+                                                :skill
+                                                :streetLifting
+                                              )
+                                  ] ;
+              rdfs:subClassOf :Disciplina .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Corso
+:Corso rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:oneOf ( :bachata
+                                         :mobility
+                                         :pilates
+                                         :strong
+                                       )
+                           ] .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Disciplina
+:Disciplina rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Disco
+:Disco rdf:type owl:Class ;
+       rdfs:subClassOf :AttrezzoPesistica .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#DiscoBumper
+:DiscoBumper rdf:type owl:Class ;
+             rdfs:subClassOf :Disco .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#DiscoGhisa
+:DiscoGhisa rdf:type owl:Class ;
+            rdfs:subClassOf :Disco .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Equipaggiamento
+:Equipaggiamento rdf:type owl:Class ;
+                 rdfs:subClassOf :Attrezzatura .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Intermedio
+:Intermedio rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :haAnniDiAllenamento ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:integer ;
+                                                       owl:withRestrictions ( [ xsd:minExclusive 2
+                                                                              ]
+                                                                              [ xsd:maxInclusive 5
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf :Sportivo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#IstruttoreDiSala
+:IstruttoreDiSala rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :supervisiona ;
+                                        owl:someValuesFrom :Sala
+                                      ] ;
+                  rdfs:subClassOf :Personale .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Macchinario
+:Macchinario rdf:type owl:Class ;
+             rdfs:subClassOf :Attrezzatura .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Manubrio
+:Manubrio rdf:type owl:Class ;
+          rdfs:subClassOf :AttrezzoPesistica .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Neofita
+:Neofita rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :haAnniDiAllenamento ;
+                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:onDatatype xsd:integer ;
+                                                    owl:withRestrictions ( [ xsd:maxInclusive 2
+                                                                           ]
+                                                                         )
+                                                  ]
+                             ] ;
+         rdfs:subClassOf :Sportivo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Palestra
+:Palestra rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :compostaDa ;
+                                                       owl:someValuesFrom :Sala
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :èDiProprietàDi ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass :Persona
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          owl:disjointUnionOf ( :PalestraCasalinga
+                                :PalestraCommerciale
+                              ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#PalestraCasalinga
+:PalestraCasalinga rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :èDiProprietàDi ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Sportivo
+                                       ] ;
+                   rdfs:subClassOf :Palestra .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#PalestraCommerciale
+:PalestraCommerciale rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :èDiProprietàDi ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :TitolarePalestra
+                                         ] ;
+                     rdfs:subClassOf :Palestra .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Panca
+:Panca rdf:type owl:Class ;
+       rdfs:subClassOf :AttrezzoPesistica .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#PancaPiana
+:PancaPiana rdf:type owl:Class ;
+            rdfs:subClassOf :Panca .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#PancaRegolabile
+:PancaRegolabile rdf:type owl:Class ;
+                 rdfs:subClassOf :Panca .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Pedana
+:Pedana rdf:type owl:Class ;
+        rdfs:subClassOf :AttrezzoPesistica .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Persona
+:Persona rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#PersonalTrainer
+:PersonalTrainer rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :allena ;
+                                       owl:someValuesFrom :Atleta
+                                     ] ;
+                 rdfs:subClassOf :Personale .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Personale
+:Personale rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :lavoraIn ;
+                                 owl:someValuesFrom :PalestraCommerciale
+                               ] ;
+           rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Rack
+:Rack rdf:type owl:Class ;
+      rdfs:subClassOf :AttrezzoPesistica .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Sala
+:Sala rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty :contiene ;
+                            owl:someValuesFrom :Attrezzatura
+                          ] ;
+      owl:disjointUnionOf ( :SalaCorpoLibero
+                            :SalaCorsi
+                            :SalaPesi
+                          ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaCorpoLibero
+:SalaCorpoLibero rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :contiene ;
+                                       owl:someValuesFrom :AttrezzoCorpoLibero
+                                     ] ;
+                 rdfs:subClassOf :Sala .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaCorsi
+:SalaCorsi rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :contiene ;
+                                                        owl:someValuesFrom :Equipaggiamento
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :ospita ;
+                                                        owl:someValuesFrom :Corso
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Sala .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaPesi
+:SalaPesi rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :contiene ;
+                                owl:someValuesFrom :AttrezzoPesistica
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :contiene ;
+                                owl:someValuesFrom :Macchinario
+                              ] ;
+          rdfs:subClassOf :Sala .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SchedaDiAllenamento
+:SchedaDiAllenamento rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :inerente ;
+                                                                  owl:someValuesFrom :Disciplina
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :èRedattaDa ;
+                                                                  owl:someValuesFrom :PersonalTrainer
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :List .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SchedaDiAllenamentoBodybuilding
+:SchedaDiAllenamentoBodybuilding rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :inerente ;
+                                                       owl:someValuesFrom :Bodybuilding
+                                                     ] ;
+                                 rdfs:subClassOf :SchedaDiAllenamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Sportivo
+:Sportivo rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :frequenta ;
+                                owl:someValuesFrom :Palestra
+                              ] ;
+          rdfs:subClassOf :Persona ;
+          owl:disjointUnionOf ( :Amatoriale
+                                :Atleta
+                              ) .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Step
+:Step rdf:type owl:Class ;
+      rdfs:subClassOf :AttrezzoCorpoLibero .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#TitolarePalestra
+:TitolarePalestra rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :èProprietarioDi ;
+                                        owl:someValuesFrom :PalestraCommerciale
+                                      ] ;
+                  rdfs:subClassOf :Personale .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#schedaDiAllenamentoCalisthenics
+:schedaDiAllenamentoCalisthenics rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :inerente ;
+                                                       owl:someValuesFrom :Calisthenics
+                                                     ] ;
+                                 rdfs:subClassOf :SchedaDiAllenamento .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#Bag
+:Bag rdf:type owl:Class ;
+     rdfs:subClassOf :Collection .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#Collection
+:Collection rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#Esercizio
+:Esercizio rdf:type owl:Class ;
+           rdfs:subClassOf :ItemList .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#Item
+:Item rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#ItemList
+:ItemList rdf:type owl:Class ;
+          rdfs:subClassOf :Item .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#List
+:List rdf:type owl:Class ;
+      rdfs:subClassOf :Bag .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#SchedaDiAllenamentoComposta
+:SchedaDiAllenamentoComposta rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :èRedattaDa ;
+                                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass :PersonalTrainer
+                                                 ] ;
+                             rdfs:subClassOf :SchedaDiAllenamento .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Dott.DiNunzio
+:Dott.DiNunzio rdf:type owl:NamedIndividual ,
+                        :TitolarePalestra ;
+               :èProprietarioDi :FitActive .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#EnryFit
+:EnryFit rdf:type owl:NamedIndividual ,
+                  :PersonalTrainer ;
+         :allena :Mo .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#FitActive
+:FitActive rdf:type owl:NamedIndividual ,
+                    :PalestraCommerciale .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Giovanni
+:Giovanni rdf:type owl:NamedIndividual ,
+                   :TitolarePalestra ;
+          :èProprietarioDi :palestraGiovanni .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Gjok
+:Gjok rdf:type owl:NamedIndividual ,
+               :Amatoriale ;
+      :haAnniDiAllenamento "5"^^xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Mentone
+:Mentone rdf:type owl:NamedIndividual ,
+                  :PersonalTrainer ;
+         :lavoraIn :FitActive ;
+         :èCollegaDi :PtLuchi .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Mo
+:Mo rdf:type owl:NamedIndividual ,
+             :Atleta ;
+    :pratica :naturalBodybuilding ;
+    :siAllenaCon :Gjok ;
+    :haAnniDiAllenamento "1"^^xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#PtLuchi
+:PtLuchi rdf:type owl:NamedIndividual ,
+                  :IstruttoreDiSala ;
+         :èCollegaDi :EnryFit .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaCorpoLiberoGiovanni
+:SalaCorpoLiberoGiovanni rdf:type owl:NamedIndividual ,
+                                  :SalaCorpoLibero .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaCorsiGiovanni
+:SalaCorsiGiovanni rdf:type owl:NamedIndividual ,
+                            :Sala ;
+                   :ospita :corsoEndurance .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaPesi2Giovanni
+:SalaPesi2Giovanni rdf:type owl:NamedIndividual ,
+                            :SalaPesi .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#SalaPesiGiovanni
+:SalaPesiGiovanni rdf:type owl:NamedIndividual ,
+                           :SalaPesi ;
+                  :contiene :pancaGiova .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#Ton
+:Ton rdf:type owl:NamedIndividual ,
+              :Bodybuilder ;
+     :siAllenaCon :Mo ;
+     :haAnniDiAllenamento "6"^^xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#bachata
+:bachata rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#corsoEndurance
+:corsoEndurance rdf:type owl:NamedIndividual ,
+                         :Corso .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#endurance
+:endurance rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#enhancedBodybuilding
+:enhancedBodybuilding rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#mobility
+:mobility rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#naturalBodybuilding
+:naturalBodybuilding rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#palestraGiovanni
+:palestraGiovanni rdf:type owl:NamedIndividual ,
+                           :Palestra ;
+                  :compostaDa :SalaCorpoLiberoGiovanni ,
+                              :SalaCorsiGiovanni ,
+                              :SalaPesiGiovanni .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#pancaGiova
+:pancaGiova rdf:type owl:NamedIndividual ,
+                     :PancaPiana ;
+            :èContenutoIn :SalaPesiGiovanni .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#pilates
+:pilates rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#skill
+:skill rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#streetLifting
+:streetLifting rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/0/untitled-ontology-12#strong
+:strong rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#equipaggiamento!
+<http://www.semanticweb.org/michael/ontologies/2022/FitnessOntology#equipaggiamento!> rdf:type owl:NamedIndividual ,
+                                                                                               :Equipaggiamento .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Attrezzatura
+                :Corso
+                :Disciplina
+                :Palestra
+                :Persona
+                :Sala
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AttrezzoCorpoLibero
+                :AttrezzoPesistica
+                :Equipaggiamento
+                :Macchinario
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :EnryFit
+                        :Mentone
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :SalaPesi2Giovanni
+                        :SalaPesiGiovanni
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :endurance
+                        :skill
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :endurance
+                        :streetLifting
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :enhancedBodybuilding
+                        :naturalBodybuilding
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :skill
+                        :streetLifting
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

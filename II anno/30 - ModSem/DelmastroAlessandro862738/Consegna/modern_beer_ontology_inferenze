@@ -1,0 +1,2279 @@
+@prefix : <http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology> .
+
+<http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology> rdf:type owl:Ontology ;
+                                                                         <http://purl.org/dc/elements/1.1/creator> "Alessandro Delmastro"@it ;
+                                                                         <http://purl.org/dc/elements/1.1/date> "10/08/2021"@it ;
+                                                                         <http://purl.org/dc/elements/1.1/description> "L'ontologia rappresenta le birre sulla base di caratteristiche percepibili al consumatore e a tutti coloro che non hanno competenze specifiche. A partire da informazioni facilmente reperibili sulla confezione del prodotto, le birre vengono categorizzate rispetto alle macrocategorie di: gusto, colore e contesto."@it ;
+                                                                         <http://purl.org/dc/elements/1.1/title> "Modern Beer Ontology"@it ;
+                                                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "mbe"@it ;
+                                                                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology"@it ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "What concept is assigned to this entity? Which category does this entity belong to?"^^xsd:string ,
+                                                                                                                                                                   "What is the cardinality (size) of this set?"^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom> "http://swan.mindinformatics.org/ontologies/1.2/collections.owl"^^xsd:string ,
+                                                                                                                                                              "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor> "PaoloCiccarese"^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> "http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> "It is possible to make asser tions about e.g., categories, types, roles, which are typically considered at the meta-level of an ontology. Instances of Concept reify such elements, which are therefore put in the ordinary domain of an ontology. It is not possible to parametrize the classiﬁcation over different dimensions e.g., time, space, etc. "^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> "To model sets of things (elements). A Set is a collection that cannot contain duplicate elements. "^^xsd:string ,
+                                                                                                                                                          """To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge 
+organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are ﬁrst-order elements."""^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom> "http://swan.mindinformatics.org/ontologies/1.2/collections.owl"^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> "Typically combined with descriptionandsituation. It is specialized by cat:objectrole. The n-ary classiﬁcation CP provides an alternative to this if classiﬁcation has to be qualiﬁed over different dimensions."^^xsd:string ,
+                                                                                                                                                           "http://www.ontologydesignpatterns.org/cp/owl/bag.owl"^^xsd:string ,
+                                                                                                                                                           "http://www.ontologydesignpatterns.org/cp/owl/list.owl"^^xsd:string ;
+                                                                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios> "Mac OSX 10.5 is classiﬁed as an an operating system in the Fujitsu-Siemens product catalog."^^xsd:string ;
+                                                                         rdfs:comment "A Set is a collection that cannot contain duplicate elements. A Set is expressed by linking to it directly all the members (elements), multiple identical values of members (elements) will be eliminated because by default they are treated as a set."^^xsd:string ,
+                                                                                      "The classification content ontology design pattern. This CP represents the realtions between concepts e.g., roles, task, and entities to which concepts are assigned to e.g., person, activities. The CP is extracted form DOLCE Ultra Lite ontology." ;
+                                                                         rdfs:label "Modern Beer Ontology"@it ,
+                                                                                    "classification" ;
+                                                                         owl:versionInfo "1.1 added rdfs:isDefinedBy for all named entities"^^xsd:string ,
+                                                                                         "Created by Valentina Presutti"^^xsd:string ,
+                                                                                         "Created with TopBraid Composer"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> rdf:type owl:AnnotationProperty ;
+                                                                                          rdfs:comment "This annotation property is used for exemplifying possible requirements the content pattern provides a solution for. Requirements are expressed as natural language competency questions." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom> rdf:type owl:AnnotationProperty ;
+                                                                                     rdfs:comment "This annotation property should be assigned with a URI, which points to the possible reference ontology which the annotated pattern was extracted from (i.e. the reference ontology that the ontology elements have been deeply or partially cloned by). The range is not explicit in the definition of the annotation property because it would turn the ontology to OWL Full. E.g. The participation pattern is extracted from the Dolce Ultra Lite ontology, hence the value for this annotation property is http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> rdf:type owl:AnnotationProperty ;
+                                                                                    rdfs:comment "This annotation property is useful for content ontology design patterns. Its value is a URI, which refers to another content ontology design pattern which is a component of the annotated one." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> rdf:type owl:AnnotationProperty ;
+                                                                                       rdfs:comment "This annotation property is used for briefly describing the benefits and/or possible trade-offs when using the CP." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> rdf:type owl:AnnotationProperty ;
+                                                                                 rdfs:comment "This annotation property is used in order to describe the intent of the content pattern." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom> rdf:type owl:AnnotationProperty ;
+                                                                                        rdfs:comment "This annotation property should be assigned with a URI, which points to the concept schema, page, or anything else from which the annotated pattern was reengineered.  If the source does not have any URI e.g., a printed book, this property value should provide information as precise as possible in order to identify the source. This property is alternative to the extractedFrom property because it is used when the pattern come from a concept schema which is not an owl ontology. For example content ontology design patterns, which are reengineered from data model patterns, rdf schemas, etc. should be annotatd with this property. E.g. The basicpersonalfoaf pattern is extracted from the rdf FOAF specification, hence the value for this annotation property is http://xmlns.com/foaf/spec/20071002.rdf" .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> rdf:type owl:AnnotationProperty ;
+                                                                                  rdfs:comment "This annotation property can be used to indicate other CPs (if any) that specialize, generalize, inlcude, or are components of the CP. Furthermore, this field may indicate other CPs that are typically used in conjunction with the described one. Important similarities and differences with other patterns can be also described here." .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios> rdf:type owl:AnnotationProperty ;
+                                                                                 rdfs:comment "This annotation property is used for describing examples of instantiation of the Content OP. For example, for the part-of Content OP (which represents part-whole relations) a possible scenario is the sentence: \"the brain is part of the human body\". Scenarios are expressed as natural language sentences." .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+<http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rdfs.co/bevon/brewery
+<http://rdfs.co/bevon/brewery> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> rdf:type owl:ObjectProperty ;
+                                                                             owl:inverseOf <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> ;
+                                                                             rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ;
+                                                                             rdfs:range owl:Thing ;
+                                                                             rdfs:comment "A relation between a Concept and an Entity, e.g. the Role 'student' classifies a Person 'John'."^^xsd:string ;
+                                                                             rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> ;
+                                                                             rdfs:label "classifica"@it ,
+                                                                                        "classifies"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain owl:Thing ;
+                                                                                 rdfs:range <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ;
+                                                                                 rdfs:comment "A relation between a Concept and an Entity, e.g. 'John is considered a typical rude man'; your last concert constitutes the achievement of a lifetime; '20-year-old means she's mature enough'." ;
+                                                                                 rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> ;
+                                                                                 rdfs:label "is classified by"@en ,
+                                                                                            "è classificato da"@it .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember
+<http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:comment "The link to the members of a Set"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#caratterizzatoDa
+:caratterizzatoDa rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Stile ;
+                  rdfs:range :Caratteristica ;
+                  rdfs:comment "Caratteristica tipica dello stile."@it ;
+                  rdfs:label "caratterizzato da"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#commercializza
+:commercializza rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                owl:inverseOf :haMarca ;
+                rdfs:domain :Marca ;
+                rdfs:range :Birra ;
+                rdfs:comment "Indica che una marca commercializza una determinata birra."@it ;
+                rdfs:label "commercializza"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#haCaratteristicaBirra
+:haCaratteristicaBirra rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Birra ;
+                       rdfs:range :Caratteristica ;
+                       rdfs:comment "Caratteristica peculiare della birra, non è tipica dello stile."@it ;
+                       rdfs:label "ha caratteristica birra"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#haCaratteristicaStile
+:haCaratteristicaStile rdf:type owl:ObjectProperty ,
+                                owl:AsymmetricProperty ,
+                                owl:IrreflexiveProperty ;
+                       rdfs:domain :Birra ;
+                       rdfs:range :Caratteristica ;
+                       owl:propertyChainAxiom ( :haStile
+                                                :caratterizzatoDa
+                                              ) ;
+                       rdfs:comment "Caratteristica di una birra propria dello stile a cui appartiene."@it ;
+                       rdfs:label "ha caratteristica stile"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#haColore
+:haColore rdf:type owl:ObjectProperty ;
+          rdfs:domain :Birra ;
+          rdfs:range :Colore ;
+          rdfs:comment "Indica il colore di una birra."@it ;
+          rdfs:label "ha colore"@it ;
+          <http://www.w3.org/2004/02/skos/core#exactMatch> <https://dbpedia.org/ontology/colour> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#haMarca
+:haMarca rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Birra ;
+         rdfs:range :Marca ;
+         rdfs:comment "Indica la marca che commercializza la birra."@it ;
+         rdfs:label "ha marca"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#haStile
+:haStile rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> ;
+         rdfs:domain :Birra ;
+         rdfs:range :Stile ;
+         rdfs:comment "Indica lo stile di produzione di una birra."@it ;
+         rdfs:label "ha stile"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#ispirataA
+:ispirataA rdf:type owl:ObjectProperty ,
+                    owl:TransitiveProperty ;
+           rdfs:domain :Birra ;
+           rdfs:range :Birra ;
+           rdfs:comment "La birra è ispirata ad un'altra birra."@it ;
+           rdfs:label "ispirata a"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#possedutaDa
+:possedutaDa rdf:type owl:ObjectProperty ;
+             owl:inverseOf :possiede ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Marca ;
+             rdfs:range :Birrificio ;
+             rdfs:comment "Indica che la marca è di proprietà di un produttore."@it ;
+             rdfs:label "posseduta da"@it ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <https://dbpedia.org/ontology/owner> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#possiede
+:possiede rdf:type owl:ObjectProperty ;
+          rdfs:domain :Birrificio ;
+          rdfs:range :Marca ;
+          rdfs:comment "Indica che un produttore possiede una marca."@it ;
+          rdfs:label "possiede"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#prodottaDa
+:prodottaDa rdf:type owl:ObjectProperty ;
+            owl:inverseOf :produce ;
+            rdf:type owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain :Birra ;
+            rdfs:range :Birrificio ;
+            owl:propertyChainAxiom ( :haMarca
+                                     :possedutaDa
+                                   ) ;
+            rdfs:comment "La birra è prodotta da un produttore, che possiede la marca che la commercializza."@it ;
+            rdfs:label "prodotta da"@it ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <https://dbpedia.org/ontology/manufacturer> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#produce
+:produce rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ,
+                  owl:IrreflexiveProperty ;
+         rdfs:domain :Birrificio ;
+         rdfs:range :Birra ;
+         rdfs:comment "Un birrificio produce una determinata birra."@it ;
+         rdfs:label "produce"@it .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/set.owl#size
+<http://www.ontologydesignpatterns.org/cp/owl/set.owl#size> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ;
+                                                            rdfs:range xsd:integer ;
+                                                            rdfs:comment "size - The number of items belonging to a collection"^^xsd:string ;
+                                                            rdfs:label "size"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#IBU
+:IBU rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Birra ;
+     rdfs:range xsd:unsignedInt ;
+     rdfs:comment "Indice di amarezza di una bevanda."@it ;
+     rdfs:label "IBU"@it ;
+     <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfs.co/bevon/ibu> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#NomeMarca
+:NomeMarca rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Marca ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#gradazioneAlcolica
+:gradazioneAlcolica rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Birra ;
+                    rdfs:range xsd:float ;
+                    rdfs:comment "Quantità di alcol presente nella bevanda."@it ;
+                    rdfs:label "Gradazione alcolica"@it ;
+                    <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfs.co/bevon/abv> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Birra ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Nome della birra."@it ;
+      rdfs:label "Nome"@it ;
+      <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://rdfs.co/bevon/name> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#temperaturaDiServizio
+:temperaturaDiServizio rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Birra ;
+                       rdfs:range xsd:integer ;
+                       rdfs:comment "Temperatura consigliata a cui bere la birra."@it ;
+                       rdfs:label "Temperatura di servizio"@it ;
+                       <http://www.w3.org/2004/02/skos/core#narrowMatch> "https://dbpedia.org/page/Temperature"@it .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Beer
+<http://dbpedia.org/ontology/Beer> rdf:type owl:Class ;
+                                   owl:equivalentClass :Birra ;
+                                   owl:disjointWith <http://dbpedia.org/ontology/Brand> ,
+                                                    <http://dbpedia.org/ontology/Brewery> ,
+                                                    <http://dbpedia.org/ontology/Colour> ,
+                                                    :Abbaziale ,
+                                                    :Ale ,
+                                                    :Birrificio ,
+                                                    :BirrificioCommerciale ,
+                                                    :Caratteristica ,
+                                                    :Colore ,
+                                                    :ColoreAmbrato ,
+                                                    :ColoreChiaro ,
+                                                    :ColoreScuro ,
+                                                    :Frumento ,
+                                                    :Lager ,
+                                                    :Lambic ,
+                                                    :Marca ,
+                                                    :MonasteroTrappista ,
+                                                    :PaleAle ,
+                                                    :Stile ,
+                                                    <http://www.wikidata.org/wiki/Q1998962> ;
+                                   rdfs:comment "Classe Birra in dbpedia."@it ;
+                                   rdfs:label "Birra"@it .
+
+
+###  http://dbpedia.org/ontology/Brand
+<http://dbpedia.org/ontology/Brand> rdf:type owl:Class ;
+                                    owl:equivalentClass :Marca ;
+                                    rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ;
+                                    owl:disjointWith <http://dbpedia.org/ontology/Brewery> ,
+                                                     <http://dbpedia.org/ontology/Colour> ,
+                                                     :Abbaziale ,
+                                                     :Ale ,
+                                                     :Birra ,
+                                                     :BirraAlcolica ,
+                                                     :BirraAmara ,
+                                                     :BirraAmbrata ,
+                                                     :BirraChiara ,
+                                                     :BirraDaCarne ,
+                                                     :BirraDaContesto ,
+                                                     :BirraDaDivano ,
+                                                     :BirraDaPasto ,
+                                                     :BirraDaPizza ,
+                                                     :BirraDolce ,
+                                                     :BirraLeggera ,
+                                                     :BirraOmonima ,
+                                                     :BirraRicercata ,
+                                                     :BirraRinfrescante ,
+                                                     :BirraScura ,
+                                                     :BirraSpeciale ,
+                                                     :Birrificio ,
+                                                     :BirrificioCommerciale ,
+                                                     :Caratteristica ,
+                                                     :Colore ,
+                                                     :ColoreAmbrato ,
+                                                     :ColoreChiaro ,
+                                                     :ColoreScuro ,
+                                                     :Frumento ,
+                                                     :Lager ,
+                                                     :Lambic ,
+                                                     :MonasteroTrappista ,
+                                                     :PaleAle ,
+                                                     :Stile ,
+                                                     <http://www.wikidata.org/wiki/Q1998962> ,
+                                                     <https://www.wikidata.org/wiki/Q44> ;
+                                    rdfs:comment "Classe Marca in dbpedia."@it ;
+                                    rdfs:label "Marca"@it .
+
+
+###  http://dbpedia.org/ontology/Brewery
+<http://dbpedia.org/ontology/Brewery> rdf:type owl:Class ;
+                                      owl:equivalentClass :Birrificio ;
+                                      owl:disjointWith <http://dbpedia.org/ontology/Colour> ,
+                                                       :Abbaziale ,
+                                                       :Ale ,
+                                                       :Birra ,
+                                                       :BirraAlcolica ,
+                                                       :BirraAmara ,
+                                                       :BirraAmbrata ,
+                                                       :BirraChiara ,
+                                                       :BirraDaCarne ,
+                                                       :BirraDaContesto ,
+                                                       :BirraDaDivano ,
+                                                       :BirraDaPasto ,
+                                                       :BirraDaPizza ,
+                                                       :BirraDolce ,
+                                                       :BirraLeggera ,
+                                                       :BirraOmonima ,
+                                                       :BirraRicercata ,
+                                                       :BirraRinfrescante ,
+                                                       :BirraScura ,
+                                                       :BirraSpeciale ,
+                                                       :Caratteristica ,
+                                                       :Colore ,
+                                                       :ColoreAmbrato ,
+                                                       :ColoreChiaro ,
+                                                       :ColoreScuro ,
+                                                       :Frumento ,
+                                                       :Lager ,
+                                                       :Lambic ,
+                                                       :Marca ,
+                                                       :PaleAle ,
+                                                       :Stile ,
+                                                       <http://www.wikidata.org/wiki/Q1998962> ,
+                                                       <https://www.wikidata.org/wiki/Q44> ;
+                                      rdfs:comment "Classe birrificio in dbpedia."@it ;
+                                      rdfs:label "Birrificio"@it .
+
+
+###  http://dbpedia.org/ontology/Colour
+<http://dbpedia.org/ontology/Colour> rdf:type owl:Class ;
+                                     owl:equivalentClass :Colore ;
+                                     owl:disjointWith :Abbaziale ,
+                                                      :Ale ,
+                                                      :Birra ,
+                                                      :BirraAlcolica ,
+                                                      :BirraAmara ,
+                                                      :BirraAmbrata ,
+                                                      :BirraChiara ,
+                                                      :BirraDaCarne ,
+                                                      :BirraDaContesto ,
+                                                      :BirraDaDivano ,
+                                                      :BirraDaPasto ,
+                                                      :BirraDaPizza ,
+                                                      :BirraDolce ,
+                                                      :BirraLeggera ,
+                                                      :BirraOmonima ,
+                                                      :BirraRicercata ,
+                                                      :BirraRinfrescante ,
+                                                      :BirraScura ,
+                                                      :BirraSpeciale ,
+                                                      :Birrificio ,
+                                                      :BirrificioCommerciale ,
+                                                      :Caratteristica ,
+                                                      :Frumento ,
+                                                      :Lager ,
+                                                      :Lambic ,
+                                                      :Marca ,
+                                                      :MonasteroTrappista ,
+                                                      :PaleAle ,
+                                                      :Stile ,
+                                                      <http://www.wikidata.org/wiki/Q1998962> ,
+                                                      <https://www.wikidata.org/wiki/Q44> ;
+                                     rdfs:comment "Classe Colore in dbpedia."@it ;
+                                     rdfs:label "Colore"@it .
+
+
+###  http://rdfs.co/bevon/Beer
+<http://rdfs.co/bevon/Beer> rdf:type owl:Class ;
+                            rdfs:comment "Classe Beer in Bevon."@it ;
+                            rdfs:label "BeerBevon"@en .
+
+
+###  http://rdfs.co/bevon/Brewery
+<http://rdfs.co/bevon/Brewery> rdf:type owl:Class ;
+                               rdfs:comment "Classe Birrificio in Bevon."@it ;
+                               rdfs:label "Brewery"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> rdf:type owl:Class ;
+                                                                          rdfs:comment """A concept is a Social Object. 
+The classifies relation relates concepts to entities at some time, but time can only be expressed in the alternative pattern: timeindexedclassification."""^^xsd:string ;
+                                                                          rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> ;
+                                                                          rdfs:label "Concept"@en ,
+                                                                                     "Concetto"@it .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection
+<http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set
+<http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ;
+                                                           rdfs:comment "Set - A collection that cannot contain duplicate elements."^^xsd:string ;
+                                                           rdfs:label "set"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Abbaziale
+:Abbaziale rdf:type owl:Class ;
+           rdfs:subClassOf :Ale ;
+           owl:disjointWith :Birra ,
+                            :BirraAlcolica ,
+                            :BirraAmara ,
+                            :BirraAmbrata ,
+                            :BirraChiara ,
+                            :BirraDaCarne ,
+                            :BirraDaContesto ,
+                            :BirraDaDivano ,
+                            :BirraDaPasto ,
+                            :BirraDaPizza ,
+                            :BirraDolce ,
+                            :BirraLeggera ,
+                            :BirraOmonima ,
+                            :BirraRicercata ,
+                            :BirraRinfrescante ,
+                            :BirraScura ,
+                            :BirraSpeciale ,
+                            :Birrificio ,
+                            :BirrificioCommerciale ,
+                            :Caratteristica ,
+                            :Colore ,
+                            :ColoreAmbrato ,
+                            :ColoreChiaro ,
+                            :ColoreScuro ,
+                            :Lager ,
+                            :Marca ,
+                            :MonasteroTrappista ,
+                            <https://www.wikidata.org/wiki/Q44> ;
+           rdfs:comment "Stile Ale ispirato alla tradizione dei monasteri trappisti."@it ;
+           rdfs:label "Abbaziale"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Ale
+:Ale rdf:type owl:Class ;
+     rdfs:subClassOf :Stile ,
+                     <http://www.wikidata.org/wiki/Q1998962> ;
+     owl:disjointWith :Birra ,
+                      :BirraAlcolica ,
+                      :BirraAmara ,
+                      :BirraAmbrata ,
+                      :BirraChiara ,
+                      :BirraDaCarne ,
+                      :BirraDaContesto ,
+                      :BirraDaDivano ,
+                      :BirraDaPasto ,
+                      :BirraDaPizza ,
+                      :BirraDolce ,
+                      :BirraLeggera ,
+                      :BirraOmonima ,
+                      :BirraRicercata ,
+                      :BirraRinfrescante ,
+                      :BirraScura ,
+                      :BirraSpeciale ,
+                      :Birrificio ,
+                      :BirrificioCommerciale ,
+                      :Caratteristica ,
+                      :Colore ,
+                      :ColoreAmbrato ,
+                      :ColoreChiaro ,
+                      :ColoreScuro ,
+                      :Lager ,
+                      :Marca ,
+                      :MonasteroTrappista ,
+                      <https://www.wikidata.org/wiki/Q44> ;
+     rdfs:comment "Ale è una macrocategoria di stili di birra che si caratterizza per l'utilizzo di lieviti la cui fermentazione avviene ad alte temperature."@it ;
+     rdfs:label "Ale"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Birra
+:Birra rdf:type owl:Class ;
+       owl:equivalentClass <https://www.wikidata.org/wiki/Q44> ;
+       owl:disjointWith :Birrificio ,
+                        :BirrificioCommerciale ,
+                        :Caratteristica ,
+                        :Colore ,
+                        :ColoreAmbrato ,
+                        :ColoreChiaro ,
+                        :ColoreScuro ,
+                        :Frumento ,
+                        :Lager ,
+                        :Lambic ,
+                        :Marca ,
+                        :MonasteroTrappista ,
+                        :PaleAle ,
+                        :Stile ,
+                        <http://www.wikidata.org/wiki/Q1998962> ;
+       rdfs:comment "Bevanda alcolica ottenuta dalla fermentazione di mosto a base di malto d'orzo e luppolo."@it ;
+       rdfs:label "Birra"@it ;
+       <http://www.w3.org/2004/02/skos/core#exactMatch> <http://zbw.eu/stw/descriptor/14973-2> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraAlcolica
+:BirraAlcolica rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :gradazioneAlcolica ;
+                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:onDatatype xsd:float ;
+                                                          owl:withRestrictions ( [ xsd:minExclusive "7.0"^^xsd:float
+                                                                                 ]
+                                                                               )
+                                                        ]
+                                   ] ;
+               rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                               :Birra ,
+                               <https://www.wikidata.org/wiki/Q44> ;
+               owl:disjointWith :BirraDaPizza ,
+                                :BirraLeggera ,
+                                :BirraRinfrescante ,
+                                :Birrificio ,
+                                :BirrificioCommerciale ,
+                                :Caratteristica ,
+                                :Colore ,
+                                :ColoreAmbrato ,
+                                :ColoreChiaro ,
+                                :ColoreScuro ,
+                                :Frumento ,
+                                :Lager ,
+                                :Lambic ,
+                                :Marca ,
+                                :MonasteroTrappista ,
+                                :PaleAle ,
+                                :Stile ,
+                                <http://www.wikidata.org/wiki/Q1998962> ;
+               rdfs:comment "Birra caratterizzata da una forte componente alcolica, superiore al 7%."@it ;
+               rdfs:label "Birra alcolica"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraAmara
+:BirraAmara rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :IBU ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:positiveInteger ;
+                                                       owl:withRestrictions ( [ xsd:minInclusive "40"^^xsd:positiveInteger
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                            :Birra ,
+                            <https://www.wikidata.org/wiki/Q44> ;
+            owl:disjointWith :BirraDolce ,
+                             :Birrificio ,
+                             :BirrificioCommerciale ,
+                             :Caratteristica ,
+                             :Colore ,
+                             :ColoreAmbrato ,
+                             :ColoreChiaro ,
+                             :ColoreScuro ,
+                             :Frumento ,
+                             :Lager ,
+                             :Lambic ,
+                             :Marca ,
+                             :MonasteroTrappista ,
+                             :PaleAle ,
+                             :Stile ,
+                             <http://www.wikidata.org/wiki/Q1998962> ;
+            rdfs:comment "Birra caratterizzata da un sapore amaro, con IBU non inferiore a 40."@it ;
+            rdfs:label "Birra amara"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraAmbrata
+:BirraAmbrata rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :haColore ;
+                                    owl:someValuesFrom :ColoreAmbrato
+                                  ] ;
+              rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                              :Birra ,
+                              <https://www.wikidata.org/wiki/Q44> ;
+              owl:disjointWith :BirraChiara ,
+                               :BirraScura ,
+                               :Birrificio ,
+                               :BirrificioCommerciale ,
+                               :Caratteristica ,
+                               :Colore ,
+                               :ColoreAmbrato ,
+                               :ColoreChiaro ,
+                               :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> ;
+              rdfs:comment "Birra dal colore ambrato."@it ;
+              rdfs:label "Birra ambrata"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraChiara
+:BirraChiara rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :haColore ;
+                                   owl:someValuesFrom :ColoreChiaro
+                                 ] ;
+             rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                             :Birra ,
+                             <https://www.wikidata.org/wiki/Q44> ;
+             owl:disjointWith :BirraScura ,
+                              :Birrificio ,
+                              :BirrificioCommerciale ,
+                              :Caratteristica ,
+                              :Colore ,
+                              :ColoreAmbrato ,
+                              :ColoreChiaro ,
+                              :ColoreScuro ,
+                              :Frumento ,
+                              :Lager ,
+                              :Lambic ,
+                              :Marca ,
+                              :MonasteroTrappista ,
+                              :PaleAle ,
+                              :Stile ,
+                              <http://www.wikidata.org/wiki/Q1998962> ;
+             rdfs:comment "Birra dal colore chiaro, bianca o bionda."@it ;
+             rdfs:label "Birra chiara"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraDaCarne
+:BirraDaCarne rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :BirraAlcolica
+                                                         :BirraDaPasto
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :BirraAlcolica ,
+                              :BirraDaPasto ;
+              owl:disjointWith :BirraDaPizza ,
+                               :BirraLeggera ,
+                               :BirraRinfrescante ,
+                               :Birrificio ,
+                               :BirrificioCommerciale ,
+                               :Caratteristica ,
+                               :Colore ,
+                               :ColoreAmbrato ,
+                               :ColoreChiaro ,
+                               :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> ;
+              rdfs:comment "Birra da pasto particolarmente indicata per la carne."@it ;
+              rdfs:label "Birra da carne"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraDaContesto
+:BirraDaContesto rdf:type owl:Class ;
+                 rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                                 :Birra ,
+                                 <https://www.wikidata.org/wiki/Q44> ;
+                 owl:disjointWith :Birrificio ,
+                                  :BirrificioCommerciale ,
+                                  :Caratteristica ,
+                                  :Colore ,
+                                  :ColoreAmbrato ,
+                                  :ColoreChiaro ,
+                                  :ColoreScuro ,
+                                  :Frumento ,
+                                  :Lager ,
+                                  :Lambic ,
+                                  :Marca ,
+                                  :MonasteroTrappista ,
+                                  :PaleAle ,
+                                  :Stile ,
+                                  <http://www.wikidata.org/wiki/Q1998962> ;
+                 rdfs:comment "Birra che ha uno più contesti nei quali rende al meglio."@it ;
+                 rdfs:label "Birra da contesto"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraDaDivano
+:BirraDaDivano rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :BirraAlcolica
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :temperaturaDiServizio ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:minExclusive 6
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :BirraAlcolica ,
+                               :BirraDaContesto ;
+               owl:disjointWith :BirraDaPizza ,
+                                :BirraLeggera ,
+                                :BirraRinfrescante ,
+                                :Birrificio ,
+                                :BirrificioCommerciale ,
+                                :Caratteristica ,
+                                :Colore ,
+                                :ColoreAmbrato ,
+                                :ColoreChiaro ,
+                                :ColoreScuro ,
+                                :Frumento ,
+                                :Lager ,
+                                :Lambic ,
+                                :Marca ,
+                                :MonasteroTrappista ,
+                                :PaleAle ,
+                                :Stile ,
+                                <http://www.wikidata.org/wiki/Q1998962> ;
+               rdfs:comment "Birra dalla alta gradazione alcolica, si presta ad essere bevuta in quantità limitata in contesti conviviali."@it ;
+               rdfs:label "Birra da divano"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraDaPasto
+:BirraDaPasto rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Birra
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :gradazioneAlcolica ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:float ;
+                                                                                owl:withRestrictions ( [ xsd:maxInclusive "9.0"^^xsd:float
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :temperaturaDiServizio ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:minExclusive 2
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :BirraDaContesto ;
+              owl:disjointWith :Birrificio ,
+                               :BirrificioCommerciale ,
+                               :Caratteristica ,
+                               :Colore ,
+                               :ColoreAmbrato ,
+                               :ColoreChiaro ,
+                               :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> ;
+              rdfs:comment "Birra adatta ad essere consumata durante i pasti."@it ;
+              rdfs:label "Birra da pasto"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraDaPizza
+:BirraDaPizza rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :BirraDaPasto
+                                                         :BirraRinfrescante
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :BirraDaPasto ,
+                              :BirraRinfrescante ;
+              owl:disjointWith :Birrificio ,
+                               :BirrificioCommerciale ,
+                               :Caratteristica ,
+                               :Colore ,
+                               :ColoreAmbrato ,
+                               :ColoreChiaro ,
+                               :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> ;
+              rdfs:comment "Birra da pasto particolarmente indicata per la pizza."@it ;
+              rdfs:label "Birra da pizza"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraDolce
+:BirraDolce rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :IBU ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:positiveInteger ;
+                                                       owl:withRestrictions ( [ xsd:maxExclusive "40"^^xsd:positiveInteger
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                            :Birra ,
+                            <https://www.wikidata.org/wiki/Q44> ;
+            owl:disjointWith :Birrificio ,
+                             :BirrificioCommerciale ,
+                             :Caratteristica ,
+                             :Colore ,
+                             :ColoreAmbrato ,
+                             :ColoreChiaro ,
+                             :ColoreScuro ,
+                             :Frumento ,
+                             :Lager ,
+                             :Lambic ,
+                             :Marca ,
+                             :MonasteroTrappista ,
+                             :PaleAle ,
+                             :Stile ,
+                             <http://www.wikidata.org/wiki/Q1998962> ;
+            rdfs:comment "Birra dal gusto dolce, con IBU inferiore a 35."@it ;
+            rdfs:label "Birra dolce"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraLeggera
+:BirraLeggera rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :gradazioneAlcolica ;
+                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                         owl:onDatatype xsd:float ;
+                                                         owl:withRestrictions ( [ xsd:maxInclusive "5.0"^^xsd:float
+                                                                                ]
+                                                                              )
+                                                       ]
+                                  ] ;
+              rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                              :Birra ,
+                              <https://www.wikidata.org/wiki/Q44> ;
+              owl:disjointWith :Birrificio ,
+                               :BirrificioCommerciale ,
+                               :Caratteristica ,
+                               :Colore ,
+                               :ColoreAmbrato ,
+                               :ColoreChiaro ,
+                               :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> ;
+              rdfs:comment "Birra dalla bassa gradazione alcolica, inferiore al 4%."@it ;
+              rdfs:label "Birra leggera"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraOmonima
+:BirraOmonima rdf:type owl:Class ;
+              rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                              :Birra ,
+                              <https://www.wikidata.org/wiki/Q44> ;
+              owl:disjointWith :Birrificio ,
+                               :BirrificioCommerciale ,
+                               :Caratteristica ,
+                               :Colore ,
+                               :ColoreAmbrato ,
+                               :ColoreChiaro ,
+                               :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraRicercata
+:BirraRicercata rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Birra
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :haCaratteristicaBirra ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass :Caratteristica
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                                :Birra ,
+                                <https://www.wikidata.org/wiki/Q44> ;
+                owl:disjointWith :Birrificio ,
+                                 :BirrificioCommerciale ,
+                                 :Caratteristica ,
+                                 :Colore ,
+                                 :ColoreAmbrato ,
+                                 :ColoreChiaro ,
+                                 :ColoreScuro ,
+                                 :Frumento ,
+                                 :Lager ,
+                                 :Lambic ,
+                                 :Marca ,
+                                 :MonasteroTrappista ,
+                                 :PaleAle ,
+                                 :Stile ,
+                                 <http://www.wikidata.org/wiki/Q1998962> ;
+                rdfs:comment "Birra caratterizzata da almeno due caratteristiche distintive."@it ;
+                rdfs:label "Birra ricercata"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraRinfrescante
+:BirraRinfrescante rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :BirraLeggera
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :temperaturaDiServizio ;
+                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:integer ;
+                                                                                     owl:withRestrictions ( [ xsd:maxInclusive 5
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ]
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :BirraDaContesto ,
+                                   :BirraLeggera ;
+                   owl:disjointWith :Birrificio ,
+                                    :BirrificioCommerciale ,
+                                    :Caratteristica ,
+                                    :Colore ,
+                                    :ColoreAmbrato ,
+                                    :ColoreChiaro ,
+                                    :ColoreScuro ,
+                                    :Frumento ,
+                                    :Lager ,
+                                    :Lambic ,
+                                    :Marca ,
+                                    :MonasteroTrappista ,
+                                    :PaleAle ,
+                                    :Stile ,
+                                    <http://www.wikidata.org/wiki/Q1998962> ;
+                   rdfs:comment "Birra leggera che viene servita molto fredda, ideale per rinfrescarsi."@it ;
+                   rdfs:label "Birra rinfrescante"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraScura
+:BirraScura rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :haColore ;
+                                  owl:someValuesFrom :ColoreScuro
+                                ] ;
+            rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                            :Birra ,
+                            <https://www.wikidata.org/wiki/Q44> ;
+            owl:disjointWith :Birrificio ,
+                             :BirrificioCommerciale ,
+                             :Caratteristica ,
+                             :Colore ,
+                             :ColoreAmbrato ,
+                             :ColoreChiaro ,
+                             :ColoreScuro ,
+                             :Frumento ,
+                             :Lager ,
+                             :Lambic ,
+                             :Marca ,
+                             :MonasteroTrappista ,
+                             :PaleAle ,
+                             :Stile ,
+                             <http://www.wikidata.org/wiki/Q1998962> ;
+            rdfs:comment "Birra dal colore scuro."@it ;
+            rdfs:label "Birra scura"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirraSpeciale
+:BirraSpeciale rdf:type owl:Class ;
+               rdfs:subClassOf <http://dbpedia.org/ontology/Beer> ,
+                               :Birra ,
+                               <https://www.wikidata.org/wiki/Q44> ;
+               owl:disjointWith :Birrificio ,
+                                :BirrificioCommerciale ,
+                                :Caratteristica ,
+                                :Colore ,
+                                :ColoreAmbrato ,
+                                :ColoreChiaro ,
+                                :ColoreScuro ,
+                                :Frumento ,
+                                :Lager ,
+                                :Lambic ,
+                                :Marca ,
+                                :MonasteroTrappista ,
+                                :PaleAle ,
+                                :Stile ,
+                                <http://www.wikidata.org/wiki/Q1998962> ;
+               rdfs:comment "Categoria di birra secondo la legge italiana, ai fini della tassazione. Corrisponde a una birra la cui gradazione alcolica è compresa fra il 4.27% e il 5.44%."@it ;
+               rdfs:label "Birra speciale"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Birrificio
+:Birrificio rdf:type owl:Class ;
+            owl:disjointWith :Caratteristica ,
+                             :Colore ,
+                             :ColoreAmbrato ,
+                             :ColoreChiaro ,
+                             :ColoreScuro ,
+                             :Frumento ,
+                             :Lager ,
+                             :Lambic ,
+                             :Marca ,
+                             :PaleAle ,
+                             :Stile ,
+                             <http://www.wikidata.org/wiki/Q1998962> ,
+                             <https://www.wikidata.org/wiki/Q44> ;
+            owl:disjointUnionOf ( :BirrificioCommerciale
+                                  :MonasteroTrappista
+                                ) ;
+            rdfs:comment "Azienda che produce birra."@it ;
+            rdfs:label "Birrificio"@it ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://zbw.eu/stw/descriptor/13151-0> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirrificioCommerciale
+:BirrificioCommerciale rdf:type owl:Class ;
+                       rdfs:subClassOf <http://dbpedia.org/ontology/Brewery> ,
+                                       :Birrificio ;
+                       owl:disjointWith :Caratteristica ,
+                                        :Colore ,
+                                        :ColoreAmbrato ,
+                                        :ColoreChiaro ,
+                                        :ColoreScuro ,
+                                        :Frumento ,
+                                        :Lager ,
+                                        :Lambic ,
+                                        :Marca ,
+                                        :MonasteroTrappista ,
+                                        :PaleAle ,
+                                        :Stile ,
+                                        <http://www.wikidata.org/wiki/Q1998962> ,
+                                        <https://www.wikidata.org/wiki/Q44> ;
+                       rdfs:comment "Birrificio commerciale è un'impresa commerciale che produce birra."@it ;
+                       rdfs:label "Birrificio commerciale"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Caratteristica
+:Caratteristica rdf:type owl:Class ;
+                owl:disjointWith :Colore ,
+                                 :ColoreAmbrato ,
+                                 :ColoreChiaro ,
+                                 :ColoreScuro ,
+                                 :Frumento ,
+                                 :Lager ,
+                                 :Lambic ,
+                                 :Marca ,
+                                 :MonasteroTrappista ,
+                                 :PaleAle ,
+                                 :Stile ,
+                                 <http://www.wikidata.org/wiki/Q1998962> ,
+                                 <https://www.wikidata.org/wiki/Q44> ;
+                rdfs:comment "Un aspetto rilevante della birra, non deducibile dallo stile, che la distingue dalle altre."@it ;
+                rdfs:label "Caratteristica"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Colore
+:Colore rdf:type owl:Class ;
+        owl:disjointWith :Frumento ,
+                         :Lager ,
+                         :Lambic ,
+                         :Marca ,
+                         :MonasteroTrappista ,
+                         :PaleAle ,
+                         :Stile ,
+                         <http://www.wikidata.org/wiki/Q1998962> ,
+                         <https://www.wikidata.org/wiki/Q44> ;
+        rdfs:comment "Colore della birra versata nel bicchiere."@it ;
+        rdfs:label "Colore"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#ColoreAmbrato
+:ColoreAmbrato rdf:type owl:Class ;
+               rdfs:subClassOf <http://dbpedia.org/ontology/Colour> ,
+                               :Colore ;
+               owl:disjointWith :ColoreChiaro ,
+                                :ColoreScuro ,
+                                :Frumento ,
+                                :Lager ,
+                                :Lambic ,
+                                :Marca ,
+                                :MonasteroTrappista ,
+                                :PaleAle ,
+                                :Stile ,
+                                <http://www.wikidata.org/wiki/Q1998962> ,
+                                <https://www.wikidata.org/wiki/Q44> ;
+               rdfs:comment "Colore nei toni dell'ambra, dall'arancione chiaro al rosso chiaro."@it ;
+               rdfs:label "Colore ambrato"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#ColoreChiaro
+:ColoreChiaro rdf:type owl:Class ;
+              rdfs:subClassOf <http://dbpedia.org/ontology/Colour> ,
+                              :Colore ;
+              owl:disjointWith :ColoreScuro ,
+                               :Frumento ,
+                               :Lager ,
+                               :Lambic ,
+                               :Marca ,
+                               :MonasteroTrappista ,
+                               :PaleAle ,
+                               :Stile ,
+                               <http://www.wikidata.org/wiki/Q1998962> ,
+                               <https://www.wikidata.org/wiki/Q44> ;
+              rdfs:comment "Colore chiaro, dal giallo lattiginoso all'ocra intenso."@it ;
+              rdfs:label "Colore chiaro"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#ColoreScuro
+:ColoreScuro rdf:type owl:Class ;
+             rdfs:subClassOf <http://dbpedia.org/ontology/Colour> ,
+                             :Colore ;
+             owl:disjointWith :Frumento ,
+                              :Lager ,
+                              :Lambic ,
+                              :Marca ,
+                              :MonasteroTrappista ,
+                              :PaleAle ,
+                              :Stile ,
+                              <http://www.wikidata.org/wiki/Q1998962> ,
+                              <https://www.wikidata.org/wiki/Q44> ;
+             rdfs:comment "Colore scuro, dal rosso brillante al marrone scuro."@it ;
+             rdfs:label "Colore scuro"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Frumento
+:Frumento rdf:type owl:Class ;
+          rdfs:subClassOf :Ale ;
+          owl:disjointWith :Lager ,
+                           :Marca ,
+                           :MonasteroTrappista ,
+                           <https://www.wikidata.org/wiki/Q44> ;
+          rdfs:comment "Stile Ale che si caratterizza per l'utilizzo di abbondanti quantità di frumento in sostituzione al malto d'orzo."@it ;
+          rdfs:label "Frumento"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Lager
+:Lager rdf:type owl:Class ;
+       rdfs:subClassOf :Stile ,
+                       <http://www.wikidata.org/wiki/Q1998962> ;
+       owl:disjointWith :Lambic ,
+                        :Marca ,
+                        :MonasteroTrappista ,
+                        :PaleAle ,
+                        <https://www.wikidata.org/wiki/Q44> ;
+       rdfs:comment "Lager è una macrocategoria di stili di birra che si caratterizza per l'utilizzo di lieviti la cui fermentazione avviene a basse temperature."@it ;
+       rdfs:label "Lager"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Lambic
+:Lambic rdf:type owl:Class ;
+        rdfs:subClassOf :Ale ;
+        owl:disjointWith :Marca ,
+                         :MonasteroTrappista ,
+                         <https://www.wikidata.org/wiki/Q44> ;
+        rdfs:comment "Stile Ale che viene prodotta tramite fermentazione spontanea."@it ;
+        rdfs:label "Lambic"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Marca
+:Marca rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ;
+       owl:disjointWith :MonasteroTrappista ,
+                        :PaleAle ,
+                        :Stile ,
+                        <http://www.wikidata.org/wiki/Q1998962> ,
+                        <https://www.wikidata.org/wiki/Q44> ;
+       rdfs:comment "Marchio che commercializza determinate birre."@it ;
+       rdfs:label "Marca"@it ;
+       <http://www.w3.org/2004/02/skos/core#exactMatch> <http://zbw.eu/stw/descriptor/12800-1> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#MonasteroTrappista
+:MonasteroTrappista rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:oneOf ( :AbbaziaDiAchel
+                                                      :AbbaziaDiChimay
+                                                      :AbbaziaDiOrval
+                                                      :AbbaziaDiRochefort
+                                                      :AbbaziaDiWestmalle
+                                                      :AbbaziaDiWestvleteren
+                                                    )
+                                        ] ;
+                    rdfs:subClassOf <http://dbpedia.org/ontology/Brewery> ,
+                                    <http://rdfs.co/bevon/Brewery> ,
+                                    :Birrificio ;
+                    owl:disjointWith :PaleAle ,
+                                     :Stile ,
+                                     <http://www.wikidata.org/wiki/Q1998962> ,
+                                     <https://www.wikidata.org/wiki/Q44> ;
+                    <http://purl.org/dc/elements/1.1/description> "Monastero cistercense produttore di birra."@it ;
+                    rdfs:label "Monastero trappista"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#PaleAle
+:PaleAle rdf:type owl:Class ;
+         rdfs:subClassOf :Ale ;
+         owl:disjointWith <https://www.wikidata.org/wiki/Q44> ;
+         rdfs:comment "Stile Ale prodotto con l'utilizzo di malto chiaro."@it ;
+         rdfs:label "Pale Ale"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Stile
+:Stile rdf:type owl:Class ;
+       owl:equivalentClass <http://www.wikidata.org/wiki/Q1998962> ;
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ;
+       owl:disjointWith <https://www.wikidata.org/wiki/Q44> ;
+       rdfs:comment "Lo stile birrario raggruppa birre che condividono caratteristiche organolettiche e di produzione simili."@it ;
+       rdfs:label "Stile"@it .
+
+
+###  http://www.wikidata.org/wiki/Q1998962
+<http://www.wikidata.org/wiki/Q1998962> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ;
+                                        owl:disjointWith <https://www.wikidata.org/wiki/Q44> ;
+                                        rdfs:comment "Stile birrario in wikidata."@it ;
+                                        rdfs:label "Beer style"@en .
+
+
+###  https://www.wikidata.org/wiki/Q44
+<https://www.wikidata.org/wiki/Q44> rdf:type owl:Class ;
+                                    rdfs:comment "Classe equivalente di Birra in wikidata."@it ;
+                                    rdfs:label "Beer"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#AbbaziaDiAchel
+:AbbaziaDiAchel rdf:type owl:NamedIndividual ,
+                         <http://dbpedia.org/ontology/Brewery> ,
+                         <http://rdfs.co/bevon/Brewery> ,
+                         :Birrificio ,
+                         :MonasteroTrappista ;
+                rdfs:comment "Abbazia trappista della città di Achel."@it ;
+                rdfs:label "Abbazia di Achel"@it ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/173657976> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#AbbaziaDiChimay
+:AbbaziaDiChimay rdf:type owl:NamedIndividual ,
+                          <http://dbpedia.org/ontology/Brewery> ,
+                          <http://rdfs.co/bevon/Brewery> ,
+                          :Birrificio ,
+                          :MonasteroTrappista ;
+                 :possiede :Chimay ;
+                 :produce :ChimayTappoBianco ,
+                          :ChimayTappoBlu ;
+                 rdfs:comment "Abbazia trappista della città di Chimay."@it ;
+                 rdfs:label "Abbazia di Chimay"@it ;
+                 <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/155004981> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#AbbaziaDiOrval
+:AbbaziaDiOrval rdf:type owl:NamedIndividual ,
+                         <http://dbpedia.org/ontology/Brewery> ,
+                         <http://rdfs.co/bevon/Brewery> ,
+                         :Birrificio ,
+                         :MonasteroTrappista ;
+                rdfs:comment "Abbazia trappista della città di Orval"@it ;
+                rdfs:label "Abbazia di Orval"@it ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/143222515> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#AbbaziaDiRochefort
+:AbbaziaDiRochefort rdf:type owl:NamedIndividual ,
+                             <http://dbpedia.org/ontology/Brewery> ,
+                             <http://rdfs.co/bevon/Brewery> ,
+                             :Birrificio ,
+                             :MonasteroTrappista ;
+                    rdfs:comment "Abbazia trappista di Rochefort."@it ;
+                    rdfs:label "Abbazia di Rochefort"@it ;
+                    <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/311574153> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#AbbaziaDiWestmalle
+:AbbaziaDiWestmalle rdf:type owl:NamedIndividual ,
+                             <http://dbpedia.org/ontology/Brewery> ,
+                             <http://rdfs.co/bevon/Brewery> ,
+                             :Birrificio ,
+                             :MonasteroTrappista ;
+                    rdfs:comment "Abbazia trappista di Westmalle."@it ;
+                    rdfs:label "Abbazia di Westmalle"@it ;
+                    <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/123119526> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#AbbaziaDiWestvleteren
+:AbbaziaDiWestvleteren rdf:type owl:NamedIndividual ,
+                                <http://dbpedia.org/ontology/Brewery> ,
+                                <http://rdfs.co/bevon/Brewery> ,
+                                :Birrificio ,
+                                :MonasteroTrappista ;
+                       rdfs:comment "Abbazia trappista di Westvleteren."@it ;
+                       rdfs:label "Abbazia di Westvleteren"@it ;
+                       <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/296261426> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Arancione
+:Arancione rdf:type owl:NamedIndividual ,
+                    <http://dbpedia.org/ontology/Colour> ,
+                    :Colore ,
+                    :ColoreAmbrato ;
+           rdfs:comment "Il colore arancione."@it ;
+           rdfs:label "Arancione"@it ;
+           <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q39338> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Baladin
+:Baladin rdf:type owl:NamedIndividual ,
+                  <http://dbpedia.org/ontology/Brand> ,
+                  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                  <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                  :Marca ;
+         <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> :MamaKriek ,
+                                                                                       :SuperBaladin ;
+         :commercializza :MamaKriek ,
+                         :SuperBaladin ;
+         :possedutaDa :BirrificioBaladin ;
+         :NomeMarca "Baladin"^^xsd:string ;
+         rdfs:comment "Marca di birra Baladin."@it ;
+         rdfs:label "Baladin"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirrificioBaladin
+:BirrificioBaladin rdf:type owl:NamedIndividual ,
+                            <http://dbpedia.org/ontology/Brewery> ,
+                            <http://rdfs.co/bevon/Brewery> ,
+                            :Birrificio ,
+                            :BirrificioCommerciale ;
+                   :possiede :Baladin ;
+                   :produce :MamaKriek ,
+                            :SuperBaladin ;
+                   rdfs:comment "Birrificio che possiede il marchio Baladin."@it ;
+                   rdfs:label "Birrificio Baladin"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BirrificioPeroni
+:BirrificioPeroni rdf:type owl:NamedIndividual ,
+                           <http://dbpedia.org/ontology/Brewery> ,
+                           <http://rdfs.co/bevon/Brewery> ,
+                           :Birrificio ,
+                           :BirrificioCommerciale ;
+                  :possiede :NastroAzzurro ,
+                            :Peroni ;
+                  rdfs:comment "Birrificio che possiede numerosi marchi di birra, tra cui Peroni e Nastro Azzurro."@it ;
+                  rdfs:label "Birrificio Peroni"@it ;
+                  <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/142737114> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Bock
+:Bock rdf:type owl:NamedIndividual ,
+               <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+               :Lager ,
+               :Stile ,
+               <http://www.wikidata.org/wiki/Q1998962> ;
+      rdfs:comment "Stile di birra lager chiamato Bock."@it ;
+      rdfs:label "Bock"@it ;
+      <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q687737> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Brewdog
+:Brewdog rdf:type owl:NamedIndividual ,
+                  <http://dbpedia.org/ontology/Brand> ,
+                  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                  <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                  :Marca ;
+         <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> :PunkIPA ;
+         :commercializza :PunkIPA ;
+         :possedutaDa :BrewdogBrewery ;
+         rdfs:comment "Marca di birra Brewdog."@it ;
+         rdfs:label "Brewdog"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BrewdogBrewery
+:BrewdogBrewery rdf:type owl:NamedIndividual ,
+                         <http://dbpedia.org/ontology/Brewery> ,
+                         <http://rdfs.co/bevon/Brewery> ,
+                         :Birrificio ;
+                :possiede :Brewdog ;
+                :produce :PunkIPA ;
+                rdfs:comment "Birrificio che possiede il marchio Brewdog."@it ;
+                rdfs:label "Birrificio Brewdog"@it ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/765160486171205180009> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#BrownAle
+:BrownAle rdf:type owl:NamedIndividual ;
+          rdfs:comment <https://www.wikidata.org/wiki/Q2725773> ,
+                       "Stile di birra denominato Brown Ale."@it ;
+          rdfs:label "Brown Ale"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Chimay
+:Chimay rdf:type owl:NamedIndividual ,
+                 <http://dbpedia.org/ontology/Brand> ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                 :Marca ;
+        <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> :ChimayTappoBianco ,
+                                                                                      :ChimayTappoBlu ;
+        :commercializza :ChimayTappoBianco ,
+                        :ChimayTappoBlu ;
+        :possedutaDa :AbbaziaDiChimay ;
+        :NomeMarca "Chimay"^^xsd:string ;
+        rdfs:comment "Marca di birra Chimay."@it ;
+        rdfs:label "Chimay"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#ChimayTappoBianco
+:ChimayTappoBianco rdf:type owl:NamedIndividual ,
+                            <http://dbpedia.org/ontology/Beer> ,
+                            <http://rdfs.co/bevon/Beer> ,
+                            :Birra ,
+                            :BirraAlcolica ,
+                            :BirraChiara ,
+                            :BirraDaCarne ,
+                            :BirraDaContesto ,
+                            :BirraDaPasto ,
+                            :BirraDolce ,
+                            :BirraOmonima ,
+                            <https://www.wikidata.org/wiki/Q44> ;
+                   <http://rdfs.co/bevon/brewery> :AbbaziaDiChimay ;
+                   <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> :Tripel ;
+                   :haCaratteristicaStile :GustoSecco ;
+                   :haColore :Oro ;
+                   :haMarca :Chimay ;
+                   :haStile :Tripel ;
+                   :prodottaDa :AbbaziaDiChimay ;
+                   :IBU "36"^^xsd:nonNegativeInteger ;
+                   :gradazioneAlcolica "8.0"^^xsd:float ;
+                   :nome "Chimay Tappo Bianco"^^xsd:string ;
+                   :temperaturaDiServizio 6 ;
+                   rdfs:label "Birra Tripel prodotta dall'Abbazia di Chimay."@it ,
+                              "Chimay Tappo Bianco"@it ;
+                   <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://www.wikidata.org/wiki/Q33105701> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#ChimayTappoBlu
+:ChimayTappoBlu rdf:type owl:NamedIndividual ,
+                         <http://dbpedia.org/ontology/Beer> ,
+                         <http://rdfs.co/bevon/Beer> ,
+                         :Birra ,
+                         :BirraAlcolica ,
+                         :BirraDaCarne ,
+                         :BirraDaContesto ,
+                         :BirraDaDivano ,
+                         :BirraDaPasto ,
+                         :BirraDolce ,
+                         :BirraOmonima ,
+                         :BirraRicercata ,
+                         :BirraScura ,
+                         <https://www.wikidata.org/wiki/Q44> ;
+                <http://rdfs.co/bevon/brewery> :AbbaziaDiChimay ;
+                <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> :Dubbel ;
+                :haCaratteristicaBirra :NoteDiFrutta ,
+                                       :NoteFloreali ;
+                :haColore :Rosso ;
+                :haMarca :Chimay ;
+                :haStile :Dubbel ;
+                :ispirataA :WestmalleDubbel ;
+                :prodottaDa :AbbaziaDiChimay ;
+                :IBU "27"^^xsd:unsignedInt ;
+                :gradazioneAlcolica "8.0"^^xsd:float ;
+                :nome "Chimay Tappo Blu"^^xsd:string ;
+                :temperaturaDiServizio 7 ;
+                rdfs:comment "Birra Tripel prodotta dall'Abbazia di Chimay."@it ;
+                rdfs:label "Chimay Tappo Blu"@it ;
+                <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://www.wikidata.org/wiki/Q33105701> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Dubbel
+:Dubbel rdf:type owl:NamedIndividual ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+                 :Abbaziale ,
+                 :Ale ,
+                 :Stile ,
+                 <http://www.wikidata.org/wiki/Q1998962> ;
+        <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> :ChimayTappoBlu ,
+                                                                                     :SuperBaladin ,
+                                                                                     :WestmalleDubbel ;
+        rdfs:comment "Stile birraio chiamato Dubbel."@it ;
+        rdfs:label "Dubbel"@it ;
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q2542177> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#DunkelWeiss
+:DunkelWeiss rdf:type owl:NamedIndividual ;
+             rdfs:comment "Stile birraio chiamato Dunkel."@it ;
+             rdfs:label "Dunkel"@it ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q1265882> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#FermentazioneSpontanea
+:FermentazioneSpontanea rdf:type owl:NamedIndividual ,
+                                 :Caratteristica ;
+                        rdfs:comment "Tipo di fermentazione che avviene spontaneamente."@it ;
+                        rdfs:label "Fermentazione spontanea"@it ;
+                        <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://www.wikidata.org/wiki/Q41760> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Franziskaner
+:Franziskaner rdf:type owl:NamedIndividual ,
+                       <http://dbpedia.org/ontology/Brand> ,
+                       <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                       <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                       :Marca ;
+              <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> :FranziskanerWeissbier ;
+              :commercializza :FranziskanerWeissbier ;
+              :possedutaDa :SpatenBrau ;
+              :NomeMarca "Franziskaner"^^xsd:string ;
+              rdfs:comment "Marca di birra Franziskaner."@it ;
+              rdfs:label "Franziskaner"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#FranziskanerWeissbier
+:FranziskanerWeissbier rdf:type owl:NamedIndividual ,
+                                <http://dbpedia.org/ontology/Beer> ,
+                                <http://rdfs.co/bevon/Beer> ,
+                                :Birra ,
+                                :BirraChiara ,
+                                :BirraDaContesto ,
+                                :BirraDaPasto ,
+                                :BirraDaPizza ,
+                                :BirraDolce ,
+                                :BirraLeggera ,
+                                :BirraOmonima ,
+                                :BirraRinfrescante ,
+                                :BirraSpeciale ,
+                                <https://www.wikidata.org/wiki/Q44> ;
+                       <http://rdfs.co/bevon/brewery> :SpatenBrau ;
+                       <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> :Weissbier ;
+                       :haCaratteristicaBirra :NoteFloreali ;
+                       :haCaratteristicaStile :NoteAcide ;
+                       :haColore :Giallo ;
+                       :haMarca :Franziskaner ;
+                       :haStile :Weissbier ;
+                       :prodottaDa :SpatenBrau ;
+                       :IBU "12"^^xsd:positiveInteger ;
+                       :gradazioneAlcolica "5.0"^^xsd:float ;
+                       :nome "Franziskaner Weissbier"^^xsd:string ;
+                       :temperaturaDiServizio 4 ;
+                       rdfs:comment "Weissbier prodotta da Franziskaner."@it ;
+                       rdfs:label "Franziskaner Weissbier"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#GermanPils
+:GermanPils rdf:type owl:NamedIndividual ,
+                     <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+                     :Lager ,
+                     :Stile ,
+                     <http://www.wikidata.org/wiki/Q1998962> ;
+            rdfs:comment "Stile birraio denomninato German Pilsener."@it ;
+            rdfs:label "German Pilsener"@it ;
+            <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://www.wikidata.org/wiki/Q152281> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Giallo
+:Giallo rdf:type owl:NamedIndividual ,
+                 <http://dbpedia.org/ontology/Colour> ,
+                 :Colore ,
+                 :ColoreChiaro ;
+        rdfs:comment "Il colore giallo."@it ;
+        rdfs:label "Giallo"@it ;
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q943> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#GustoSecco
+:GustoSecco rdf:type owl:NamedIndividual ,
+                     :Caratteristica ;
+            rdfs:comment "Il gusto non permane nella bocca a lungo e non presenta note dolci."@it ;
+            rdfs:label "Gusto secco"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#IPA
+:IPA rdf:type owl:NamedIndividual ,
+              <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+              :Ale ,
+              :PaleAle ,
+              :Stile ,
+              <http://www.wikidata.org/wiki/Q1998962> ;
+     rdfs:comment "Stile birraio denomianto IPA."@it ;
+     rdfs:label "IPA"@it ;
+     <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q1543214> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Kriek
+:Kriek rdf:type owl:NamedIndividual ,
+                <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+                :Ale ,
+                :Lambic ,
+                :Stile ,
+                <http://www.wikidata.org/wiki/Q1998962> ;
+       <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> :MamaKriek ;
+       :caratterizzatoDa :FermentazioneSpontanea ,
+                         :NoteDiFrutta ;
+       rdfs:comment "Stile birraio denominato Kriek."@it ;
+       rdfs:label "Kriek"@it ;
+       <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q1756073> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#MamaKriek
+:MamaKriek rdf:type owl:NamedIndividual ,
+                    <http://dbpedia.org/ontology/Beer> ,
+                    <http://rdfs.co/bevon/Beer> ,
+                    :Birra ,
+                    :BirraAmbrata ,
+                    :BirraDaContesto ,
+                    :BirraDaPasto ,
+                    :BirraDolce ,
+                    <https://www.wikidata.org/wiki/Q44> ;
+           <http://rdfs.co/bevon/brewery> :BirrificioBaladin ;
+           <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> :Kriek ;
+           :haCaratteristicaBirra :NoteDiCiliegia ;
+           :haCaratteristicaStile :FermentazioneSpontanea ,
+                                  :NoteDiFrutta ;
+           :haColore :RossoChiaro ;
+           :haMarca :Baladin ;
+           :haStile :Kriek ;
+           :prodottaDa :BirrificioBaladin ;
+           :IBU 10 ,
+                "10"^^xsd:unsignedInt ;
+           :gradazioneAlcolica "5.8"^^xsd:float ;
+           :nome "MamaKriek"^^xsd:string ;
+           :temperaturaDiServizio 12 ,
+                                  "12"^^xsd:positiveInteger ;
+           rdfs:comment "Birra in stile Kriek prodotta da Baladin."@it ;
+           rdfs:label "Mama Kriek"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Marrone
+:Marrone rdf:type owl:NamedIndividual ,
+                  <http://dbpedia.org/ontology/Colour> ,
+                  :Colore ,
+                  :ColoreScuro ;
+         rdfs:comment "Il colore marrone."@it ;
+         rdfs:label "Marrone"@it ;
+         <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q47071> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#NastroAzzurro
+:NastroAzzurro rdf:type owl:NamedIndividual ,
+                        <http://dbpedia.org/ontology/Brand> ,
+                        <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                        <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                        :Marca ;
+               :possedutaDa :BirrificioPeroni ;
+               rdfs:comment "MArca di birra Nastro Azzurro."@it ;
+               rdfs:label "Nastro Azzurro"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#NoteAcide
+:NoteAcide rdf:type owl:NamedIndividual ,
+                    :Caratteristica ;
+           rdfs:comment "Caratteristica acida del gusto."@it ;
+           rdfs:label "Note acide"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#NoteDiCiliegia
+:NoteDiCiliegia rdf:type owl:NamedIndividual ,
+                         :Caratteristica ;
+                rdfs:comment "Caratteristico sentore di ciliegia nel gusto."@it ;
+                rdfs:label "Note di ciliegia"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#NoteDiFrutta
+:NoteDiFrutta rdf:type owl:NamedIndividual ,
+                       :Caratteristica ;
+              rdfs:comment "Caratteristica che conferisce un gusto fruttato."@it ;
+              rdfs:label "Note di frutta"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#NoteFloreali
+:NoteFloreali rdf:type owl:NamedIndividual ,
+                       :Caratteristica ;
+              rdfs:comment "Sentore di fiori nell'aroma."@it ;
+              rdfs:label "Note floreali"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Oro
+:Oro rdf:type owl:NamedIndividual ,
+              <http://dbpedia.org/ontology/Colour> ,
+              :Colore ,
+              :ColoreChiaro ;
+     rdfs:comment "Il colore oro."@it ;
+     rdfs:label "Oro"@it ;
+     <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q208045> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Peroni
+:Peroni rdf:type owl:NamedIndividual ,
+                 <http://dbpedia.org/ontology/Brand> ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                 :Marca ;
+        :possedutaDa :BirrificioPeroni ;
+        rdfs:comment "Marca di birra Peroni."@it ;
+        rdfs:label "Peroni"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Porter
+:Porter rdf:type owl:NamedIndividual ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+                 :Stile ,
+                 <http://www.wikidata.org/wiki/Q1998962> ;
+        rdfs:comment "Stile birraio denominato Porter."@it ;
+        rdfs:label "Porter"@it ;
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q954166> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#PunkIPA
+:PunkIPA rdf:type owl:NamedIndividual ,
+                  <http://dbpedia.org/ontology/Beer> ,
+                  <http://rdfs.co/bevon/Beer> ,
+                  :Birra ,
+                  :BirraAmara ,
+                  :BirraChiara ,
+                  :BirraDaContesto ,
+                  :BirraDaPasto ,
+                  :BirraDaPizza ,
+                  :BirraLeggera ,
+                  :BirraRinfrescante ,
+                  <https://www.wikidata.org/wiki/Q44> ;
+         <http://rdfs.co/bevon/brewery> :BrewdogBrewery ;
+         :haColore :Oro ;
+         :haMarca :Brewdog ;
+         :prodottaDa :BrewdogBrewery ;
+         :IBU 40 ;
+         :gradazioneAlcolica "4.0"^^xsd:float ;
+         :nome "PunkIPA"^^xsd:string ;
+         :temperaturaDiServizio 4 ;
+         rdfs:comment "Birra in stile IPA prodotta da Brewdog."@it ;
+         rdfs:label "Punk IPA"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Rosso
+:Rosso rdf:type owl:NamedIndividual ,
+                <http://dbpedia.org/ontology/Colour> ,
+                :Colore ,
+                :ColoreScuro ;
+       rdfs:comment "Il colore rosso."@it ;
+       rdfs:label "Rosso"@it ;
+       <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q3142> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#RossoChiaro
+:RossoChiaro rdf:type owl:NamedIndividual ,
+                      <http://dbpedia.org/ontology/Colour> ,
+                      :Colore ,
+                      :ColoreAmbrato ;
+             rdfs:comment "Il colore rosso chiaro."@it ;
+             rdfs:label "Rosso chiaro"@it ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q69692146> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#SpatenBrau
+:SpatenBrau rdf:type owl:NamedIndividual ,
+                     <http://dbpedia.org/ontology/Brewery> ,
+                     <http://rdfs.co/bevon/Brewery> ,
+                     :Birrificio ,
+                     :BirrificioCommerciale ;
+            :possiede :Franziskaner ;
+            :produce :FranziskanerWeissbier ;
+            rdfs:comment "Birrificio Spaten."@it ;
+            rdfs:label "Spaten Brau"@it ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/150743941> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Stout
+:Stout rdf:type owl:NamedIndividual ;
+       rdfs:comment "Stile birraio denominato Stout."@it ;
+       rdfs:label "Stout"@it ;
+       <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q217825> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#SuperBaladin
+:SuperBaladin rdf:type owl:NamedIndividual ,
+                       <http://dbpedia.org/ontology/Beer> ,
+                       <http://rdfs.co/bevon/Beer> ,
+                       :Birra ,
+                       :BirraAlcolica ,
+                       :BirraAmbrata ,
+                       :BirraDaCarne ,
+                       :BirraDaContesto ,
+                       :BirraDaDivano ,
+                       :BirraDaPasto ,
+                       :BirraDolce ,
+                       :BirraOmonima ,
+                       <https://www.wikidata.org/wiki/Q44> ;
+              <http://rdfs.co/bevon/brewery> :BirrificioBaladin ;
+              <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> :Dubbel ;
+              :haColore :Arancione ;
+              :haMarca :Baladin ;
+              :haStile :Dubbel ;
+              :ispirataA :ChimayTappoBlu ,
+                         :WestmalleDubbel ;
+              :prodottaDa :BirrificioBaladin ;
+              :IBU "32"^^xsd:unsignedInt ;
+              :gradazioneAlcolica "8.0"^^xsd:float ;
+              :nome "Super Baladin"^^xsd:string ;
+              :temperaturaDiServizio 10 ;
+              rdfs:comment "Birra in stile Dubbel prodotta da Baladin."@it ;
+              rdfs:label "Super Baladin"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Tripel
+:Tripel rdf:type owl:NamedIndividual ,
+                 <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+                 :Abbaziale ,
+                 :Ale ,
+                 :Stile ,
+                 <http://www.wikidata.org/wiki/Q1998962> ;
+        <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> :ChimayTappoBianco ;
+        :caratterizzatoDa :GustoSecco ;
+        rdfs:comment "Stile birraio denominato Tripel."@it ;
+        rdfs:label "Tripel"@it ;
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q2719638> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Turtel
+:Turtel rdf:type owl:NamedIndividual ,
+                 <http://dbpedia.org/ontology/Beer> ,
+                 <http://rdfs.co/bevon/Beer> ,
+                 :Birra ,
+                 :BirraLeggera ,
+                 <https://www.wikidata.org/wiki/Q44> ;
+        :gradazioneAlcolica "0.5"^^xsd:float ;
+        rdfs:comment "Birra analcolica Turtel."@it ;
+        rdfs:label "Turtel"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Weissbier
+:Weissbier rdf:type owl:NamedIndividual ,
+                    <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> ,
+                    :Ale ,
+                    :Frumento ,
+                    :Stile ,
+                    <http://www.wikidata.org/wiki/Q1998962> ;
+           <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> :FranziskanerWeissbier ;
+           :caratterizzatoDa :NoteAcide ;
+           rdfs:comment "Stile birraio denominato Weissbier."@it ;
+           rdfs:label "Weissbier"@it ;
+           <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/wiki/Q13417568> .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#Westmalle
+:Westmalle rdf:type owl:NamedIndividual ,
+                    <http://dbpedia.org/ontology/Brand> ,
+                    <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection> ,
+                    <http://www.ontologydesignpatterns.org/cp/owl/set.owl#Set> ,
+                    :Marca ;
+           <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> :WestmalleDubbel ;
+           :commercializza :WestmalleDubbel ;
+           rdfs:comment "Marca di birra Westmalle."@it ;
+           rdfs:label "Westmalle"@it .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/modern_beer_ontology#WestmalleDubbel
+:WestmalleDubbel rdf:type owl:NamedIndividual ,
+                          <http://dbpedia.org/ontology/Beer> ,
+                          <http://rdfs.co/bevon/Beer> ,
+                          :Birra ,
+                          :BirraDaContesto ,
+                          :BirraDaPasto ,
+                          :BirraDolce ,
+                          :BirraScura ,
+                          <https://www.wikidata.org/wiki/Q44> ;
+                 <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> :Dubbel ;
+                 :haCaratteristicaBirra :NoteDiFrutta ;
+                 :haColore :Rosso ;
+                 :haMarca :Westmalle ;
+                 :haStile :Dubbel ;
+                 :IBU "25"^^xsd:unsignedInt ;
+                 :gradazioneAlcolica "7.0"^^xsd:float ;
+                 :nome "Westmalle Dubble"^^xsd:string ;
+                 :temperaturaDiServizio 10 ;
+                 rdfs:comment "Birra in stile dubbel prodotta dall'Abbazia di Westmalle."@it ;
+                 rdfs:label "Westmalle Dubbel"@it .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasUnitTest> rdfs:comment "This property can be used to annotate a unit test (e.g. in the form of a SPARQL query) to be launched to evaluate an ontology against a requirement-based task." .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isCloneOf> rdfs:comment "This annotation property is used for referring a cloned ontology entity to its cloning source." .
+
+
+<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isSpecializationOf> rdfs:comment "This annotation property is useful for content ontology design patterns and its elements. Its value is a URI, which refers either to a content ontology design pattern that is specialized by the annotated one, or to an ontology element that is specialized by the annotated one." .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Birra
+                :Birrificio
+                :Caratteristica
+                :Colore
+                :Marca
+                :Stile
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BirraAmbrata
+                :BirraChiara
+                :BirraScura
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ColoreAmbrato
+                :ColoreChiaro
+                :ColoreScuro
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AbbaziaDiAchel
+                        :AbbaziaDiChimay
+                        :AbbaziaDiOrval
+                        :AbbaziaDiRochefort
+                        :AbbaziaDiWestmalle
+                        :AbbaziaDiWestvleteren
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Arancione
+                        :Giallo
+                        :Oro
+                        :Rosso
+                        :RossoChiaro
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :BrownAle
+                        :Porter
+                        :Stout
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Dubbel
+                        :Tripel
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :DunkelWeiss
+                        :Weissbier
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :FermentazioneSpontanea
+                        :GustoSecco
+                        :NoteAcide
+                        :NoteDiCiliegia
+                        :NoteDiFrutta
+                        :NoteFloreali
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:b rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:m rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:nm rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:g rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:birra rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:birrificio rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Mapping fra la classe Birra e la classe Beer di Bevon."^^xsd:string ;
+   rdfs:label "Birra in Bevon"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://dbpedia.org/ontology/Beer> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://rdfs.co/bevon/Beer> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Categorizza una birra come BirraOmonima se il suo nome contiene quello del birrificio."^^xsd:string ;
+   rdfs:label "BirraOmonima"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://dbpedia.org/ontology/Beer> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :nome ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :haMarca ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :m
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :NomeMarca ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :m ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :nm
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#contains> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> ( :n
+                                                                                                                                                :nm
+                                                                                                                                              )
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :BirraOmonima ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Categrozza le birre in birre speciali se la loro gradazione alcolica rientra nel range previsto."^^xsd:string ;
+   rdfs:label "BirraSpeciale"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://dbpedia.org/ontology/Beer> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :gradazioneAlcolica ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :g
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :g ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.27 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :g ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 5.44 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :BirraSpeciale ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Mapping fra la classe Birrificio e la classe Brewery di Bevon."^^xsd:string ;
+   rdfs:label "Birrificio Bevon"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://dbpedia.org/ontology/Brewery> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://rdfs.co/bevon/Brewery> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Mapping fra la proprietà prodottaDa e la proprietà brewery di Bevon."^^xsd:string ;
+   rdfs:label "prodottaDa Bevon"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :prodottaDa ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :birra ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :birrificio
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rdfs.co/bevon/brewery> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :birra ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :birrificio
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
